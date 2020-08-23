@@ -26,12 +26,12 @@ defaults:
       permalink: /Shopod/
   -
     scope:
-      path: "_apps/Shopod/privacy/"
+      path: "_apps/Shopod/privacy"
     values:
       permalink: /Shopod/privacy/:basename
 
 include:
-  - _apps/
+  - _apps
 
 exclude:
   - .sass-cache/
