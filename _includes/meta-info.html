@@ -1,0 +1,13 @@
+    <meta charset="{{ site.encoding }}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="author" content="{{ site.owner }},{{ site.baseurl }}">
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    {% if layout.noindex %}
+    <meta name="robots" content="noindex">
+    {% else %}
+    <meta name="robots" content="index,follow">
+    {% endif %}

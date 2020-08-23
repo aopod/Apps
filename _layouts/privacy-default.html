@@ -1,0 +1,18 @@
+---
+layout: privacy
+---
+{% assign lang = "en" %}
+{% if page.lang %}
+    {% assign lang = page.lang %}
+{% endif %}
+{% capture content_import %}{{ "privacy-default-" | append: lang | append: ".html" }}{% endcapture %}
+{% include one-css.html named="privacy-default" %}
+<header>
+    {{ page.title }}
+</header>
+<article class="content">
+    {% include {{ content_import }} %}
+</article>
+<footer>
+    AOPOD © {{ site.time | date: '%Y' }} • All rights reserved.
+</footer>

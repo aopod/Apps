@@ -1,0 +1,12 @@
+---
+---
+
+@charset 'UTF-8';
+
+// @import 'defaults';
+
+$default_font_stack: "lucida grande", "lucida sans unicode", "lucida,helvetica", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei" , "sans-serif";
+
+body {
+    font-family: $default_font_stack;
+}

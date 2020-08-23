@@ -1,0 +1,15 @@
+---
+noindex: true
+---
+<!DOCTYPE html>
+<html>
+    <head>
+{% include meta-info.html %}
+    <title>{% if page.title %}{{ page.title | escape }}{% elsif layout.title %}{{ layout.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+{% include link-info.html %}
+{% include style-info.html %}
+    </head>
+    <body>
+        {{ content }}
+    </body>
+</html>

@@ -1,0 +1,5 @@
+{% if include.named %}<script src="{{ '/js/' | append: include.named | append: '.js' | prepend: site: asset_path }}"></script>{% endif %}{% comment %}
+{% endcomment %}{% if include.src %}<script src="{{ include.src }}"></script>{% endif %}{% comment %}
+{% endcomment %}{% if include.content %}<script>
+{{ include.content }}
+</script>{% endif %}

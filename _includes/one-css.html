@@ -1,0 +1,2 @@
+{% if include.named %}<link rel="stylesheet" href="{{ '/css/' | append: include.named | append: '.css' | prepend: site.asset_path }}">{% endif %}{% comment %}
+{% endcomment %}{% if include.path %}<link rel="stylesheet" href="{{ include.path }}">{% endif %}
