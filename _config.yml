@@ -28,7 +28,7 @@ defaults:
     scope:
       path: "_apps/Shopod/privacy"
     values:
-      permalink: /Shopod/privacy/:basename
+      permalink: /Shopod/privacy/:basename/
 
 include:
   - _apps
