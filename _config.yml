@@ -29,6 +29,17 @@ defaults:
       path: "_apps/Shopod/privacy"
     values:
       permalink: /Shopod/privacy/:basename/
+  -
+    scope:
+      path: "_apps/Typin"
+    values:
+      layout: app_Typin
+      permalink: /Typin/:basename/
+  -
+    scope:
+      path: "_apps/Typin/privacy"
+    values:
+      permalink: /Typin/privacy/:basename/
 
 include:
   - _apps

@@ -1,0 +1,63 @@
+---
+layout: default
+---
+{% assign lang = "en" %}
+{% if page.lang %}
+    {% assign lang = page.lang %}
+{% endif %}
+{% include one-css.html named="typin" %}
+
+<div class="typin-showcase">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="app-title">{{ page.app_title }}</h1>
+            <p class="app-tagline">{{ page.app_tagline }}</p>
+            <div class="app-badges">
+                <!-- App Store badges - add when available -->
+            </div>
+        </div>
+        <div class="hero-visual">
+            <!-- Phone mockup or app preview - add when available -->
+        </div>
+    </section>
+
+    <!-- Language Switcher -->
+    <nav class="lang-switcher" aria-label="Language selection">
+        <ul>
+            <li><a href="/Typin/" class="{% if lang == 'en' %}active{% endif %}">English</a></li>
+            <li><a href="/Typin/zh-Hans/" class="{% if lang == 'zh-Hans' %}active{% endif %}">简体中文</a></li>
+            <li><a href="/Typin/zh-Hant/" class="{% if lang == 'zh-Hant' %}active{% endif %}">繁體中文</a></li>
+            <li><a href="/Typin/ja/" class="{% if lang == 'ja' %}active{% endif %}">日本語</a></li>
+            <li><a href="/Typin/ko/" class="{% if lang == 'ko' %}active{% endif %}">한국어</a></li>
+            <li><a href="/Typin/fr/" class="{% if lang == 'fr' %}active{% endif %}">Français</a></li>
+            <li><a href="/Typin/de/" class="{% if lang == 'de' %}active{% endif %}">Deutsch</a></li>
+        </ul>
+    </nav>
+
+    <!-- Feature Sections -->
+    <section class="features-intro">
+        <h2>{{ page.features_title }}</h2>
+        <p>{{ page.features_subtitle }}</p>
+    </section>
+
+    <!-- Feature Categories -->
+    {{ content }}
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <h2>{{ page.cta_title }}</h2>
+        <p>{{ page.cta_text }}</p>
+        <a href="#" class="download-btn">{{ page.download_button }}</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="typin-footer">
+        <p>AOPOD &copy; {{ site.time | date: '%Y' }}</p>
+        <nav>
+            <a href="/Typin/privacy/">Privacy Policy</a>
+        </nav>
+    </footer>
+</div>
+
+{% include analytics.html %}

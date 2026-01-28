@@ -1,7 +1,6 @@
 ---
 layout: privacy-default
-appName: Shopod
+appName: Typin
 lang: en
 title: Privacy Policy
-permalink: /Shopod/privacy/
 ---
