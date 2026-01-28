@@ -55,7 +55,7 @@ layout: default
     <footer class="typin-footer">
         <p>AOPOD &copy; {{ site.time | date: '%Y' }}</p>
         <nav>
-            <a href="/Typin/privacy/">Privacy Policy</a>
+            <a href="/Typin/privacy/{% if lang != 'en' %}{{ lang }}/{% endif %}" target="_blank">Privacy Policy</a>
         </nav>
     </footer>
 </div>
