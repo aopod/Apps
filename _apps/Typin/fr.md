@@ -2,7 +2,8 @@
 layout: app_Typin
 lang: fr
 permalink: /Typin/fr/
-app_title: "Typin - Éditeur Markdown"
+title: "Typin"
+app_title: "Typin"
 app_tagline: "L'édition Markdown élégante sur votre iPhone"
 features_title: "Fonctionnalités Puissantes"
 features_subtitle: "Tout ce dont vous avez besoin pour une rédaction Markdown productive"

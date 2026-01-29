@@ -2,7 +2,8 @@
 layout: app_Typin
 lang: zh-Hant
 permalink: /Typin/zh-Hant/
-app_title: "Typin - Markdown 編輯器"
+title: "Typin"
+app_title: "Typin"
 app_tagline: "在 iPhone 上體驗優雅的 Markdown 編輯"
 features_title: "強大功能"
 features_subtitle: "高效 Markdown 寫作所需的一切"

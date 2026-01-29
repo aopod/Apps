@@ -2,7 +2,8 @@
 layout: app_Typin
 lang: ko
 permalink: /Typin/ko/
-app_title: "Typin - Markdown 에디터"
+title: "Typin"
+app_title: "Typin"
 app_tagline: "iPhone에서 아름다운 Markdown 편집을"
 features_title: "강력한 기능"
 features_subtitle: "생산적인 Markdown 작성을 위해 필요한 모든 것"

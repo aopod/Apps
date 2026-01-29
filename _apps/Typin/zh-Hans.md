@@ -2,7 +2,8 @@
 layout: app_Typin
 lang: zh-Hans
 permalink: /Typin/zh-Hans/
-app_title: "Typin - Markdown 编辑器"
+title: "Typin"
+app_title: "Typin"
 app_tagline: "在 iPhone 上体验优雅的 Markdown 编辑"
 features_title: "强大功能"
 features_subtitle: "高效 Markdown 写作所需的一切"
