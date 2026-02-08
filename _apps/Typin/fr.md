@@ -10,6 +10,11 @@ features_subtitle: "Tout ce dont vous avez besoin pour une rédaction Markdown p
 cta_title: "Prêt à Écrire ?"
 cta_text: "Téléchargez Typin et commencez à créer de beaux documents Markdown dès aujourd'hui."
 download_button: "Télécharger sur l'App Store"
+wechat_overlay_title: "Ouvrir dans le navigateur système"
+wechat_overlay_message: "Pour télécharger l'application, veuillez ouvrir cette page dans Safari ou votre navigateur système."
+wechat_step_1: "Touchez le bouton Partager en haut à droite"
+wechat_step_2: "Faites défiler vers le bas et touchez 'Ouvrir dans le navigateur'"
+wechat_close_button: "J'ai compris"
 ---
 
 <div class="feature-category">

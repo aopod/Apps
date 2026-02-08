@@ -60,4 +60,89 @@ layout: default
     </footer>
 </div>
 
+<!-- WeChat Browser Warning Overlay -->
+<div id="wechat-overlay" class="wechat-overlay" hidden>
+    <div class="wechat-overlay-content">
+        <div class="wechat-overlay-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+        </div>
+        <h3 class="wechat-overlay-title">{{ page.wechat_overlay_title }}</h3>
+        <p class="wechat-overlay-message">{{ page.wechat_overlay_message }}</p>
+        <div class="wechat-overlay-steps">
+            <div class="step-item">
+                <span class="step-number">1</span>
+                <span>{{ page.wechat_step_1 }}</span>
+            </div>
+            <div class="step-item">
+                <span class="step-number">2</span>
+                <span>{{ page.wechat_step_2 }}</span>
+            </div>
+        </div>
+        <button class="wechat-overlay-close">{{ page.wechat_close_button }}</button>
+    </div>
+</div>
+
 {% include analytics.html %}
+{% include one-script.html content="
+// WeChat Browser Detection and Overlay
+(function() {
+    const overlay = document.getElementById('wechat-overlay');
+    const downloadBtn = document.querySelector('.download-btn');
+    const closeBtn = document.querySelector('.wechat-overlay-close');
+
+    // Detection functions
+    function isIOS() {
+        return /iPhone|iPad|iPod/i.test(navigator.userAgent);
+    }
+
+    function isWeChat() {
+        return /MicroMessenger/i.test(navigator.userAgent);
+    }
+
+    function shouldShowOverlay() {
+        return isIOS() && isWeChat();
+    }
+
+    // Show overlay
+    function showOverlay(e) {
+        if (shouldShowOverlay()) {
+            e.preventDefault();
+            overlay.hidden = false;
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    // Hide overlay
+    function hideOverlay() {
+        overlay.hidden = true;
+        document.body.style.overflow = '';
+    }
+
+    // Event listeners
+    if (downloadBtn) {
+        downloadBtn.addEventListener('click', showOverlay);
+    }
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', hideOverlay);
+    }
+
+    // Close on backdrop click
+    if (overlay) {
+        overlay.addEventListener('click', function(e) {
+            if (e.target === overlay) {
+                hideOverlay();
+            }
+        });
+    }
+
+    // Close on Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && !overlay.hidden) {
+            hideOverlay();
+        }
+    });
+})();
+" %}

@@ -10,6 +10,11 @@ features_subtitle: "生産的なMarkdownライティングに必要なすべて"
 cta_title: "執筆を始めよう"
 cta_text: "Typinをダウンロードして、美しいMarkdownドキュメントの作成を始めましょう。"
 download_button: "App Storeでダウンロード"
+wechat_overlay_title: "システムブラウザで開く"
+wechat_overlay_message: "アプリをダウンロードするには、Safariまたはシステムブラウザでこのページを開いてください。"
+wechat_step_1: "右上の共有ボタンをタップ"
+wechat_step_2: "下にスクロールして'ブラウザで開く'をタップ"
+wechat_close_button: "了解しました"
 ---
 
 <div class="feature-category">

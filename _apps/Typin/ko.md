@@ -10,6 +10,11 @@ features_subtitle: "생산적인 Markdown 작성을 위해 필요한 모든 것"
 cta_title: "작성 시작하기"
 cta_text: "Typin을 다운로드하고 아름다운 Markdown 문서 작성을 시작하세요."
 download_button: "App Store에서 다운로드"
+wechat_overlay_title: "시스템 브라우저에서 열기"
+wechat_overlay_message: "앱을 다운로드하려면 Safari 또는 시스템 브라우저에서 이 페이지를 여십시오."
+wechat_step_1: "우측 상단의 공유 버튼 탭"
+wechat_step_2: "아래로 스크롤하여'브라우저에서 열기'탭"
+wechat_close_button: "알겠습니다"
 ---
 
 <div class="feature-category">

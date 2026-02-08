@@ -10,6 +10,11 @@ features_subtitle: "高效 Markdown 寫作所需的一切"
 cta_title: "開始寫作"
 cta_text: "立即下載 Typin，開始創建精美的 Markdown 文件。"
 download_button: "在 App Store 下載"
+wechat_overlay_title: "在系統瀏覽器中打開"
+wechat_overlay_message: "要下載應用，請在 Safari 或系統瀏覽器中打開此頁面。"
+wechat_step_1: "點擊右上角的分享按鈕"
+wechat_step_2: "向下滾動並點擊'在瀏覽器中打開'"
+wechat_close_button: "知道了"
 ---
 
 <div class="feature-category">
