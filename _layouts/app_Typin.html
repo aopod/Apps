@@ -55,7 +55,7 @@ layout: default
     <!-- Language Switcher -->
     <nav class="lang-switcher" aria-label="Language selection">
         <ul>
-            <li><a href="/Typin/" class="{% if lang == 'en' %}active{% endif %}">English</a></li>
+            <li><a href="/Typin/en/" class="{% if lang == 'en' %}active{% endif %}">English</a></li>
             <li><a href="/Typin/zh-Hans/" class="{% if lang == 'zh-Hans' %}active{% endif %}">简体中文</a></li>
             <li><a href="/Typin/zh-Hant/" class="{% if lang == 'zh-Hant' %}active{% endif %}">繁體中文</a></li>
             <li><a href="/Typin/ja/" class="{% if lang == 'ja' %}active{% endif %}">日本語</a></li>
@@ -85,7 +85,7 @@ layout: default
     <footer class="typin-footer">
         <p>AOPOD &copy; {{ site.time | date: '%Y' }}</p>
         <nav>
-            <a href="/Typin/privacy/{% if lang != 'en' %}{{ lang }}/{% endif %}" target="_blank">Privacy Policy</a>
+            <a href="/Typin/privacy/{{ lang }}/" target="_blank">Privacy Policy</a>
         </nav>
     </footer>
 </div>
