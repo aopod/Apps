@@ -15,6 +15,10 @@ wechat_overlay_message: "Pour télécharger l'application, veuillez ouvrir cette
 wechat_step_1: "Touchez le bouton Partager en haut à droite"
 wechat_step_2: "Faites défiler vers le bas et touchez 'Ouvrir dans le navigateur'"
 wechat_close_button: "J'ai compris"
+floating_anchor_label: "Aller au téléchargement"
+mobile_banner_title: "Typin"
+mobile_banner_subtitle: "Gratuit sur l'App Store"
+mobile_banner_cta: "Télécharger"
 ---
 
 <div class="feature-category">

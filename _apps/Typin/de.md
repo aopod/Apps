@@ -15,6 +15,10 @@ wechat_overlay_message: "Um die App herunterzuladen, öffnen Sie diese Seite bit
 wechat_step_1: "Tippen Sie oben rechts auf die Teilen-Schaltfläche"
 wechat_step_2: "Scrollen Sie nach unten und tippen Sie auf 'In Browser öffnen'"
 wechat_close_button: "Verstanden"
+floating_anchor_label: "Zum Download springen"
+mobile_banner_title: "Typin"
+mobile_banner_subtitle: "Kostenlos im App Store"
+mobile_banner_cta: "Herunterladen"
 ---
 
 <div class="feature-category">

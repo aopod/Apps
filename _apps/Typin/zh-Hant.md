@@ -15,6 +15,10 @@ wechat_overlay_message: "要下載應用，請在 Safari 或系統瀏覽器中�
 wechat_step_1: "點擊右上角的分享按鈕"
 wechat_step_2: "向下滾動並點擊'在瀏覽器中打開'"
 wechat_close_button: "知道了"
+floating_anchor_label: "跳轉到下載"
+mobile_banner_title: "Typin"
+mobile_banner_subtitle: "App Store 免費下載"
+mobile_banner_cta: "下載"
 ---
 
 <div class="feature-category">

@@ -15,6 +15,10 @@ wechat_overlay_message: "To download the app, please open this page in Safari or
 wechat_step_1: "Tap the Share button in the top right"
 wechat_step_2: "Scroll down and tap 'Open in Browser'"
 wechat_close_button: "Got it"
+floating_anchor_label: "Jump to Download"
+mobile_banner_title: "Typin"
+mobile_banner_subtitle: "Free on App Store"
+mobile_banner_cta: "Download"
 ---
 
 <div class="feature-category">

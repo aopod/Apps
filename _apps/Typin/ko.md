@@ -15,6 +15,10 @@ wechat_overlay_message: "앱을 다운로드하려면 Safari 또는 시스템 �
 wechat_step_1: "우측 상단의 공유 버튼 탭"
 wechat_step_2: "아래로 스크롤하여'브라우저에서 열기'탭"
 wechat_close_button: "알겠습니다"
+floating_anchor_label: "다운로드로 이동"
+mobile_banner_title: "Typin"
+mobile_banner_subtitle: "App Store에서 무료"
+mobile_banner_cta: "다운로드"
 ---
 
 <div class="feature-category">

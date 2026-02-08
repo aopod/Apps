@@ -431,6 +431,173 @@ $spacing-xl: 4rem;
     }
 }
 
+// Floating Anchor Button
+.floating-anchor-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background-size: 200% 200%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(108, 92, 231, 0.4);
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 1000;
+    animation: gradientShift 5s ease infinite, float 4s ease-in-out infinite;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    pointer-events: none;
+
+    svg {
+        width: 1.75rem;
+        height: 1.75rem;
+        fill: white;
+        transition: transform 0.3s ease;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 12px 32px rgba(108, 92, 231, 0.5);
+
+        svg {
+            transform: translateY(0.25rem);
+        }
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+}
+
+// Show button after scrolling past hero
+.floating-anchor-btn.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+// Mobile Download Banner
+.mobile-download-banner {
+    display: none;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background-size: 200% 200%;
+    animation: gradientShift 5s ease infinite;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.mobile-download-banner.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.mobile-banner-link {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 0.75rem 1rem;
+
+    &:active {
+        opacity: 0.8;
+    }
+}
+
+.banner-content {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.banner-icon {
+    flex-shrink: 0;
+
+    svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        fill: white;
+    }
+}
+
+.banner-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+    color: white !important;
+    min-width: 0;
+}
+
+.banner-title {
+    font-weight: 700;
+    font-size: 0.95rem;
+    line-height: 1.2;
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    white-space: nowrap;
+    overflow: visible;
+}
+
+.banner-subtitle {
+    font-weight: 500;
+    font-size: 0.75rem;
+    opacity: 0.9;
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    white-space: nowrap;
+    overflow: visible;
+}
+
+.banner-cta {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    margin-left: auto;
+    padding-left: 0.75rem;
+}
+
+.cta-text {
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    white-space: nowrap;
+}
+
+.cta-arrow {
+    width: 1.125rem;
+    height: 1.125rem;
+    fill: #FFFFFF !important;
+    transition: transform 0.3s ease;
+    animation: bounceDown 1.5s ease-in-out infinite;
+}
+
+@keyframes bounceDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(3px);
+    }
+}
+
+.mobile-banner-link:active .cta-arrow {
+    transform: translateY(2px);
+    animation: none;
+}
+
+// Direct span selector for banner text
+.mobile-banner-link span {
+    color: #FFFFFF !important;
+}
+
 // Footer
 .typin-footer {
     text-align: center;
@@ -485,6 +652,16 @@ $spacing-xl: 4rem;
     .download-btn {
         padding: 0.875rem 2rem;
         font-size: 1rem;
+    }
+
+    // Hide floating button on mobile
+    .floating-anchor-btn {
+        display: none;
+    }
+
+    // Show mobile banner on mobile
+    .mobile-download-banner {
+        display: block;
     }
 }
 
