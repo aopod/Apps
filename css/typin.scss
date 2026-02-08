@@ -44,6 +44,14 @@ $spacing-md: 1rem;
 $spacing-lg: 2rem;
 $spacing-xl: 4rem;
 
+// Reset HTML and body to remove default margins/padding
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
 // CSS Custom Properties for theming
 :root {
     color-scheme: light dark;
