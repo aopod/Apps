@@ -116,6 +116,134 @@ layout: default
 
 {% include analytics.html %}
 {% include one-script.html content="
+// Browser Language Detection and Automatic Redirection
+(function() {
+    const SUPPORTED_LANGUAGES = {
+        'en': 'en',
+        'zh-cn': 'zh-Hans',
+        'zh-sg': 'zh-Hans',
+        'zh-tw': 'zh-Hant',
+        'zh-hk': 'zh-Hant',
+        'zh-mo': 'zh-Hant',
+        'zh': 'zh-Hans',
+        'ja': 'ja',
+        'ko': 'ko',
+        'fr': 'fr',
+        'de': 'de'
+    };
+
+    function getBrowserLanguage() {
+        if (navigator.languages && navigator.languages.length > 0) {
+            return navigator.languages[0];
+        }
+        return navigator.language || 'en';
+    }
+
+    function resolveLanguage(browserLang) {
+        const normalized = browserLang.toLowerCase().trim();
+
+        if (SUPPORTED_LANGUAGES[normalized]) {
+            return SUPPORTED_LANGUAGES[normalized];
+        }
+
+        const langFamily = normalized.split('-')[0];
+        if (SUPPORTED_LANGUAGES[langFamily]) {
+            return SUPPORTED_LANGUAGES[langFamily];
+        }
+
+        return 'en';
+    }
+
+    function getUserLanguagePreference() {
+        const savedLang = localStorage.getItem('typin_user_lang');
+        if (savedLang) {
+            const validLangs = ['en', 'zh-Hans', 'zh-Hant', 'ja', 'ko', 'fr', 'de'];
+            if (validLangs.includes(savedLang)) {
+                return savedLang;
+            }
+        }
+        return null;
+    }
+
+    function shouldRedirect(currentPath, detectedLang) {
+        // Only redirect from the root /Typin/ or /Typin path
+        if (currentPath !== '/Typin/' && currentPath !== '/Typin') {
+            return false;
+        }
+
+        // Prevent redirect loops with cooldown
+        const lastRedirect = sessionStorage.getItem('typin_lang_redirect');
+        if (lastRedirect) {
+            const timeSinceRedirect = Date.now() - parseInt(lastRedirect);
+            if (timeSinceRedirect < 1000) {
+                return false;
+            }
+        }
+
+        const targetPath = '/Typin/' + detectedLang + '/';
+        return currentPath !== targetPath;
+    }
+
+    function performRedirect(targetPath) {
+        sessionStorage.setItem('typin_lang_redirect', Date.now().toString());
+        window.location.href = targetPath;
+    }
+
+    function detectAndRedirect() {
+        const currentPath = window.location.pathname;
+
+        // Check for saved user preference first
+        const userPreference = getUserLanguagePreference();
+        if (userPreference) {
+            const targetPath = '/Typin/' + userPreference + '/';
+            if (currentPath !== targetPath && (currentPath === '/Typin/' || currentPath === '/Typin')) {
+                performRedirect(targetPath);
+            }
+            return;
+        }
+
+        // Detect browser language
+        const browserLang = getBrowserLanguage();
+        const detectedLang = resolveLanguage(browserLang);
+
+        if (shouldRedirect(currentPath, detectedLang)) {
+            const targetPath = '/Typin/' + detectedLang + '/';
+            performRedirect(targetPath);
+        }
+    }
+
+    function setupLanguageSwitcher() {
+        const langLinks = document.querySelectorAll('.lang-switcher a');
+        langLinks.forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                const langMatch = href.match(/\/Typin\/([^/]+)\/?/);
+                if (langMatch) {
+                    const lang = langMatch[1];
+                    if (lang === '' || lang === 'Typin') {
+                        // English selected, clear preference
+                        localStorage.removeItem('typin_user_lang');
+                    } else {
+                        localStorage.setItem('typin_user_lang', lang);
+                    }
+                    sessionStorage.setItem('typin_lang_redirect', Date.now().toString());
+                }
+            });
+        });
+    }
+
+    // Initialize
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function() {
+            detectAndRedirect();
+            setupLanguageSwitcher();
+        });
+    } else {
+        detectAndRedirect();
+        setupLanguageSwitcher();
+    }
+})();
+
 // WeChat Browser Detection and Overlay
 (function() {
     const overlay = document.getElementById('wechat-overlay');
