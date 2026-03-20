@@ -52,6 +52,34 @@ mobile_banner_cta: "下載"
             <h3>文字操作</h3>
             <p>智慧複製根據焦點狀態自適應：無焦點複製全部，有焦點彈出選項選單。支援複製目前行、選中目前行、貼上、替換行和清空文件。</p>
         </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H9V5h6v2z"/></svg>
+            </div>
+            <h3>剪貼簿提示</h3>
+            <p>從後台切回前台時自動檢測剪貼簿內容變化，智慧顯示貼上選項。根據編輯器焦點狀態提供不同的操作：貼上、替換目前行或插入到末尾，支援長按剔除空行。</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 6.5v3h-3v-3h3M11 5H5v6h6V5zm-1.5 9.5v3h-3v-3h3M11 13H5v6h6v-6zm6.5-6.5v3h-3v-3h3M19 5h-6v6h6V5zm-6 8h1.5v1.5H13V13zm1.5 1.5H16V16h-1.5v-1.5zM16 13h1.5v1.5H16V13zm-3 3h1.5v1.5H13V16zm1.5 1.5H16V19h-1.5v-1.5zM16 16h1.5v1.5H16V16zm1.5-1.5H19V16h-1.5v-1.5zm0 3H19V19h-1.5v-1.5zM19 13h-1.5v1.5H19V13z"/></svg>
+            </div>
+            <h3>二維碼掃描</h3>
+            <p>內建二維碼掃描功能，快速將掃描內容插入到文件中。掃描前有焦點則插入到游標位置，無焦點則追加到末尾，支援複製並儲存操作。</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 10.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zm0-6c-.83 0-1.5.67-1.5 1.5S3.17 7.5 4 7.5 5.5 6.83 5.5 6 4.83 4.5 4 4.5zm0 12c-.83 0-1.5.68-1.5 1.5s.68 1.5 1.5 1.5 1.5-.68 1.5-1.5-.67-1.5-1.5-1.5zM7 19h14v-2H7v2zm0-6h14v-2H7v2zm0-8v2h14V5H7z"/></svg>
+            </div>
+            <h3>標題跳轉</h3>
+            <p>Markdown 模式下快速查看文件標題大綱，點擊即可跳轉到對應位置。支援 H1-H6 多級標題，標題層級用不同顏色指示。</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2.5 4v3h5v12h3V7h5V4h-13zm19 5h-9v3h3v7h3v-7h3V9z"/></svg>
+            </div>
+            <h3>字數統計</h3>
+            <p>即時顯示文件字數統計，在頂部工具列清晰呈現。支援多種語言的字數計算，分享文件時字數單位自動適配語言。</p>
+        </div>
     </div>
 </div>
 
@@ -78,6 +106,13 @@ mobile_banner_cta: "下載"
             </div>
             <h3>文件元資料</h3>
             <p>自動記錄文件的建立時間、修改時間、字數統計和預覽內容。相對時間顯示根據應用語言自動格式化。</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>
+            </div>
+            <h3>資源回收桶</h3>
+            <p>刪除的文件會移入資源回收桶而非永久刪除，支援隨時恢復。資源回收桶顯示已刪除文件列表，可單個恢復或永久刪除，也支援清空資源回收桶。</p>
         </div>
     </div>
 </div>
@@ -146,6 +181,13 @@ mobile_banner_cta: "下載"
             </div>
             <h3>自動儲存</h3>
             <p>可配置的自動儲存間隔（10秒、30秒、60秒、120秒），再也不會遺失工作內容。應用進入背景時自動儲存，待儲存文件追蹤避免不必要的儲存。</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </div>
+            <h3>捲動位置記憶</h3>
+            <p>自動記錄每個文件的捲動位置，切換文件後再回來時自動恢復到上次閱讀位置。按文件 ID 記憶，資料與文件獨立關聯。</p>
         </div>
     </div>
 </div>

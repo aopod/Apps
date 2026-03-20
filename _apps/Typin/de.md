@@ -52,6 +52,34 @@ mobile_banner_cta: "Herunterladen"
             <h3>Textoperationen</h3>
             <p>Intelligentes Kopieren passt sich an Fokusstatus an: Alles kopieren bei keinem Fokus, Optionsmenü anzeigen bei Fokus. Unterstützt Kopieren der aktuellen Zeile, Auswählen, Einfügen, Zeile ersetzen und Dokument löschen.</p>
         </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H9V5h6v2z"/></svg>
+            </div>
+            <h3>Zwischenablage-Hinweis</h3>
+            <p>Erkennt automatisch Zwischenablage-Änderungen bei Rückkehr aus dem Hintergrund und zeigt intelligente Einfügeoptionen. Bietet je nach Editor-Fokus: Einfügen, aktuelle Zeile ersetzen oder am Ende anhängen. Lange drücken zum Entfernen leerer Zeilen.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 6.5v3h-3v-3h3M11 5H5v6h6V5zm-1.5 9.5v3h-3v-3h3M11 13H5v6h6v-6zm6.5-6.5v3h-3v-3h3M19 5h-6v6h6V5zm-6 8h1.5v1.5H13V13zm1.5 1.5H16V16h-1.5v-1.5zM16 13h1.5v1.5H16V13zm-3 3h1.5v1.5H13V16zm1.5 1.5H16V19h-1.5v-1.5zM16 16h1.5v1.5H16V16zm1.5-1.5H19V16h-1.5v-1.5zm0 3H19V19h-1.5v-1.5zM19 13h-1.5v1.5H19V13z"/></svg>
+            </div>
+            <h3>QR-Code-Scanner</h3>
+            <p>Integrierter QR-Code-Scanner zum schnellen Einfügen gescannter Inhalte in Dokumente. Fügt bei Fokus an Cursorposition ein, sonst am Ende. Unterstützt Kopieren und Speichern.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 10.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zm0-6c-.83 0-1.5.67-1.5 1.5S3.17 7.5 4 7.5 5.5 6.83 5.5 6 4.83 4.5 4 4.5zm0 12c-.83 0-1.5.68-1.5 1.5s.68 1.5 1.5 1.5 1.5-.68 1.5-1.5-.67-1.5-1.5-1.5zM7 19h14v-2H7v2zm0-6h14v-2H7v2zm0-8v2h14V5H7z"/></svg>
+            </div>
+            <h3>Überschriften-Navigation</h3>
+            <p>Schnelle Dokumentübersicht im Markdown-Modus. Tippen Sie auf eine Überschrift um dorthin zu springen. Unterstützt H1-H6 Ebenen mit farbcodierten Hierarchieanzeigen.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2.5 4v3h5v12h3V7h5V4h-13zm19 5h-9v3h3v7h3v-7h3V9z"/></svg>
+            </div>
+            <h3>Wortzahl</h3>
+            <p>Echtzeit-Wortzahl klar in der oberen Toolbar angezeigt. Unterstützt Wortzählung für mehrere Sprachen mit automatischer Einheitsanpassung beim Teilen von Dokumenten.</p>
+        </div>
     </div>
 </div>
 
@@ -78,6 +106,13 @@ mobile_banner_cta: "Herunterladen"
             </div>
             <h3>Dokument-Metadaten</h3>
             <p>Verfolgt automatisch Erstellungszeit, Änderungszeit, Wortanzahl und Vorschaudaten. Relativzeit-Anzeige formatiert sich automatisch nach der App-Sprache.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>
+            </div>
+            <h3>Papierkorb</h3>
+            <p>Gelöschte Dokumente werden in den Papierkorb verschoben statt permanent gelöscht, mit jederzeitiger Wiederherstellung. Der Papierkorb zeigt eine Liste gelöschter Dokumente für einzelne Wiederherstellung oder dauerhafte Löschung, mit Option zum Leeren.</p>
         </div>
     </div>
 </div>
@@ -146,6 +181,13 @@ mobile_banner_cta: "Herunterladen"
             </div>
             <h3>Automatisches Speichern</h3>
             <p>Konfigurierbare Auto-Save-Intervalle (10s, 30s, 60s, 120s) sorgen dafür, dass Sie nie Ihre Arbeit verlieren. Automatisches Speichern wenn App in Hintergrund geht, mit Tracking der ausstehenden Dokumente um unnötige Speicherungen zu vermeiden.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </div>
+            <h3>Scrollposition-Speicherung</h3>
+            <p>Merkt sich automatisch die Scrollposition für jedes Dokument. Beim Wechseln von Dokumenten wird die letzte Leseposition wiederhergestellt. Daten werden pro Dokument-ID unabhängig gespeichert.</p>
         </div>
     </div>
 </div>

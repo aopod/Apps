@@ -52,6 +52,34 @@ mobile_banner_cta: "下载"
             <h3>文本操作</h3>
             <p>智能复制根据焦点状态自适应：无焦点复制全部，有焦点弹出选项菜单。支持复制当前行、选中当前行、粘贴、替换行和清空文档。</p>
         </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H9V5h6v2z"/></svg>
+            </div>
+            <h3>剪贴板提示</h3>
+            <p>从后台切回前台时自动检测剪贴板内容变化，智能显示粘贴选项。根据编辑器焦点状态提供不同的操作：粘贴、替换当前行或插入到末尾，支持长按剔除空行。</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 6.5v3h-3v-3h3M11 5H5v6h6V5zm-1.5 9.5v3h-3v-3h3M11 13H5v6h6v-6zm6.5-6.5v3h-3v-3h3M19 5h-6v6h6V5zm-6 8h1.5v1.5H13V13zm1.5 1.5H16V16h-1.5v-1.5zM16 13h1.5v1.5H16V13zm-3 3h1.5v1.5H13V16zm1.5 1.5H16V19h-1.5v-1.5zM16 16h1.5v1.5H16V16zm1.5-1.5H19V16h-1.5v-1.5zm0 3H19V19h-1.5v-1.5zM19 13h-1.5v1.5H19V13z"/></svg>
+            </div>
+            <h3>二维码扫描</h3>
+            <p>内置二维码扫描功能，快速将扫描内容插入到文档中。扫描前有焦点则插入到光标位置，无焦点则追加到末尾，支持复制并保存操作。</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 10.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zm0-6c-.83 0-1.5.67-1.5 1.5S3.17 7.5 4 7.5 5.5 6.83 5.5 6 4.83 4.5 4 4.5zm0 12c-.83 0-1.5.68-1.5 1.5s.68 1.5 1.5 1.5 1.5-.68 1.5-1.5-.67-1.5-1.5-1.5zM7 19h14v-2H7v2zm0-6h14v-2H7v2zm0-8v2h14V5H7z"/></svg>
+            </div>
+            <h3>标题跳转</h3>
+            <p>Markdown 模式下快速查看文档标题大纲，点击即可跳转到对应位置。支持 H1-H6 多级标题，标题层级用不同颜色指示。</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2.5 4v3h5v12h3V7h5V4h-13zm19 5h-9v3h3v7h3v-7h3V9z"/></svg>
+            </div>
+            <h3>字数统计</h3>
+            <p>实时显示文档字数统计，在顶部工具栏清晰呈现。支持多种语言的字数计算，分享文档时字数单位自动适配语言。</p>
+        </div>
     </div>
 </div>
 
@@ -78,6 +106,13 @@ mobile_banner_cta: "下载"
             </div>
             <h3>文档元数据</h3>
             <p>自动记录文档的创建时间、修改时间、字数统计和预览内容。相对时间显示根据应用语言自动格式化。</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>
+            </div>
+            <h3>回收站功能</h3>
+            <p>删除的文档会移入回收站而非永久删除，支持随时恢复。回收站显示已删除文档列表，可单个恢复或永久删除，也支持清空回收站。</p>
         </div>
     </div>
 </div>
@@ -146,6 +181,13 @@ mobile_banner_cta: "下载"
             </div>
             <h3>自动保存</h3>
             <p>可配置的自动保存间隔（10秒、30秒、60秒、120秒），再也不会丢失工作内容。应用进入后台时自动保存，待保存文档跟踪避免不必要的保存。</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </div>
+            <h3>滚动位置记忆</h3>
+            <p>自动记录每个文档的滚动位置，切换文档后再回来时自动恢复到上次阅读位置。按文档 ID 记忆，数据与文档独立关联。</p>
         </div>
     </div>
 </div>

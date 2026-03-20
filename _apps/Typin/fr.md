@@ -52,6 +52,34 @@ mobile_banner_cta: "Télécharger"
             <h3>Opérations de Texte</h3>
             <p>La copie intelligente s'adapte à l'état du focus : copier tout quand pas de focus, afficher le menu d'options quand focus. Supporte la copie de la ligne actuelle, la sélection, le collage, le remplacement de ligne et l'effacement du document.</p>
         </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H9V5h6v2z"/></svg>
+            </div>
+            <h3>Notification Presse-papiers</h3>
+            <p>Détecte automatiquement les changements du presse-papiers lors du retour de l'arrière-plan. Options de collage intelligentes selon le focus : coller, remplacer la ligne actuelle ou ajouter à la fin. Appui long pour supprimer les lignes vides.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 6.5v3h-3v-3h3M11 5H5v6h6V5zm-1.5 9.5v3h-3v-3h3M11 13H5v6h6v-6zm6.5-6.5v3h-3v-3h3M19 5h-6v6h6V5zm-6 8h1.5v1.5H13V13zm1.5 1.5H16V16h-1.5v-1.5zM16 13h1.5v1.5H16V13zm-3 3h1.5v1.5H13V16zm1.5 1.5H16V19h-1.5v-1.5zM16 16h1.5v1.5H16V16zm1.5-1.5H19V16h-1.5v-1.5zm0 3H19V19h-1.5v-1.5zM19 13h-1.5v1.5H19V13z"/></svg>
+            </div>
+            <h3>Scanner QR Code</h3>
+            <p>Scanner QR code intégré pour insérer rapidement le contenu scanné dans les documents. Insère à la position du curseur si focus, sinon à la fin. Supporte les opérations copier et sauvegarder.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 10.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zm0-6c-.83 0-1.5.67-1.5 1.5S3.17 7.5 4 7.5 5.5 6.83 5.5 6 4.83 4.5 4 4.5zm0 12c-.83 0-1.5.68-1.5 1.5s.68 1.5 1.5 1.5 1.5-.68 1.5-1.5-.67-1.5-1.5-1.5zM7 19h14v-2H7v2zm0-6h14v-2H7v2zm0-8v2h14V5H7z"/></svg>
+            </div>
+            <h3>Navigation par Titres</h3>
+            <p>Vue rapide du plan du document en mode Markdown. Touchez un titre pour y sauter. Supporte les niveaux H1-H6 avec indicateurs de hiérarchie colorés.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2.5 4v3h5v12h3V7h5V4h-13zm19 5h-9v3h3v7h3v-7h3V9z"/></svg>
+            </div>
+            <h3>Compteur de Mots</h3>
+            <p>Comptage des mots en temps réel affiché clairement dans la barre d'outils supérieure. Supporte le comptage pour plusieurs langues avec adaptation automatique des unités lors du partage.</p>
+        </div>
     </div>
 </div>
 
@@ -78,6 +106,13 @@ mobile_banner_cta: "Télécharger"
             </div>
             <h3>Métadonnées du Document</h3>
             <p>Suit automatiquement l'heure de création, l'heure de modification, le nombre de mots et le contenu de prévisualisation. L'affichage de l'heure relative se formate automatiquement selon la langue de l'application.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>
+            </div>
+            <h3>Corbeille</h3>
+            <p>Les documents supprimés sont déplacés vers la corbeille au lieu d'être supprimés définitivement, avec restauration possible à tout moment. La corbeille affiche la liste des documents supprimés pour restauration individuelle ou suppression permanente.</p>
         </div>
     </div>
 </div>
@@ -146,6 +181,13 @@ mobile_banner_cta: "Télécharger"
             </div>
             <h3>Sauvegarde Automatique</h3>
             <p>Intervalles de sauvegarde automatique configurables (10s, 30s, 60s, 120s) pour ne jamais perdre votre travail. Sauvegarde automatique lorsque l'application passe en arrière-plan, avec le suivi des documents en attente pour éviter les sauvegardes inutiles.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </div>
+            <h3>Mémorisation du Défilement</h3>
+            <p>Mémorise automatiquement la position de défilement pour chaque document. Lors du changement de documents, restaure la dernière position de lecture. Données stockées par ID de document pour un suivi indépendant.</p>
         </div>
     </div>
 </div>

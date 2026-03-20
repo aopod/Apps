@@ -52,6 +52,34 @@ mobile_banner_cta: "Download"
             <h3>Text Operations</h3>
             <p>Smart copy adapts to focus state: copy all when no focus, show options menu when focused. Supports copying current line, selecting current line, pasting, replacing line, and clearing document.</p>
         </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H9V5h6v2z"/></svg>
+            </div>
+            <h3>Clipboard Prompt</h3>
+            <p>Automatically detects clipboard changes when returning from background. Smart paste options based on editor focus: paste, replace current line, or append to end. Long press to strip empty lines.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 6.5v3h-3v-3h3M11 5H5v6h6V5zm-1.5 9.5v3h-3v-3h3M11 13H5v6h6v-6zm6.5-6.5v3h-3v-3h3M19 5h-6v6h6V5zm-6 8h1.5v1.5H13V13zm1.5 1.5H16V16h-1.5v-1.5zM16 13h1.5v1.5H16V13zm-3 3h1.5v1.5H13V16zm1.5 1.5H16V19h-1.5v-1.5zM16 16h1.5v1.5H16V16zm1.5-1.5H19V16h-1.5v-1.5zm0 3H19V19h-1.5v-1.5zM19 13h-1.5v1.5H19V13z"/></svg>
+            </div>
+            <h3>QR Code Scanner</h3>
+            <p>Built-in QR code scanner to quickly insert scanned content into documents. Inserts at cursor position if focused, or appends to end otherwise. Supports copy and save operations.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 10.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zm0-6c-.83 0-1.5.67-1.5 1.5S3.17 7.5 4 7.5 5.5 6.83 5.5 6 4.83 4.5 4 4.5zm0 12c-.83 0-1.5.68-1.5 1.5s.68 1.5 1.5 1.5 1.5-.68 1.5-1.5-.67-1.5-1.5-1.5zM7 19h14v-2H7v2zm0-6h14v-2H7v2zm0-8v2h14V5H7z"/></svg>
+            </div>
+            <h3>Header Navigation</h3>
+            <p>Quick document outline view in Markdown mode. Tap any heading to jump to that position. Supports H1-H6 levels with color-coded hierarchy indicators.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2.5 4v3h5v12h3V7h5V4h-13zm19 5h-9v3h3v7h3v-7h3V9z"/></svg>
+            </div>
+            <h3>Word Count</h3>
+            <p>Real-time word count displayed clearly in the top toolbar. Supports word counting for multiple languages, with automatic unit adaptation when sharing documents.</p>
+        </div>
     </div>
 </div>
 
@@ -78,6 +106,13 @@ mobile_banner_cta: "Download"
             </div>
             <h3>Document Metadata</h3>
             <p>Automatically tracks document creation time, modification time, word count, and preview content. Relative time display auto-formats based on app language.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>
+            </div>
+            <h3>Trash</h3>
+            <p>Deleted documents move to trash instead of permanent deletion. Supports restoration anytime. Trash shows list of deleted documents for individual restore or permanent delete, with option to empty trash.</p>
         </div>
     </div>
 </div>
@@ -146,6 +181,13 @@ mobile_banner_cta: "Download"
             </div>
             <h3>Auto-Save</h3>
             <p>Configurable auto-save intervals (10s, 30s, 60s, 120s) ensure you never lose your work. Automatically saves when app enters background, with pending document tracking to avoid unnecessary saves.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 4 6.48 4 12s4.48 10 10 10 10-4.48 10-10S15.87 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            </div>
+            <h3>Scroll Position Memory</h3>
+            <p>Automatically remembers scroll position for each document. When switching documents, restores the last reading position. Data stored by document ID for independent tracking.</p>
         </div>
     </div>
 </div>
