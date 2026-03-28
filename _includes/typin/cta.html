@@ -1,0 +1,28 @@
+<!-- CTA Section -->
+<section class="cta-section" id="download-section">
+  <h2 class="cta-section__title">{{ page.cta_title | default: "Start Writing Today" }}</h2>
+  <p class="cta-section__subtitle">{{ page.cta_subtitle | default: "Free on the App Store. No account required." }}</p>
+  <a href="https://apps.apple.com/us/app/typin-focused-writing/id6758349989"
+     class="btn btn-primary" target="_blank" rel="noopener">
+    {{ page.cta_button | default: "Download on App Store" }}
+  </a>
+
+  <div class="cta-section__trust">
+    <div class="trust-item">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+      <span>{{ page.trust_1 | default: "Data Not Collected" }}</span>
+    </div>
+    <div class="trust-item">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg>
+      <span>{{ page.trust_2 | default: "iPhone & iPad" }}</span>
+    </div>
+    <div class="trust-item">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>
+      <span>{{ page.trust_3 | default: "7 Languages" }}</span>
+    </div>
+    <div class="trust-item">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.5 11H19V7c0-1.1-.9-2-2-2h-4V3.5C13 2.12 11.88 1 10.5 1S8 2.12 8 3.5V5H4c-1.1 0-1.99.9-1.99 2v3.8H3.5c1.49 0 2.7 1.21 2.7 2.7s-1.21 2.7-2.7 2.7H2V20c0 1.1.9 2 2 2h3.8v-1.5c0-1.49 1.21-2.7 2.7-2.7 1.49 0 2.7 1.21 2.7 2.7V22H17c1.1 0 2-.9 2-2v-4h1.5c1.38 0 2.5-1.12 2.5-2.5S21.88 11 20.5 11z"/></svg>
+      <span>{{ page.trust_4 | default: "Lightweight" }}</span>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,23 @@
+<!-- WeChat Browser Warning Overlay -->
+<div id="wechat-overlay" class="wechat-overlay" hidden>
+  <div class="wechat-overlay-content">
+    <div class="wechat-overlay-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+      </svg>
+    </div>
+    <h3 class="wechat-overlay-title">{{ page.wechat_overlay_title | default: "Open in System Browser" }}</h3>
+    <p class="wechat-overlay-message">{{ page.wechat_overlay_message | default: "To download the app, please open this page in Safari or your system browser." }}</p>
+    <div class="wechat-overlay-steps">
+      <div class="step-item">
+        <span class="step-number">1</span>
+        <span>{{ page.wechat_step_1 | default: "Tap the Share button in the top right" }}</span>
+      </div>
+      <div class="step-item">
+        <span class="step-number">2</span>
+        <span>{{ page.wechat_step_2 | default: "Scroll down and tap 'Open in Browser'" }}</span>
+      </div>
+    </div>
+    <button class="wechat-overlay-close">{{ page.wechat_close_button | default: "Got it" }}</button>
+  </div>
+</div>

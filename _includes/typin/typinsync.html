@@ -1,0 +1,53 @@
+<!-- TypinSync Section -->
+<section class="typinsync-section">
+  <div class="typinsync-content">
+    <div class="typinsync-info">
+      <h2 class="section__title">{{ page.typinsync_title | default: "TypinSync" }}</h2>
+      <p class="section__subtitle">{{ page.typinsync_subtitle | default: "Real-time sync. No cloud. Full privacy." }}</p>
+
+      <div class="typinsync-features">
+        <div class="typinsync-feature">
+          <div class="typinsync-feature__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          </div>
+          <span class="typinsync-feature__text">{{ page.typinsync_feature_1 | default: "Start on iPhone, continue on browser" }}</span>
+        </div>
+        <div class="typinsync-feature">
+          <div class="typinsync-feature__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          </div>
+          <span class="typinsync-feature__text">{{ page.typinsync_feature_2 | default: "Local network sync via HTTP" }}</span>
+        </div>
+        <div class="typinsync-feature">
+          <div class="typinsync-feature__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          </div>
+          <span class="typinsync-feature__text">{{ page.typinsync_feature_3 | default: "Optional password protection" }}</span>
+        </div>
+        <div class="typinsync-feature">
+          <div class="typinsync-feature__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          </div>
+          <span class="typinsync-feature__text">{{ page.typinsync_feature_4 | default: "Data never leaves your network" }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="typinsync-visual">
+      {% assign sync_image = page.typinsync_image | default: "/assets/typin/images/sync-en.jpg" %}
+      {% if sync_image %}
+      <img src="{{ sync_image }}"
+           alt="{{ page.typinsync_image_alt | default: 'TypinSync Real-time Sync' }}"
+           class="typinsync__image"
+           width="400"
+           height="280"
+           loading="lazy">
+      {% else %}
+      <!-- Sync visual placeholder -->
+      <div class="typinsync__placeholder">
+        Sync Illustration
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>

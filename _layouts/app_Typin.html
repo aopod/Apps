@@ -1,117 +1,44 @@
 ---
 layout: default
 ---
-{% assign lang = "en" %}
-{% if page.lang %}
-    {% assign lang = page.lang %}
-{% endif %}
+{% assign lang = page.lang | default: "en" %}
 {% include one-css.html named="typin" %}
 
-<div class="typin-showcase">
-    <!-- Mobile Download Banner -->
-    <div id="mobile-download-banner" class="mobile-download-banner">
-        <a href="#download-section" class="mobile-banner-link">
-            <div class="banner-content">
-                <div class="banner-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                        <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 52.3-11.4 69.5-34.3z"/>
-                    </svg>
-                </div>
-                <div class="banner-text">
-                    <span class="banner-title" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; font-weight: 700; font-size: 0.95rem;">{{ page.mobile_banner_title }}</span>
-                    <span class="banner-subtitle" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; font-weight: 500; font-size: 0.75rem;">{{ page.mobile_banner_subtitle }}</span>
-                </div>
-                <div class="banner-cta">
-                    <span class="cta-text" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">{{ page.mobile_banner_cta }}</span>
-                    <svg class="cta-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="fill: #FFFFFF !important;">
-                        <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
-                    </svg>
-                </div>
-            </div>
-        </a>
-    </div>
+<div class="typin-page" data-lang="{{ lang }}">
+  <!-- Mobile Download Banner -->
+  {% include typin/mobile-banner.html %}
 
+  <main>
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1 class="app-title">{{ page.app_title }}</h1>
-            <p class="app-tagline">{{ page.app_tagline }}</p>
-            <div class="app-badges">
-                <!-- App Store badges - add when available -->
-            </div>
-        </div>
-        <div class="hero-visual">
-            <!-- Phone mockup or app preview - add when available -->
-        </div>
-    </section>
-
-    <!-- Floating Anchor Button -->
-    <a href="#download-section" class="floating-anchor-btn" aria-label="{{ page.floating_anchor_label }}">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-            <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 52.3-11.4 69.5-34.3z"/>
-        </svg>
-    </a>
+    {% include typin/hero.html %}
 
     <!-- Language Switcher -->
-    <nav class="lang-switcher" aria-label="Language selection">
-        <ul>
-            <li><a href="/Typin/en/" class="{% if lang == 'en' %}active{% endif %}">English</a></li>
-            <li><a href="/Typin/zh-Hans/" class="{% if lang == 'zh-Hans' %}active{% endif %}">简体中文</a></li>
-            <li><a href="/Typin/zh-Hant/" class="{% if lang == 'zh-Hant' %}active{% endif %}">繁體中文</a></li>
-            <li><a href="/Typin/ja/" class="{% if lang == 'ja' %}active{% endif %}">日本語</a></li>
-            <li><a href="/Typin/ko/" class="{% if lang == 'ko' %}active{% endif %}">한국어</a></li>
-            <li><a href="/Typin/fr/" class="{% if lang == 'fr' %}active{% endif %}">Français</a></li>
-            <li><a href="/Typin/de/" class="{% if lang == 'de' %}active{% endif %}">Deutsch</a></li>
-        </ul>
-    </nav>
+    {% include typin/language-switcher.html %}
 
-    <!-- Feature Sections -->
-    <section class="features-intro">
-        <h2>{{ page.features_title }}</h2>
-        <p>{{ page.features_subtitle }}</p>
-    </section>
+    <!-- Core Value Section -->
+    {% include typin/core-value.html %}
 
-    <!-- Feature Categories -->
-    {{ content }}
+    <!-- TypinSync Section -->
+    {% include typin/typinsync.html %}
 
-    <!-- Call to Action -->
-    <section class="cta" id="download-section">
-        <h2>{{ page.cta_title }}</h2>
-        <p>{{ page.cta_text }}</p>
-        <a href="https://apps.apple.com/us/app/typin-focused-writing/id6758349989" class="download-btn" target="_blank">{{ page.download_button }}</a>
-    </section>
+    <!-- Use Cases Section -->
+    {% include typin/use-cases.html %}
 
-    <!-- Footer -->
-    <footer class="typin-footer">
-        <p>AOPOD &copy; {{ site.time | date: '%Y' }}</p>
-        <nav>
-            <a href="/Typin/privacy/{{ lang }}/" target="_blank">Privacy Policy</a>
-        </nav>
-    </footer>
-</div>
+    <!-- Capabilities Section -->
+    {% include typin/capabilities.html %}
 
-<!-- WeChat Browser Warning Overlay -->
-<div id="wechat-overlay" class="wechat-overlay" hidden>
-    <div class="wechat-overlay-content">
-        <div class="wechat-overlay-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-            </svg>
-        </div>
-        <h3 class="wechat-overlay-title">{{ page.wechat_overlay_title }}</h3>
-        <p class="wechat-overlay-message">{{ page.wechat_overlay_message }}</p>
-        <div class="wechat-overlay-steps">
-            <div class="step-item">
-                <span class="step-number">1</span>
-                <span>{{ page.wechat_step_1 }}</span>
-            </div>
-            <div class="step-item">
-                <span class="step-number">2</span>
-                <span>{{ page.wechat_step_2 }}</span>
-            </div>
-        </div>
-        <button class="wechat-overlay-close">{{ page.wechat_close_button }}</button>
-    </div>
+    <!-- CTA Section -->
+    {% include typin/cta.html %}
+  </main>
+
+  <!-- Footer -->
+  {% include typin/footer.html %}
+
+  <!-- Floating Anchor Button -->
+  {% include typin/floating-anchor.html %}
+
+  <!-- WeChat Browser Warning Overlay -->
+  {% include typin/wechat-overlay.html %}
 </div>
 
 {% include analytics.html %}
@@ -166,12 +93,10 @@ layout: default
     }
 
     function shouldRedirect(currentPath, detectedLang) {
-        // Only redirect from the root /Typin/ or /Typin path
         if (currentPath !== '/Typin/' && currentPath !== '/Typin') {
             return false;
         }
 
-        // Prevent redirect loops with cooldown
         const lastRedirect = sessionStorage.getItem('typin_lang_redirect');
         if (lastRedirect) {
             const timeSinceRedirect = Date.now() - parseInt(lastRedirect);
@@ -192,7 +117,6 @@ layout: default
     function detectAndRedirect() {
         const currentPath = window.location.pathname;
 
-        // Check for saved user preference first
         const userPreference = getUserLanguagePreference();
         if (userPreference) {
             const targetPath = '/Typin/' + userPreference + '/';
@@ -202,7 +126,6 @@ layout: default
             return;
         }
 
-        // Detect browser language
         const browserLang = getBrowserLanguage();
         const detectedLang = resolveLanguage(browserLang);
 
@@ -221,7 +144,6 @@ layout: default
                 if (langMatch) {
                     const lang = langMatch[1];
                     if (lang === '' || lang === 'Typin') {
-                        // English selected, clear preference
                         localStorage.removeItem('typin_user_lang');
                     } else {
                         localStorage.setItem('typin_user_lang', lang);
@@ -232,7 +154,6 @@ layout: default
         });
     }
 
-    // Initialize
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', function() {
             detectAndRedirect();
@@ -247,10 +168,9 @@ layout: default
 // WeChat Browser Detection and Overlay
 (function() {
     const overlay = document.getElementById('wechat-overlay');
-    const downloadBtn = document.querySelector('.download-btn');
+    const downloadBtns = document.querySelectorAll('.btn-primary');
     const closeBtn = document.querySelector('.wechat-overlay-close');
 
-    // Detection functions
     function isIOS() {
         return /iPhone|iPad|iPod/i.test(navigator.userAgent);
     }
@@ -263,7 +183,6 @@ layout: default
         return isIOS() && isWeChat();
     }
 
-    // Show overlay
     function showOverlay(e) {
         if (shouldShowOverlay()) {
             e.preventDefault();
@@ -272,22 +191,21 @@ layout: default
         }
     }
 
-    // Hide overlay
     function hideOverlay() {
         overlay.hidden = true;
         document.body.style.overflow = '';
     }
 
-    // Event listeners
-    if (downloadBtn) {
-        downloadBtn.addEventListener('click', showOverlay);
-    }
+    downloadBtns.forEach(function(btn) {
+        if (btn.getAttribute('href') && btn.getAttribute('href').includes('apps.apple.com')) {
+            btn.addEventListener('click', showOverlay);
+        }
+    });
 
     if (closeBtn) {
         closeBtn.addEventListener('click', hideOverlay);
     }
 
-    // Close on backdrop click
     if (overlay) {
         overlay.addEventListener('click', function(e) {
             if (e.target === overlay) {
@@ -296,78 +214,72 @@ layout: default
         });
     }
 
-    // Close on Escape key
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && !overlay.hidden) {
             hideOverlay();
         }
     });
+})();
 
-    // Floating Anchor Button & Mobile Banner
-    (function() {
-        const floatingBtn = document.querySelector('.floating-anchor-btn');
-        const mobileBanner = document.querySelector('#mobile-download-banner');
-        const downloadSection = document.querySelector('#download-section');
+// Floating Anchor Button & Mobile Banner
+(function() {
+    const floatingBtn = document.querySelector('.floating-anchor-btn');
+    const mobileBanner = document.querySelector('.mobile-download-banner');
+    const downloadSection = document.querySelector('#download-section');
 
-        if (!downloadSection) return;
+    if (!downloadSection) return;
 
-        // Smooth scroll handler
-        function handleSmoothScroll(e) {
-            e.preventDefault();
-            const targetId = e.currentTarget.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
+    function handleSmoothScroll(e) {
+        e.preventDefault();
+        const targetId = e.currentTarget.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
 
-            if (targetSection) {
-                const offsetTop = targetSection.offsetTop - 20;
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
-                targetSection.setAttribute('tabindex', '-1');
-                targetSection.focus();
-            }
+        if (targetSection) {
+            const offsetTop = targetSection.offsetTop - 20;
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+            });
+            targetSection.setAttribute('tabindex', '-1');
+            targetSection.focus();
         }
+    }
 
-        // Set up floating button
+    if (floatingBtn) {
+        floatingBtn.addEventListener('click', handleSmoothScroll);
+        floatingBtn.classList.add('visible');
+    }
+
+    if (mobileBanner) {
+        const mobileBannerLink = mobileBanner.querySelector('.mobile-banner-link') || mobileBanner.querySelector('a');
+        if (mobileBannerLink) {
+            mobileBannerLink.addEventListener('click', handleSmoothScroll);
+        }
+        mobileBanner.classList.add('visible');
+    }
+
+    window.addEventListener('scroll', function() {
+        const st = window.pageYOffset || document.documentElement.scrollTop;
+        const downloadSectionTop = downloadSection.offsetTop;
+        const windowHeight = window.innerHeight;
+
+        const shouldHide = st > downloadSectionTop - windowHeight;
+
         if (floatingBtn) {
-            floatingBtn.addEventListener('click', handleSmoothScroll);
-            floatingBtn.classList.add('visible');
+            if (shouldHide) {
+                floatingBtn.classList.remove('visible');
+            } else {
+                floatingBtn.classList.add('visible');
+            }
         }
 
-        // Set up mobile banner
         if (mobileBanner) {
-            const mobileBannerLink = mobileBanner.querySelector('.mobile-banner-link');
-            if (mobileBannerLink) {
-                mobileBannerLink.addEventListener('click', handleSmoothScroll);
+            if (shouldHide) {
+                mobileBanner.classList.remove('visible');
+            } else {
+                mobileBanner.classList.add('visible');
             }
-            mobileBanner.classList.add('visible');
         }
-
-        // Show/hide based on scroll position
-        window.addEventListener('scroll', function() {
-            const st = window.pageYOffset || document.documentElement.scrollTop;
-            const downloadSectionTop = downloadSection.offsetTop;
-            const windowHeight = window.innerHeight;
-
-            // Hide when download section is visible (within viewport)
-            const shouldHide = st > downloadSectionTop - windowHeight;
-
-            if (floatingBtn) {
-                if (shouldHide) {
-                    floatingBtn.classList.remove('visible');
-                } else {
-                    floatingBtn.classList.add('visible');
-                }
-            }
-
-            if (mobileBanner) {
-                if (shouldHide) {
-                    mobileBanner.classList.remove('visible');
-                } else {
-                    mobileBanner.classList.add('visible');
-                }
-            }
-        });
-    })();
+    });
 })();
 " %}

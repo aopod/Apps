@@ -1,0 +1,39 @@
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero__content">
+    <span class="hero__badge">{{ page.hero_badge | default: "Free" }}</span>
+    <h1 class="hero__title">{{ page.hero_title }}</h1>
+    <p class="hero__subtitle">{{ page.hero_subtitle }}</p>
+    <div class="hero__actions">
+      <a href="https://apps.apple.com/us/app/typin-focused-writing/id6758349989"
+         class="btn btn-primary" target="_blank" rel="noopener">
+        {{ page.hero_cta | default: "Download Free" }}
+      </a>
+      <a href="#core-value" class="btn btn-secondary">
+        {{ page.hero_secondary_cta | default: "Learn More" }}
+      </a>
+    </div>
+    <div class="hero__tags">
+      {% assign tags = page.hero_tags | split: "," %}
+      {% for tag in tags %}
+        <span class="tag">{{ tag | strip }}</span>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="hero__visual">
+    {% assign hero_image = page.hero_image | default: "/assets/typin/images/hero-en.jpg" %}
+    {% if hero_image %}
+    <img src="{{ hero_image }}"
+         alt="{{ page.hero_image_alt | default: 'Typin App Preview' }}"
+         class="hero__image"
+         width="280"
+         height="560"
+         loading="eager">
+    {% else %}
+    <!-- App preview placeholder -->
+    <div class="hero__placeholder">
+      App Preview
+    </div>
+    {% endif %}
+  </div>
+</section>

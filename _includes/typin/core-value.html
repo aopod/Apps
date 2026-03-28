@@ -1,0 +1,44 @@
+<!-- Core Value Section -->
+<section class="section" id="core-value">
+  <div class="section__header">
+    <h2 class="section__title">{{ page.core_value_title | default: "Why Typin" }}</h2>
+    <p class="section__subtitle">{{ page.core_value_subtitle | default: "Built for focused writing" }}</p>
+  </div>
+  <div class="core-value-grid">
+    <!-- Card 1: Distraction-Free -->
+    <div class="value-card">
+      <div class="value-card__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+      </div>
+      <h3 class="value-card__title">{{ page.cv_1_title | default: "Distraction-Free Writing" }}</h3>
+      <p class="value-card__desc">{{ page.cv_1_desc | default: "Clean interface. No clutter. Just you and your words." }}</p>
+    </div>
+
+    <!-- Card 2: Markdown -->
+    <div class="value-card">
+      <div class="value-card__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+      </div>
+      <h3 class="value-card__title">{{ page.cv_2_title | default: "Markdown, Perfected" }}</h3>
+      <p class="value-card__desc">{{ page.cv_2_desc | default: "Smart symbols, live preview, instant formatting." }}</p>
+    </div>
+
+    <!-- Card 3: Multi-Document -->
+    <div class="value-card">
+      <div class="value-card__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9H9V9h10v2zm-4 4H9v-2h6v2zm4-8H9V5h10v2z"/></svg>
+      </div>
+      <h3 class="value-card__title">{{ page.cv_3_title | default: "Multi-Document" }}</h3>
+      <p class="value-card__desc">{{ page.cv_3_desc | default: "Create, organize, switch. All your docs in one place." }}</p>
+    </div>
+
+    <!-- Card 4: TypinSync -->
+    <div class="value-card">
+      <div class="value-card__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+      </div>
+      <h3 class="value-card__title">{{ page.cv_4_title | default: "TypinSync" }}</h3>
+      <p class="value-card__desc">{{ page.cv_4_desc | default: "Real-time sync via local network. Your data stays with you." }}</p>
+    </div>
+  </div>
+</section>

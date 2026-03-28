@@ -1,0 +1,35 @@
+<!-- Use Cases Section -->
+<section class="section">
+  <div class="section__header">
+    <h2 class="section__title">{{ page.use_cases_title | default: "Made For" }}</h2>
+    <p class="section__subtitle">{{ page.use_cases_subtitle | default: "Perfect for different writing needs" }}</p>
+  </div>
+  <div class="use-cases-grid">
+    <!-- Writers -->
+    <div class="use-case-card">
+      <div class="use-case-card__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+      </div>
+      <h3 class="use-case-card__title">{{ page.uc_1_title | default: "Writers" }}</h3>
+      <p class="use-case-card__desc">{{ page.uc_1_desc | default: "Draft your next article, blog post, or story." }}</p>
+    </div>
+
+    <!-- Developers -->
+    <div class="use-case-card">
+      <div class="use-case-card__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
+      </div>
+      <h3 class="use-case-card__title">{{ page.uc_2_title | default: "Developers" }}</h3>
+      <p class="use-case-card__desc">{{ page.uc_2_desc | default: "Document code, write README files, take notes." }}</p>
+    </div>
+
+    <!-- Students -->
+    <div class="use-case-card">
+      <div class="use-case-card__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
+      </div>
+      <h3 class="use-case-card__title">{{ page.uc_3_title | default: "Students" }}</h3>
+      <p class="use-case-card__desc">{{ page.uc_3_desc | default: "Take lecture notes, organize study materials." }}</p>
+    </div>
+  </div>
+</section>
