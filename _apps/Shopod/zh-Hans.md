@@ -6,10 +6,7 @@ title: Shopod - 带总价的购物清单
 description: Shopod 是一款 iOS 购物清单应用，可以给商品记录价格和数量，并在购物时查看清单总价。
 permalink: /Shopod/zh-Hans/
 app_icon: ""
-hero_screenshot: "/assets/shopod/images/hero-en.jpg"
 hero_screenshot_alt: Shopod 购物清单界面
-screenshot_placeholder: 待补充真实截图
-screenshot_placeholder_desc: 在 hero_screenshot 填入 Shopod 的真实 App 截图路径。
 hero_title: 购物前先知道大概要花多少
 hero_subtitle: 把价格和数量记在商品旁边，边逛边勾选，清单总价会跟着变化。
 hero_cta: 在 App Store 下载

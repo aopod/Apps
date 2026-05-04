@@ -6,7 +6,7 @@ layout: default
 {% assign lang = page.lang | default: "en" %}
 {% assign languages_count = page.languages_count | default: "8" %}
 {% assign app_icon = page.app_icon | default: "" %}
-{% assign hero_screenshot = page.hero_screenshot | default: "" %}
+{% assign hero_screenshot = page.hero_screenshot | default: "/assets/shopod/images/hero-en.jpg" %}
 
 <div class="shopod-page" data-lang="{{ lang }}">
   <a class="shopod-mobile-banner shopod-store-link" href="{{ app_store_url }}" target="_blank" rel="noopener" aria-label="{{ page.app_store_aria | default: 'Download Shopod on the App Store' }}">

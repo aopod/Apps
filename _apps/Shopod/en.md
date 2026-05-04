@@ -10,4 +10,6 @@ gesture_swipe: Swipe
 gesture_long_press: Long press
 gesture_drag: Drag
 gesture_pull: Pull down
+hero_screenshot: "/assets/shopod/images/hero-en.jpg"
+hero_screenshot_alt: "Shopod shopping list screen"
 ---
