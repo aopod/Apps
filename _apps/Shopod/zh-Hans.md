@@ -2,14 +2,21 @@
 layout: app_Shopod
 appName: Shopod
 lang: zh-Hans
-title: Shopod - 购物清单计算器
-description: 一款清爽极简的 iOS 购物清单应用，支持分类、商品价格、数量、总计和内置计算器。
+title: Shopod - 带总价的购物清单
+description: Shopod 是一款 iOS 购物清单应用，可以给商品记录价格和数量，并在购物时查看清单总价。
 permalink: /Shopod/zh-Hans/
-hero_title: 用更清爽的方式计划购物清单
-hero_subtitle: 分类、商品价格、数量、总计和内置计算器，都在一个简洁流程里。
+app_icon: ""
+hero_screenshot: "/assets/shopod/images/hero-en.jpg"
+hero_screenshot_alt: Shopod 购物清单界面
+screenshot_placeholder: 待补充真实截图
+screenshot_placeholder_desc: 在 hero_screenshot 填入 Shopod 的真实 App 截图路径。
+hero_title: 购物前先知道大概要花多少
+hero_subtitle: 把价格和数量记在商品旁边，边逛边勾选，清单总价会跟着变化。
 hero_cta: 在 App Store 下载
-hero_secondary_cta: 查看功能
-hero_note: 点击、输入、下拉、滑动、长按、拖动，都是熟悉的操作。
+hero_secondary_cta: 看看怎么用
+hero_note: 适合超市采购、家庭补货，也适合旅行时控制预算。
+proof_title: 一个清单，实时总价
+proof_desc: 价格、数量和已购买状态都在同一张清单里，不需要切到计算器。
 mobile_banner_subtitle: 已上架 App Store
 mobile_banner_cta: 打开
 app_store_aria: 在 App Store 下载 Shopod
@@ -26,31 +33,38 @@ mock_item_5: 意面
 mock_total_label: 清单总计
 positioning_1: 备忘录应用不会计算总价。
 positioning_2: 很多购物应用加入了太多不需要的功能。
-positioning_3: Shopod 保持简单流程：清单、分类、商品、价格、数量、总计。
-features_title: 日常购物计划需要的功能
+positioning_3: 给商品填上货架价格和数量，Shopod 会把分类小计和清单总价算出来。
+features_title: 结账前心里有数
+receipt_eyebrow: 结账前
+receipt_title: 篮子里的东西大概要多少钱
+receipt_desc: 看到价格就填进去，拿两件就改数量，已经放进购物车的项目可以直接标记完成。
 feature_1_title: 整理
-feature_1_desc: 管理多个清单，在清单中添加分类，并用拖动、滑动和长按调整顺序。
+feature_1_desc: 按超市区域或自己的习惯分分类，常买的东西下次还能接着用。
 feature_2_title: 计算
-feature_2_desc: 为商品添加价格和数量，自动查看总计，并使用带历史记录的内置计算器。
+feature_2_desc: 商品价格和数量放在同一行，改数量时自动更新小计和总价。
 feature_3_title: 购物
-feature_3_desc: 标记已完成商品，快速跳转分类，跨分类移动商品，并分享带水印的清单截图。
-flow_title: 先计划清单，再随时查看总计
-flow_1_title: 创建清单
-flow_1_desc: 从一个清爽的购物计划开始。
+feature_3_desc: 逛到哪一类就看哪一类，买完就勾掉，清单不会变成一长串备忘录。
+flow_title: 一次普通采购，只需要三步
+flow_1_title: 出门前列清单
+flow_1_desc: 把要买的东西按区域整理好。
 flow_2_title: 添加分类
-flow_2_desc: 按你的购物方式组织商品。
-flow_3_title: 输入商品
-flow_3_desc: 计划时加入价格和数量。
-flow_4_title: 查看总计
-flow_4_desc: 购物时保持清单总计更新。
+flow_2_desc: 生鲜、食品柜、日用品都可以分开看。
+flow_3_title: 看到价格就填上
+flow_3_desc: 货架价、数量和小计留在商品旁边。
+flow_4_title: 购物时勾掉
+flow_4_desc: 清单总价随时更新。
+workbench_1_title: 出门前列好清单
+workbench_2_title: 看到价格就填在商品旁边
+workbench_3_title: 购物时一项项勾掉
 calculator_title: 不离开应用就能计算价格
 calculator_1: 支持基础运算、百分比、正负切换、删除和清除。
 calculator_2: 编辑商品价格时可直接使用计算结果。
 calculator_3: 从历史记录回看最近计算。
-support_title: 适合家庭、旅行和不同地区使用
-support_desc: Shopod 支持 8 种运行时语言和多种货币符号，让清单贴合你的购物方式。
-cta_title: 让下一次购物清单更简单
-cta_subtitle: 在一个清爽的地方计划商品、价格、数量和总计。
+support_eyebrow: 本地化
+support_title: 用你习惯的语言和货币记账
+support_desc: Shopod 支持多种界面语言和常见货币符号，家庭采购、出门旅行都能按当地价格记录。
+cta_title: 下次采购前，先列一张带总价的清单
+cta_subtitle: 记录商品、价格和数量，购物时直接勾选。
 gesture_tap: 点击
 gesture_swipe: 滑动
 gesture_long_press: 长按

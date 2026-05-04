@@ -56,7 +56,7 @@ html {
   grid-template-columns: minmax(0, 0.95fr) minmax(360px, 1.05fr);
   gap: 56px;
   align-items: center;
-  min-height: 92vh;
+  min-height: 88vh;
   padding: 72px 0 52px;
 }
 
@@ -140,7 +140,7 @@ html {
 
 .shopod-hero__visual {
   position: relative;
-  min-height: 620px;
+  min-height: 610px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -154,12 +154,43 @@ html {
   box-shadow: var(--shopod-shadow);
 }
 
+.shopod-phone__image {
+  display: block;
+  width: 100%;
+  min-height: 612px;
+  object-fit: cover;
+  border-radius: 31px;
+  background: #f4f2ec;
+}
+
 .shopod-phone__screen {
   min-height: 612px;
   overflow: hidden;
   border-radius: 31px;
   background: linear-gradient(180deg, #fcfbf8 0%, #f4f2ec 100%);
   padding: 18px 14px;
+}
+
+.shopod-phone__screen--placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px dashed #c9c5b8;
+  padding: 34px;
+  text-align: center;
+}
+
+.shopod-phone__screen--placeholder span {
+  color: var(--shopod-text);
+  font-size: 1.25rem;
+  font-weight: 760;
+}
+
+.shopod-phone__screen--placeholder small {
+  color: var(--shopod-muted);
+  font-size: 0.9rem;
 }
 
 .shopod-appbar {
@@ -260,6 +291,30 @@ html {
   background: rgba(255, 255, 255, 0.96);
   padding: 14px;
   box-shadow: 0 18px 42px rgba(31, 37, 32, 0.16);
+}
+
+.shopod-proof-note {
+  position: absolute;
+  right: 8px;
+  bottom: 72px;
+  display: grid;
+  width: 210px;
+  gap: 6px;
+  border: 1px solid rgba(31, 37, 32, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.94);
+  padding: 14px;
+  box-shadow: 0 18px 42px rgba(31, 37, 32, 0.14);
+}
+
+.shopod-proof-note strong {
+  color: var(--shopod-green-dark);
+  font-size: 0.95rem;
+}
+
+.shopod-proof-note span {
+  color: var(--shopod-muted);
+  font-size: 0.86rem;
 }
 
 .shopod-calc-display {
@@ -908,6 +963,12 @@ html {
     width: 176px;
   }
 
+  .shopod-proof-note {
+    right: max(0px, calc(50% - 178px));
+    bottom: 22px;
+    width: 176px;
+  }
+
   .shopod-positioning,
   .shopod-receipt,
   .shopod-workbench-grid,
@@ -979,6 +1040,17 @@ html {
     color: #fff;
   }
 
+  .shopod-mobile-banner__icon img {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    object-fit: cover;
+  }
+
+  .shopod-mobile-banner__icon span {
+    font-weight: 800;
+  }
+
   .shopod-mobile-banner__icon svg {
     width: 18px;
     height: 18px;
@@ -1036,6 +1108,13 @@ html {
   }
 
   .shopod-calculator-card {
+    right: 0;
+    bottom: 4px;
+    width: 158px;
+    padding: 12px;
+  }
+
+  .shopod-proof-note {
     right: 0;
     bottom: 4px;
     width: 158px;
