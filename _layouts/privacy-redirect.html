@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script>
+    (function() {
+        var appName = "{{ page.appName }}";
+        var supportedLanguages, validLangs, storageKey;
+
+        if (appName === "Shopod") {
+            supportedLanguages = {
+                'en': 'en',
+                'zh-cn': 'zh-Hans', 'zh-sg': 'zh-Hans',
+                'zh-tw': 'zh-Hant', 'zh-hk': 'zh-Hant', 'zh-mo': 'zh-Hant',
+                'zh': 'zh-Hans',
+                'de': 'de', 'fr': 'fr', 'ja': 'ja', 'ko': 'ko', 'es': 'es'
+            };
+            validLangs = ['en', 'zh-Hans', 'zh-Hant', 'de', 'fr', 'ja', 'ko', 'es'];
+            storageKey = 'shopod_user_lang';
+        } else {
+            supportedLanguages = {
+                'en': 'en',
+                'zh-cn': 'zh-Hans', 'zh-sg': 'zh-Hans',
+                'zh-tw': 'zh-Hant', 'zh-hk': 'zh-Hant', 'zh-mo': 'zh-Hant',
+                'zh': 'zh-Hans',
+                'ja': 'ja', 'ko': 'ko', 'fr': 'fr', 'de': 'de'
+            };
+            validLangs = ['en', 'zh-Hans', 'zh-Hant', 'ja', 'ko', 'fr', 'de'];
+            storageKey = 'typin_user_lang';
+        }
+
+        var basePath = '/' + appName + '/privacy/';
+
+        function resolveLanguage(browserLang) {
+            var normalized = (browserLang || 'en').toLowerCase().trim();
+            if (supportedLanguages[normalized]) return supportedLanguages[normalized];
+            var langFamily = normalized.split('-')[0];
+            return supportedLanguages[langFamily] || 'en';
+        }
+
+        var savedLang = localStorage.getItem(storageKey);
+        var targetLang = 'en';
+        if (savedLang && validLangs.indexOf(savedLang) !== -1) {
+            targetLang = savedLang;
+        } else {
+            var browserLang = navigator.languages && navigator.languages.length > 0
+                ? navigator.languages[0] : navigator.language;
+            targetLang = resolveLanguage(browserLang);
+        }
+
+        window.location.replace(basePath + targetLang + '/');
+    })();
+    </script>
+</head>
+<body>
+    <p>Redirecting...</p>
+</body>
+</html>

@@ -1,7 +1,6 @@
 ---
-layout: privacy-default
+layout: privacy-redirect
 appName: Typin
-lang: en
 title: Privacy Policy
-permalink: /Typin/privacy/en/
+permalink: /Typin/privacy/
 ---
