@@ -1,0 +1,298 @@
+---
+layout: default
+---
+{% include one-css.html named="shopod" %}
+{% assign app_store_url = "https://apps.apple.com/us/app/shopod-a-shopping-list/id1271213321" %}
+{% assign lang = page.lang | default: "en" %}
+{% assign languages_count = page.languages_count | default: "8" %}
+
+<div class="shopod-page" data-lang="{{ lang }}">
+  <a class="shopod-mobile-banner shopod-store-link" href="{{ app_store_url }}" target="_blank" rel="noopener" aria-label="{{ page.app_store_aria | default: 'Download Shopod on the App Store' }}">
+    <span class="shopod-mobile-banner__icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" role="img">
+        <path d="M17.2 12.1c0-1.9 1-3.4 2.4-4.3-.9-1.3-2.3-2-4-2.1-1.7-.2-3.3 1-4.1 1-.8 0-2.1-1-3.4-.9-1.8 0-3.5 1.1-4.4 2.7-1.9 3.3-.5 8.1 1.3 10.7.9 1.3 2 2.8 3.4 2.7 1.4-.1 1.9-.9 3.6-.9s2.2.9 3.6.9c1.5 0 2.5-1.3 3.4-2.7 1-1.5 1.4-3 1.5-3.1-.1-.1-3.3-1.3-3.3-4zM14.5 3.8c.8-.9 1.3-2.2 1.1-3.4-1.1 0-2.4.8-3.2 1.7-.7.8-1.3 2.1-1.1 3.3 1.2.1 2.4-.6 3.2-1.6z"/>
+      </svg>
+    </span>
+    <span>
+      <strong>Shopod</strong>
+      <small>{{ page.mobile_banner_subtitle | default: "Available on the App Store" }}</small>
+    </span>
+    <span class="shopod-mobile-banner__cta">{{ page.mobile_banner_cta | default: "Open" }}</span>
+  </a>
+
+  <main>
+    <section class="shopod-hero" aria-labelledby="shopod-hero-title">
+      <div class="shopod-hero__copy">
+        <p class="shopod-eyebrow">Shopod</p>
+        <h1 id="shopod-hero-title">{{ page.hero_title | default: "A simpler shopping list with prices built in" }}</h1>
+        <p class="shopod-hero__lead">{{ page.hero_subtitle | default: "Categories, item prices, quantities, totals, and a built-in calculator in one clean grocery planning flow." }}</p>
+        <div class="shopod-actions">
+          <a class="shopod-button shopod-button--primary shopod-store-link" href="{{ app_store_url }}" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M17.2 12.1c0-1.9 1-3.4 2.4-4.3-.9-1.3-2.3-2-4-2.1-1.7-.2-3.3 1-4.1 1-.8 0-2.1-1-3.4-.9-1.8 0-3.5 1.1-4.4 2.7-1.9 3.3-.5 8.1 1.3 10.7.9 1.3 2 2.8 3.4 2.7 1.4-.1 1.9-.9 3.6-.9s2.2.9 3.6.9c1.5 0 2.5-1.3 3.4-2.7 1-1.5 1.4-3 1.5-3.1-.1-.1-3.3-1.3-3.3-4zM14.5 3.8c.8-.9 1.3-2.2 1.1-3.4-1.1 0-2.4.8-3.2 1.7-.7.8-1.3 2.1-1.1 3.3 1.2.1 2.4-.6 3.2-1.6z"/>
+            </svg>
+            {{ page.hero_cta | default: "Download on the App Store" }}
+          </a>
+          <a class="shopod-button shopod-button--secondary" href="#features">{{ page.hero_secondary_cta | default: "See features" }}</a>
+        </div>
+        <p class="shopod-hero__note">{{ page.hero_note | default: "Built for tap, type, pull down, swipe, long press, and drag." }}</p>
+      </div>
+
+      <div class="shopod-hero__visual" aria-label="{{ page.preview_aria | default: 'Shopod app interface preview' }}">
+        <div class="shopod-phone shopod-phone--main">
+          <div class="shopod-phone__screen">
+            <div class="shopod-appbar">
+              <span>{{ page.mock_list_title | default: "Saturday groceries" }}</span>
+              <strong>$48.65</strong>
+            </div>
+            <div class="shopod-category">
+              <div class="shopod-category__head"><span>{{ page.mock_cat_1 | default: "Produce" }}</span><span>$16.20</span></div>
+              <div class="shopod-item"><span>{{ page.mock_item_1 | default: "Tomatoes" }}</span><small>$3.40 x 2</small><strong>$6.80</strong></div>
+              <div class="shopod-item is-done"><span>{{ page.mock_item_2 | default: "Spinach" }}</span><small>$4.20 x 1</small><strong>$4.20</strong></div>
+              <div class="shopod-item"><span>{{ page.mock_item_3 | default: "Apples" }}</span><small>$2.60 x 2</small><strong>$5.20</strong></div>
+            </div>
+            <div class="shopod-category">
+              <div class="shopod-category__head"><span>{{ page.mock_cat_2 | default: "Pantry" }}</span><span>$21.45</span></div>
+              <div class="shopod-item"><span>{{ page.mock_item_4 | default: "Olive oil" }}</span><small>$12.50 x 1</small><strong>$12.50</strong></div>
+              <div class="shopod-item"><span>{{ page.mock_item_5 | default: "Pasta" }}</span><small>$2.25 x 3</small><strong>$6.75</strong></div>
+            </div>
+            <div class="shopod-total"><span>{{ page.mock_total_label | default: "List total" }}</span><strong>$48.65</strong></div>
+          </div>
+        </div>
+        <div class="shopod-calculator-card" aria-hidden="true">
+          <div class="shopod-calc-display">12.50 + 8%</div>
+          <strong>13.50</strong>
+          <div class="shopod-calc-grid">
+            <span>7</span><span>8</span><span>9</span><span>%</span>
+            <span>4</span><span>5</span><span>6</span><span>+</span>
+            <span>1</span><span>2</span><span>3</span><span>=</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <nav class="shopod-lang-switcher" aria-label="{{ page.language_aria | default: 'Language selection' }}">
+      <ul>
+        <li><a href="/Shopod/en/" class="{% if lang == 'en' %}active{% endif %}">English</a></li>
+        <li><a href="/Shopod/zh-Hans/" class="{% if lang == 'zh-Hans' %}active{% endif %}">简体中文</a></li>
+        <li><a href="/Shopod/zh-Hant/" class="{% if lang == 'zh-Hant' %}active{% endif %}">繁體中文</a></li>
+        <li><a href="/Shopod/de/" class="{% if lang == 'de' %}active{% endif %}">Deutsch</a></li>
+        <li><a href="/Shopod/fr/" class="{% if lang == 'fr' %}active{% endif %}">Français</a></li>
+        <li><a href="/Shopod/ja/" class="{% if lang == 'ja' %}active{% endif %}">日本語</a></li>
+        <li><a href="/Shopod/ko/" class="{% if lang == 'ko' %}active{% endif %}">한국어</a></li>
+        <li><a href="/Shopod/es/" class="{% if lang == 'es' %}active{% endif %}">Español</a></li>
+      </ul>
+    </nav>
+
+    <section id="features" class="shopod-section shopod-receipt" aria-labelledby="receipt-title">
+      <div class="shopod-receipt__copy">
+        <p class="shopod-eyebrow">{{ page.receipt_eyebrow | default: page.feature_2_title | default: "List math" }}</p>
+        <h2 id="receipt-title">{{ page.receipt_title | default: page.features_title | default: "The list is built around totals, not plain text" }}</h2>
+        <p>{{ page.receipt_desc | default: page.positioning_3 | default: "Shopod treats every grocery item as name, price, quantity, and total, then rolls those numbers up by category and by list." }}</p>
+      </div>
+      <div class="shopod-receipt-card" aria-label="{{ page.receipt_aria | default: 'Shopping total example' }}">
+        <div><span>{{ page.mock_cat_1 | default: "Produce" }}</span><strong>$16.20</strong></div>
+        <div><span>{{ page.mock_cat_2 | default: "Pantry" }}</span><strong>$21.45</strong></div>
+        <div class="shopod-receipt-card__total"><span>{{ page.mock_total_label | default: "List total" }}</span><strong>$48.65</strong></div>
+      </div>
+    </section>
+
+    <section class="shopod-section shopod-workbench" aria-labelledby="workbench-title">
+      <div class="shopod-section__header">
+        <p class="shopod-eyebrow">{{ page.workbench_eyebrow | default: page.feature_1_title | default: "Shopping workspace" }}</p>
+        <h2 id="workbench-title">{{ page.workbench_title | default: page.flow_title | default: "One screen for lists, categories, prices, and progress" }}</h2>
+      </div>
+      <div class="shopod-workbench-grid">
+        <article>
+          <span class="shopod-mini-label">{{ page.feature_1_title | default: "Organize" }}</span>
+          <h3>{{ page.workbench_1_title | default: page.flow_1_title | default: "Keep several shopping plans ready" }}</h3>
+          <p>{{ page.feature_1_desc | default: "Manage multiple lists, add categories inside each list, and reorder with drag, swipe, and long press." }}</p>
+          <div class="shopod-list-stack" aria-hidden="true">
+            <span>{{ page.mock_list_title | default: "Saturday groceries" }}</span><span>{{ page.flow_2_title | default: "Add categories" }}</span><span>{{ page.support_title | default: "Languages and currency" }}</span>
+          </div>
+        </article>
+        <article>
+          <span class="shopod-mini-label">{{ page.feature_2_title | default: "Calculate" }}</span>
+          <h3>{{ page.workbench_2_title | default: page.flow_3_title | default: "Enter prices where the item lives" }}</h3>
+          <p>{{ page.feature_2_desc | default: "Add price and quantity per item, see automatic totals, and use the built-in calculator with history." }}</p>
+          <div class="shopod-price-editor" aria-hidden="true">
+            <span>{{ page.mock_item_4 | default: "Olive oil" }}</span>
+            <strong>$12.50</strong>
+            <small>x 1</small>
+          </div>
+        </article>
+        <article>
+          <span class="shopod-mini-label">{{ page.feature_3_title | default: "Shop" }}</span>
+          <h3>{{ page.workbench_3_title | default: page.flow_4_title | default: "Use the same list while shopping" }}</h3>
+          <p>{{ page.feature_3_desc | default: "Mark items as done, jump between categories, move items across categories, and share list screenshots." }}</p>
+          <div class="shopod-done-row" aria-hidden="true">
+            <span></span>
+            <strong>{{ page.mock_item_2 | default: "Spinach" }}</strong>
+            <small>$4.20</small>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="shopod-section shopod-calculator" aria-labelledby="calculator-title">
+      <div>
+        <p class="shopod-eyebrow">{{ page.calculator_eyebrow | default: page.feature_2_title | default: "Price checks" }}</p>
+        <h2 id="calculator-title">{{ page.calculator_title | default: "Calculate prices without leaving the app" }}</h2>
+        <ul>
+          <li>{{ page.calculator_1 | default: "Basic operations, percentages, sign toggle, delete, and clear." }}</li>
+          <li>{{ page.calculator_2 | default: "Reuse calculation results while editing item prices." }}</li>
+          <li>{{ page.calculator_3 | default: "Review recent calculations from history." }}</li>
+        </ul>
+      </div>
+      <div class="shopod-calc-flow" aria-label="{{ page.calculator_aria | default: 'Calculator result applied to item price' }}">
+        <div class="shopod-calculator-panel">
+          <div class="shopod-calc-history">
+            <span>3.49 x 2 = 6.98</span>
+            <span>12.50 + 8% = 13.50</span>
+          </div>
+          <div class="shopod-calc-large">13.50</div>
+          <div class="shopod-calc-buttons">
+            <span>C</span><span>DEL</span><span>%</span><span>÷</span>
+            <span>7</span><span>8</span><span>9</span><span>×</span>
+            <span>4</span><span>5</span><span>6</span><span>-</span>
+            <span>1</span><span>2</span><span>3</span><span>+</span>
+            <span>+/-</span><span>0</span><span>.</span><strong>=</strong>
+          </div>
+        </div>
+        <div class="shopod-apply-card">
+          <small>{{ page.apply_result_label | default: page.calculator_2 | default: "Use result as price" }}</small>
+          <strong>$13.50</strong>
+          <span>{{ page.mock_item_4 | default: "Olive oil" }}</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="shopod-section shopod-market" aria-labelledby="market-title">
+      <div class="shopod-section__header">
+        <p class="shopod-eyebrow">{{ page.market_eyebrow | default: page.feature_3_title | default: "In the aisle" }}</p>
+        <h2 id="market-title">{{ page.market_title | default: page.hero_note | default: "Designed for quick corrections while you shop" }}</h2>
+      </div>
+      <div class="shopod-market-grid">
+        <div class="shopod-gesture-board">
+          <span>{{ page.gesture_tap | default: "Tap" }}</span>
+          <span>{{ page.gesture_swipe | default: "Swipe" }}</span>
+          <span>{{ page.gesture_long_press | default: "Long press" }}</span>
+          <span>{{ page.gesture_drag | default: "Drag" }}</span>
+          <span>{{ page.gesture_pull | default: "Pull down" }}</span>
+        </div>
+        <ol class="shopod-market-list">
+          <li><strong>{{ page.flow_1_title | default: "Create a list" }}</strong><small>{{ page.flow_1_desc | default: "Start with a clean shopping plan." }}</small></li>
+          <li><strong>{{ page.flow_2_title | default: "Add categories" }}</strong><small>{{ page.flow_2_desc | default: "Group groceries in the way you shop." }}</small></li>
+          <li><strong>{{ page.flow_3_title | default: "Enter items" }}</strong><small>{{ page.flow_3_desc | default: "Add prices and quantities as you plan." }}</small></li>
+          <li><strong>{{ page.flow_4_title | default: "Check the total" }}</strong><small>{{ page.flow_4_desc | default: "See the list total update while shopping." }}</small></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="shopod-section shopod-support" aria-labelledby="support-title">
+      <div>
+        <p class="shopod-eyebrow">Languages and currency</p>
+        <h2 id="support-title">{{ page.support_title | default: "Useful across households, travel, and regions" }}</h2>
+        <p>{{ page.support_desc | default: "Shopod supports 8 runtime languages and multiple currency symbols, so lists can match the way you shop." }}</p>
+      </div>
+      <div class="shopod-chips" aria-label="Supported languages and currencies">
+        <span>English</span><span>简体中文</span><span>繁體中文</span><span>Deutsch</span>
+        <span>Français</span><span>日本語</span><span>한국어</span><span>Español</span>
+        <span>$</span><span>€</span><span>¥</span><span>£</span>
+      </div>
+    </section>
+
+    <section id="download-section" class="shopod-final" aria-labelledby="download-title">
+      <div>
+        <p class="shopod-eyebrow">Shopod</p>
+        <h2 id="download-title">{{ page.cta_title | default: "Make your next shopping list simpler" }}</h2>
+        <p>{{ page.cta_subtitle | default: "Plan items, prices, quantities, and totals in one clean place." }}</p>
+      </div>
+      <a class="shopod-button shopod-button--primary shopod-store-link" href="{{ app_store_url }}" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M17.2 12.1c0-1.9 1-3.4 2.4-4.3-.9-1.3-2.3-2-4-2.1-1.7-.2-3.3 1-4.1 1-.8 0-2.1-1-3.4-.9-1.8 0-3.5 1.1-4.4 2.7-1.9 3.3-.5 8.1 1.3 10.7.9 1.3 2 2.8 3.4 2.7 1.4-.1 1.9-.9 3.6-.9s2.2.9 3.6.9c1.5 0 2.5-1.3 3.4-2.7 1-1.5 1.4-3 1.5-3.1-.1-.1-3.3-1.3-3.3-4zM14.5 3.8c.8-.9 1.3-2.2 1.1-3.4-1.1 0-2.4.8-3.2 1.7-.7.8-1.3 2.1-1.1 3.3 1.2.1 2.4-.6 3.2-1.6z"/>
+        </svg>
+        {{ page.hero_cta | default: "Download on the App Store" }}
+      </a>
+    </section>
+  </main>
+
+  <footer class="shopod-footer">
+    <span>© {{ site.time | date: "%Y" }} aopod</span>
+    <a href="/Shopod/privacy/en/">Privacy Policy</a>
+  </footer>
+
+  <a class="shopod-floating-store shopod-store-link" href="{{ app_store_url }}" target="_blank" rel="noopener" aria-label="{{ page.app_store_aria | default: 'Download Shopod on the App Store' }}">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M17.2 12.1c0-1.9 1-3.4 2.4-4.3-.9-1.3-2.3-2-4-2.1-1.7-.2-3.3 1-4.1 1-.8 0-2.1-1-3.4-.9-1.8 0-3.5 1.1-4.4 2.7-1.9 3.3-.5 8.1 1.3 10.7.9 1.3 2 2.8 3.4 2.7 1.4-.1 1.9-.9 3.6-.9s2.2.9 3.6.9c1.5 0 2.5-1.3 3.4-2.7 1-1.5 1.4-3 1.5-3.1-.1-.1-3.3-1.3-3.3-4zM14.5 3.8c.8-.9 1.3-2.2 1.1-3.4-1.1 0-2.4.8-3.2 1.7-.7.8-1.3 2.1-1.1 3.3 1.2.1 2.4-.6 3.2-1.6z"/>
+    </svg>
+  </a>
+</div>
+
+{% include analytics.html %}
+{% include one-script.html content="
+(function() {
+    const SUPPORTED_LANGUAGES = {
+        'en': 'en',
+        'zh-cn': 'zh-Hans',
+        'zh-sg': 'zh-Hans',
+        'zh-tw': 'zh-Hant',
+        'zh-hk': 'zh-Hant',
+        'zh-mo': 'zh-Hant',
+        'zh': 'zh-Hans',
+        'de': 'de',
+        'fr': 'fr',
+        'ja': 'ja',
+        'ko': 'ko',
+        'es': 'es'
+    };
+    const VALID_LANGS = ['en', 'zh-Hans', 'zh-Hant', 'de', 'fr', 'ja', 'ko', 'es'];
+
+    function resolveLanguage(browserLang) {
+        const normalized = (browserLang || 'en').toLowerCase().trim();
+        if (SUPPORTED_LANGUAGES[normalized]) return SUPPORTED_LANGUAGES[normalized];
+        const langFamily = normalized.split('-')[0];
+        return SUPPORTED_LANGUAGES[langFamily] || 'en';
+    }
+
+    function getPreferredLanguage() {
+        const savedLang = localStorage.getItem('shopod_user_lang');
+        if (savedLang && VALID_LANGS.includes(savedLang)) return savedLang;
+        const browserLang = navigator.languages && navigator.languages.length > 0 ? navigator.languages[0] : navigator.language;
+        return resolveLanguage(browserLang);
+    }
+
+    function detectAndRedirect() {
+        const currentPath = window.location.pathname;
+        if (currentPath !== '/Shopod/' && currentPath !== '/Shopod') return;
+        const targetLang = getPreferredLanguage();
+        const targetPath = '/Shopod/' + targetLang + '/';
+        const lastRedirect = sessionStorage.getItem('shopod_lang_redirect');
+        if (lastRedirect && Date.now() - parseInt(lastRedirect, 10) < 1000) return;
+        sessionStorage.setItem('shopod_lang_redirect', Date.now().toString());
+        window.location.href = targetPath;
+    }
+
+    function setupLanguageSwitcher() {
+        document.querySelectorAll('.shopod-lang-switcher a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                const match = this.getAttribute('href').match(/\/Shopod\/([^/]+)\//);
+                if (match && VALID_LANGS.includes(match[1])) {
+                    localStorage.setItem('shopod_user_lang', match[1]);
+                    sessionStorage.setItem('shopod_lang_redirect', Date.now().toString());
+                }
+            });
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function() {
+            detectAndRedirect();
+            setupLanguageSwitcher();
+        });
+    } else {
+        detectAndRedirect();
+        setupLanguageSwitcher();
+    }
+})();
+" %}
