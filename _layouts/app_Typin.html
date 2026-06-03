@@ -221,6 +221,15 @@ layout: default
     });
 })();
 
+// App Store Link: use itms-apps scheme on Apple devices
+(function() {
+    if (/Mac|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+        document.querySelectorAll('.typin-store-link').forEach(function(link) {
+            link.href = 'itms-apps://itunes.apple.com/app/id6758349989';
+        });
+    }
+})();
+
 // Floating Anchor Button & Mobile Banner
 (function() {
     const floatingBtn = document.querySelector('.floating-anchor-btn');
