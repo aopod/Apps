@@ -219,14 +219,24 @@ layout: default
         });
     }
 
+    function updateStoreLinks() {
+        if (/Mac|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+            document.querySelectorAll('.shopod-store-link').forEach(function(link) {
+                link.href = 'itms-apps://itunes.apple.com/app/id1271213321';
+            });
+        }
+    }
+
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', function() {
             detectAndRedirect();
             setupLanguageSwitcher();
+            updateStoreLinks();
         });
     } else {
         detectAndRedirect();
         setupLanguageSwitcher();
+        updateStoreLinks();
     }
 })();
 " %}
