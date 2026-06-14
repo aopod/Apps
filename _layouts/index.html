@@ -1,4 +1,147 @@
 ---
 layout: default
 ---
-Hello, World!
+{% include one-css.html named="index" %}
+{% assign lang = page.lang | default: "en" %}
+
+<div class="portal-page" data-lang="{{ lang }}">
+  <header class="portal-masthead">
+    <div class="portal-masthead__inner">
+      <p class="portal-wordmark">aopod</p>
+      <h1 class="portal-tagline">{{ page.tagline | default: "iPhone software, made in small numbers." }}</h1>
+      <p class="portal-sub">{{ page.sub | default: "Two apps, each its own thing." }}</p>
+      {% include portal/lang-switcher.html %}
+    </div>
+  </header>
+
+  <main>
+    {% include portal/typin-card.html %}
+    {% include portal/shopod-card.html %}
+  </main>
+
+  <footer class="portal-footer">
+    <span class="portal-footer__copy">© {{ site.time | date: "%Y" }} aopod</span>
+    <nav class="portal-footer__links">
+      <a href="/Typin/privacy/">Typin {{ page.privacy_label | default: "Privacy" }}</a>
+      <a href="/Shopod/privacy/">Shopod {{ page.privacy_label | default: "Privacy" }}</a>
+    </nav>
+  </footer>
+</div>
+
+{% include analytics.html %}
+{% include one-script.html content="
+// Portal: browser-language detection + language switcher wiring.
+// Mirrors the pattern used by the Typin/Shopod landing pages.
+(function() {
+    var SUPPORTED_LANGUAGES = {
+        'en': 'en',
+        'zh-cn': 'zh-Hans',
+        'zh-sg': 'zh-Hans',
+        'zh-tw': 'zh-Hant',
+        'zh-hk': 'zh-Hant',
+        'zh-mo': 'zh-Hant',
+        'zh': 'zh-Hans',
+        'de': 'de',
+        'fr': 'fr',
+        'ja': 'ja',
+        'ko': 'ko',
+        'es': 'es'
+    };
+    var VALID_LANGS = ['en', 'zh-Hans', 'zh-Hant', 'de', 'fr', 'ja', 'ko', 'es'];
+
+    function getBrowserLanguage() {
+        if (navigator.languages && navigator.languages.length > 0) {
+            return navigator.languages[0];
+        }
+        return navigator.language || 'en';
+    }
+
+    function resolveLanguage(browserLang) {
+        var normalized = (browserLang || 'en').toLowerCase().trim();
+        if (SUPPORTED_LANGUAGES[normalized]) {
+            return SUPPORTED_LANGUAGES[normalized];
+        }
+        var langFamily = normalized.split('-')[0];
+        if (SUPPORTED_LANGUAGES[langFamily]) {
+            return SUPPORTED_LANGUAGES[langFamily];
+        }
+        return 'en';
+    }
+
+    function readStoredLang(key) {
+        var saved = null;
+        try { saved = localStorage.getItem(key); } catch (e) {}
+        if (saved && VALID_LANGS.indexOf(saved) !== -1) {
+            return saved;
+        }
+        return null;
+    }
+
+    function getPreferredLanguage() {
+        // Honor the visitor's choice on the portal first, then their choice
+        // on either app so the site feels consistent, then fall back to browser.
+        return readStoredLang('portal_user_lang')
+            || readStoredLang('shopod_user_lang')
+            || readStoredLang('typin_user_lang')
+            || null;
+    }
+
+    function isRoot(path) {
+        return path === '/' || path === '/index.html';
+    }
+
+    function detectAndRedirect() {
+        var path = window.location.pathname;
+        if (!isRoot(path)) {
+            return;
+        }
+
+        var lastRedirect = null;
+        try { lastRedirect = sessionStorage.getItem('portal_lang_redirect'); } catch (e) {}
+        if (lastRedirect) {
+            var since = Date.now() - parseInt(lastRedirect, 10);
+            if (since < 1000) {
+                return;
+            }
+        }
+
+        var lang = getPreferredLanguage();
+        if (!lang) {
+            lang = resolveLanguage(getBrowserLanguage());
+        }
+
+        var target = '/' + lang + '/';
+        if (path !== target) {
+            try {
+                sessionStorage.setItem('portal_lang_redirect', String(Date.now()));
+            } catch (e) {}
+            window.location.href = target;
+        }
+    }
+
+    function setupLanguageSwitcher() {
+        var links = document.querySelectorAll('.portal-lang-switcher a');
+        Array.prototype.forEach.call(links, function(link) {
+            link.addEventListener('click', function() {
+                var match = link.getAttribute('href').match(/^\/([^/]+)\/?$/);
+                if (match && VALID_LANGS.indexOf(match[1]) !== -1) {
+                    try {
+                        localStorage.setItem('portal_user_lang', match[1]);
+                        sessionStorage.setItem('portal_lang_redirect', String(Date.now()));
+                    } catch (e) {}
+                }
+            });
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function() {
+            detectAndRedirect();
+            setupLanguageSwitcher();
+        });
+    } else {
+        detectAndRedirect();
+        setupLanguageSwitcher();
+    }
+})();
+" %}

@@ -40,9 +40,16 @@ defaults:
       path: "_apps/Typin/privacy"
     values:
       permalink: /Typin/privacy/:basename/
+  -
+    scope:
+      path: "_portal"
+    values:
+      layout: index
+      permalink: /:basename/
 
 include:
   - _apps
+  - _portal
 
 exclude:
   - .sass-cache/

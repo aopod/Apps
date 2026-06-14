@@ -1,0 +1,436 @@
+---
+---
+@charset "UTF-8";
+
+// ============================================
+// PORTAL / ENTRY-LIST PAGE
+// A warm paper sheet with one dark band.
+// Each app appears in its own real identity —
+// Typin dark, Shopod warm — paired with its real
+// screenshot. No generic gradients, no aurora.
+// ============================================
+
+:root {
+  // Neutral base (masthead + footer) — warm paper, not cold white
+  --portal-bg: #fbfaf7;
+  --portal-text: #1a1a1a;
+  --portal-muted: #6b6b6b;
+  --portal-line: #e6e4dd;
+  --portal-font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif;
+
+  // Typin row (mirrors css/typin.scss)
+  --portal-typin-bg: #0F1115;
+  --portal-typin-text: #F5F7FA;
+  --portal-typin-muted: #A8B0BF;
+  --portal-typin-accent: #7CC4FF;
+  --portal-typin-accent-hi: #4FA2F2;
+
+  // Shopod row (mirrors css/shopod.scss)
+  --portal-shopod-bg: #fafaf7;
+  --portal-shopod-text: #1f2520;
+  --portal-shopod-muted: #697067;
+  --portal-shopod-line: #dfded7;
+  --portal-shopod-accent: #2f8f5b;
+  --portal-shopod-accent-dark: #237046;
+
+  --portal-shadow: 0 28px 70px rgba(31, 37, 32, 0.16);
+  --portal-shadow-dark: 0 34px 80px rgba(0, 0, 0, 0.55);
+  --portal-maxw: min(1120px, calc(100% - 48px));
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.portal-page {
+  min-height: 100vh;
+  background: var(--portal-bg);
+  color: var(--portal-text);
+  font-family: var(--portal-font);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+.portal-page * {
+  box-sizing: border-box;
+}
+
+.portal-page a {
+  color: inherit;
+}
+
+.portal-page img {
+  display: block;
+  max-width: 100%;
+}
+
+// ============================================
+// MASTHEAD
+// ============================================
+.portal-masthead {
+  padding: clamp(96px, 16vh, 168px) 0 clamp(72px, 12vh, 120px);
+  text-align: center;
+  border-bottom: 1px solid var(--portal-line);
+}
+
+.portal-masthead__inner {
+  width: var(--portal-maxw);
+  margin: 0 auto;
+}
+
+.portal-wordmark {
+  margin: 0 0 28px;
+  color: var(--portal-text);
+  font-size: clamp(2.75rem, 6vw, 4rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.portal-tagline {
+  max-width: 720px;
+  margin: 0 auto;
+  color: var(--portal-text);
+  font-size: clamp(1.35rem, 2.6vw, 1.9rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+
+.portal-sub {
+  max-width: 560px;
+  margin: 18px auto 0;
+  color: var(--portal-muted);
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+}
+
+// ============================================
+// APP SHOWCASE ROWS — shared
+// ============================================
+.portal-row {
+  position: relative;
+  padding: clamp(80px, 12vh, 140px) 0;
+}
+
+.portal-row__inner {
+  display: grid;
+  grid-template-columns: 1.04fr 0.96fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: center;
+  width: var(--portal-maxw);
+  margin: 0 auto;
+}
+
+// Shopod row mirrors Typin so the two phones face each other
+.portal-row--shopod .portal-row__inner {
+  grid-template-columns: 0.96fr 1.04fr;
+}
+
+.portal-row__copy {
+  min-width: 0;
+}
+
+.portal-row__eyebrow {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin: 0 0 22px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.portal-row__index {
+  font-variant-numeric: tabular-nums;
+  opacity: 0.5;
+}
+
+.portal-row__title {
+  margin: 0;
+  font-size: clamp(2.1rem, 4.6vw, 3.4rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.06;
+}
+
+.portal-row__lead {
+  max-width: 460px;
+  margin: 22px 0 0;
+  font-size: clamp(1.05rem, 1.6vw, 1.22rem);
+  line-height: 1.6;
+}
+
+.portal-row__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 36px;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: transform 0.18s ease, background 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.portal-row__arrow {
+  transition: transform 0.18s ease;
+}
+
+.portal-row__cta:hover .portal-row__arrow {
+  transform: translateX(4px);
+}
+
+.portal-row__visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// ============================================
+// TYPIN ROW (dark)
+// ============================================
+.portal-row--typin {
+  background: var(--portal-typin-bg);
+  color: var(--portal-typin-text);
+}
+
+.portal-row--typin .portal-row__lead {
+  color: var(--portal-typin-muted);
+}
+
+.portal-row--typin .portal-row__eyebrow {
+  color: var(--portal-typin-accent);
+}
+
+.portal-row--typin .portal-row__cta {
+  background: var(--portal-typin-accent);
+  color: #0F1115;
+  box-shadow: 0 10px 28px rgba(124, 196, 255, 0.22);
+}
+
+.portal-row--typin .portal-row__cta:hover {
+  background: var(--portal-typin-accent-hi);
+  transform: translateY(-2px);
+}
+
+// Typin presents its hero as a clean rounded screenshot (no bezel),
+// the same way its own landing page does.
+.portal-phone--typin {
+  width: min(300px, 100%);
+  height: auto;
+  border-radius: 28px;
+  box-shadow: var(--portal-shadow-dark);
+}
+
+// ============================================
+// SHOPOD ROW (warm)
+// ============================================
+.portal-row--shopod {
+  background: var(--portal-shopod-bg);
+  color: var(--portal-shopod-text);
+}
+
+.portal-row--shopod .portal-row__lead {
+  color: var(--portal-shopod-muted);
+}
+
+.portal-row--shopod .portal-row__eyebrow {
+  color: var(--portal-shopod-accent-dark);
+}
+
+.portal-row--shopod .portal-row__cta {
+  background: var(--portal-shopod-accent);
+  color: #fff;
+  box-shadow: 0 12px 28px rgba(47, 143, 91, 0.22);
+}
+
+.portal-row--shopod .portal-row__cta:hover {
+  background: var(--portal-shopod-accent-dark);
+  transform: translateY(-2px);
+}
+
+// Shopod presents its hero inside a phone bezel, mirroring .shopod-phone.
+.portal-phone-bezel {
+  width: min(300px, 100%);
+  border: 10px solid #1f2520;
+  border-radius: 42px;
+  background: #1f2520;
+  box-shadow: var(--portal-shadow);
+}
+
+.portal-phone-bezel img {
+  width: 100%;
+  height: auto;
+  border-radius: 31px;
+}
+
+// ============================================
+// FOOTER
+// ============================================
+.portal-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  width: var(--portal-maxw);
+  margin: 0 auto;
+  padding: 40px 0 56px;
+  border-top: 1px solid var(--portal-line);
+  color: var(--portal-muted);
+  font-size: 0.9rem;
+}
+
+.portal-footer__links {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.portal-footer__links a {
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.portal-footer__links a:hover {
+  color: var(--portal-text);
+}
+
+// ============================================
+// LANGUAGE SWITCHER
+// ============================================
+.portal-lang-switcher {
+  width: 100%;
+  margin-top: clamp(44px, 6vh, 64px);
+}
+
+.portal-lang-switcher ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.portal-lang-switcher a {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  padding: 6px 12px;
+  border: 1px solid var(--portal-line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--portal-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.portal-lang-switcher a:hover {
+  border-color: var(--portal-text);
+  color: var(--portal-text);
+}
+
+.portal-lang-switcher a.active {
+  background: var(--portal-text);
+  border-color: var(--portal-text);
+  color: var(--portal-bg);
+}
+
+// ============================================
+// ENTRANCE ANIMATION (subtle, on load)
+// ============================================
+@keyframes portal-rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.portal-masthead__inner {
+  animation: portal-rise 0.7s ease-out both;
+}
+
+.portal-row--typin {
+  animation: portal-rise 0.8s ease-out 0.1s both;
+}
+
+.portal-row--shopod {
+  animation: portal-rise 0.8s ease-out 0.2s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .portal-masthead__inner,
+  .portal-row {
+    animation: none;
+  }
+}
+
+// ============================================
+// RESPONSIVE
+// ============================================
+@media (max-width: 900px) {
+  .portal-row__inner,
+  .portal-row--shopod .portal-row__inner {
+    grid-template-columns: 1fr;
+    width: min(100% - 28px, 680px);
+    gap: 40px;
+    text-align: center;
+  }
+
+  .portal-row__visual {
+    order: -1;
+  }
+
+  .portal-row__eyebrow {
+    justify-content: center;
+  }
+
+  .portal-row__lead {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .portal-row__cta {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .portal-row__cta {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .portal-phone--typin,
+  .portal-phone-bezel {
+    width: min(260px, 80vw);
+  }
+
+  .portal-phone-bezel {
+    border-width: 8px;
+    border-radius: 36px;
+  }
+
+  .portal-phone-bezel img {
+    border-radius: 27px;
+  }
+
+  .portal-footer {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

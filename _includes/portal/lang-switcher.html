@@ -1,0 +1,12 @@
+<nav class="portal-lang-switcher" aria-label="{{ page.language_aria | default: 'Language selection' }}">
+  <ul>
+    <li><a href="/en/" class="{% if lang == 'en' %}active{% endif %}">English</a></li>
+    <li><a href="/zh-Hans/" class="{% if lang == 'zh-Hans' %}active{% endif %}">简体中文</a></li>
+    <li><a href="/zh-Hant/" class="{% if lang == 'zh-Hant' %}active{% endif %}">繁體中文</a></li>
+    <li><a href="/de/" class="{% if lang == 'de' %}active{% endif %}">Deutsch</a></li>
+    <li><a href="/fr/" class="{% if lang == 'fr' %}active{% endif %}">Français</a></li>
+    <li><a href="/ja/" class="{% if lang == 'ja' %}active{% endif %}">日本語</a></li>
+    <li><a href="/ko/" class="{% if lang == 'ko' %}active{% endif %}">한국어</a></li>
+    <li><a href="/es/" class="{% if lang == 'es' %}active{% endif %}">Español</a></li>
+  </ul>
+</nav>

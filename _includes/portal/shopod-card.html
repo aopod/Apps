@@ -1,0 +1,24 @@
+<section class="portal-row portal-row--shopod" aria-labelledby="portal-shopod-title">
+  <div class="portal-row__inner">
+    <div class="portal-row__visual">
+      <div class="portal-phone-bezel">
+        <img src="/assets/shopod/images/hero-en.jpg"
+             alt="{{ page.shopod_title | default: 'Shopod' }}"
+             width="329" height="712"
+             loading="lazy" decoding="async">
+      </div>
+    </div>
+    <div class="portal-row__copy">
+      <p class="portal-row__eyebrow">
+        <span class="portal-row__index">02</span>
+        <span>Shopod</span>
+      </p>
+      <h2 id="portal-shopod-title" class="portal-row__title">{{ page.shopod_title | default: "A simpler shopping list with prices built in." }}</h2>
+      <p class="portal-row__lead">{{ page.shopod_lead | default: "Make a grocery list, enter prices as you go, and keep the total visible before checkout." }}</p>
+      <a class="portal-row__cta" href="/Shopod/">
+        {{ page.shopod_cta | default: "Open Shopod" }}
+        <span class="portal-row__arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</section>
