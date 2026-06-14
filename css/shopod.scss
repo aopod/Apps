@@ -1088,6 +1088,14 @@ html {
     width: 100%;
   }
 
+  .shopod-qr-wrap {
+    width: 100%;
+  }
+
+  .shopod-qr-wrap .shopod-button {
+    width: 100%;
+  }
+
   .shopod-button {
     padding-left: 14px;
     padding-right: 14px;
@@ -1127,5 +1135,92 @@ html {
 
   .shopod-footer {
     flex-direction: column;
+  }
+}
+
+/* ============================================ */
+/* QR hover popover (desktop only)              */
+/* ============================================ */
+.shopod-qr-wrap {
+  position: relative;
+  display: inline-flex;
+}
+
+/* The bottom CTA sits in a 2-col grid (.shopod-final); without this, the grid item
+   stretches to the full column width while the button hugs the left edge, so the
+   popover's left:50% would center on the column instead of the button. */
+.shopod-qr-wrap--final {
+  justify-self: start;
+}
+
+.shopod-qr-popover {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: max-content;
+  padding: 12px 14px 14px;
+  border: 1px solid var(--shopod-line);
+  border-radius: 8px;
+  background: var(--shopod-surface);
+  box-shadow: 0 18px 42px rgba(31, 37, 32, 0.16);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+  z-index: 50;
+}
+
+.shopod-qr-popover::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  background: var(--shopod-surface);
+  border-top: 1px solid var(--shopod-line);
+  border-left: 1px solid var(--shopod-line);
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.shopod-qr-popover img {
+  display: block;
+  width: 160px;
+  height: 160px;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.shopod-qr-popover__caption {
+  color: var(--shopod-muted);
+  font-size: 0.82rem;
+  font-weight: 650;
+  text-align: center;
+  white-space: nowrap;
+}
+
+@media (hover: hover) and (pointer: fine) and (min-width: 901px) {
+  .shopod-qr-wrap:hover .shopod-qr-popover,
+  .shopod-qr-wrap:focus-within .shopod-qr-popover {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+
+@media (hover: none), (pointer: coarse), (max-width: 900px) {
+  .shopod-qr-popover {
+    display: none;
+  }
+}
+
+@media print {
+  .shopod-qr-popover {
+    display: none !important;
   }
 }

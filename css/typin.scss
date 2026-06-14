@@ -1084,3 +1084,83 @@ html, body {
     font-size: 1rem;
   }
 }
+
+// ============================================
+// QR HOVER POPOVER (desktop only)
+// ============================================
+.typin-qr-wrap {
+  position: relative;
+  display: inline-flex;
+}
+
+.typin-qr-popover {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  width: max-content;
+  padding: var(--space-3) var(--space-4) var(--space-4);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity var(--transition-fast);
+  z-index: 30;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    background: var(--bg-card);
+    border-top: 1px solid var(--border);
+    border-left: 1px solid var(--border);
+    transform: translateX(-50%) rotate(45deg);
+  }
+
+  img {
+    display: block;
+    width: 160px;
+    height: 160px;
+    background: #fff;
+    border-radius: var(--radius-sm);
+  }
+}
+
+.typin-qr-popover__caption {
+  color: var(--text-secondary);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+}
+
+@media (hover: hover) and (pointer: fine) and (min-width: 901px) {
+  .typin-qr-wrap:hover .typin-qr-popover,
+  .typin-qr-wrap:focus-within .typin-qr-popover {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+
+@media (hover: none), (pointer: coarse), (max-width: 900px) {
+  .typin-qr-popover {
+    display: none;
+  }
+}
+
+@media print {
+  .typin-qr-popover {
+    display: none !important;
+  }
+}

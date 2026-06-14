@@ -5,6 +5,7 @@ lang: de
 title: Shopod - Einkaufslisten-Rechner
 description: Eine klare, minimalistische iOS-Einkaufslisten-App mit Kategorien, Preisen, Mengen, Summen und integriertem Rechner.
 permalink: /Shopod/de/
+qr_hint: "Scannen zum Laden"
 hero_title: Eine einfachere Einkaufsliste mit Preisen
 hero_subtitle: Kategorien, Artikelpreise, Mengen, Summen und ein integrierter Rechner in einem klaren Planungsfluss.
 hero_cta: Im App Store laden

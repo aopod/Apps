@@ -5,6 +5,7 @@ lang: es
 title: Shopod - Calculadora de lista de compras
 description: Una app iOS limpia y minimalista para listas de compras, con categorías, precios, cantidades, totales y calculadora integrada.
 permalink: /Shopod/es/
+qr_hint: "Escanear para descargar"
 hero_title: Una lista de compras más simple, con precios incluidos
 hero_subtitle: Categorías, precios, cantidades, totales y una calculadora integrada en un flujo claro.
 hero_cta: Descargar en App Store

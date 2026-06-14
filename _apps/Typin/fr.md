@@ -2,6 +2,7 @@
 layout: app_Typin
 lang: fr
 permalink: /Typin/fr/
+qr_hint: "Scanner pour télécharger"
 title: "Typin - Écrivez avec concentration"
 description: "Un éditeur Markdown minimaliste pour iPhone. Écrivez localement, synchronisez sans faille."
 

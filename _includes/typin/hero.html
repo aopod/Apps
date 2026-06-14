@@ -5,10 +5,16 @@
     <h1 class="hero__title">{{ page.hero_title }}</h1>
     <p class="hero__subtitle">{{ page.hero_subtitle }}</p>
     <div class="hero__actions">
-      <a href="https://apps.apple.com/us/app/typin-focused-writing/id6758349989"
-         class="btn btn-primary typin-store-link" target="_blank" rel="noopener">
-        {{ page.hero_cta | default: "Download Free" }}
-      </a>
+      <div class="typin-qr-wrap" data-qr data-qr-url="https://apps.apple.com/us/app/typin-focused-writing/id6758349989">
+        <a href="https://apps.apple.com/us/app/typin-focused-writing/id6758349989"
+           class="btn btn-primary typin-store-link" target="_blank" rel="noopener">
+          {{ page.hero_cta | default: "Download Free" }}
+        </a>
+        <div class="typin-qr-popover" role="tooltip">
+          <img data-qr-img width="160" height="160" alt="{{ page.qr_alt | default: 'QR code for Typin on the App Store' }}" loading="lazy" decoding="async">
+          <span class="typin-qr-popover__caption">{{ page.qr_hint | default: "Scan to download" }}</span>
+        </div>
+      </div>
       <a href="#core-value" class="btn btn-secondary">
         {{ page.hero_secondary_cta | default: "Learn More" }}
       </a>

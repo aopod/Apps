@@ -5,6 +5,7 @@ lang: ko
 title: Shopod - 쇼핑 목록 계산기
 description: 카테고리, 상품 가격, 수량, 합계, 내장 계산기를 갖춘 깔끔한 iOS 쇼핑 목록 앱입니다.
 permalink: /Shopod/ko/
+qr_hint: "스캔하여 다운로드"
 hero_title: 가격까지 함께 관리하는 더 단순한 쇼핑 목록
 hero_subtitle: 카테고리, 상품 가격, 수량, 합계, 내장 계산기를 하나의 깔끔한 흐름에서 관리합니다.
 hero_cta: App Store에서 다운로드

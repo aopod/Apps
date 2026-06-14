@@ -5,6 +5,7 @@ lang: zh-Hant
 title: Shopod - 購物清單計算器
 description: 一款清爽極簡的 iOS 購物清單 App，支援分類、商品價格、數量、總計和內建計算器。
 permalink: /Shopod/zh-Hant/
+qr_hint: "掃碼下載"
 hero_title: 用更清爽的方式規劃購物清單
 hero_subtitle: 分類、商品價格、數量、總計和內建計算器，都在一個簡潔流程裡。
 hero_cta: 在 App Store 下載

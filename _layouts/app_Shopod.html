@@ -31,12 +31,18 @@ layout: default
         <h1 id="shopod-hero-title">{{ page.hero_title | default: "A simpler shopping list with prices built in" }}</h1>
         <p class="shopod-hero__lead">{{ page.hero_subtitle | default: "Make a grocery list, enter prices as you go, and keep the total visible before checkout." }}</p>
         <div class="shopod-actions">
-          <a class="shopod-button shopod-button--primary shopod-store-link" href="{{ app_store_url }}" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M17.2 12.1c0-1.9 1-3.4 2.4-4.3-.9-1.3-2.3-2-4-2.1-1.7-.2-3.3 1-4.1 1-.8 0-2.1-1-3.4-.9-1.8 0-3.5 1.1-4.4 2.7-1.9 3.3-.5 8.1 1.3 10.7.9 1.3 2 2.8 3.4 2.7 1.4-.1 1.9-.9 3.6-.9s2.2.9 3.6.9c1.5 0 2.5-1.3 3.4-2.7 1-1.5 1.4-3 1.5-3.1-.1-.1-3.3-1.3-3.3-4zM14.5 3.8c.8-.9 1.3-2.2 1.1-3.4-1.1 0-2.4.8-3.2 1.7-.7.8-1.3 2.1-1.1 3.3 1.2.1 2.4-.6 3.2-1.6z"/>
-            </svg>
-            {{ page.hero_cta | default: "Download on the App Store" }}
-          </a>
+          <div class="shopod-qr-wrap" data-qr data-qr-url="{{ app_store_url }}">
+            <a class="shopod-button shopod-button--primary shopod-store-link" href="{{ app_store_url }}" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M17.2 12.1c0-1.9 1-3.4 2.4-4.3-.9-1.3-2.3-2-4-2.1-1.7-.2-3.3 1-4.1 1-.8 0-2.1-1-3.4-.9-1.8 0-3.5 1.1-4.4 2.7-1.9 3.3-.5 8.1 1.3 10.7.9 1.3 2 2.8 3.4 2.7 1.4-.1 1.9-.9 3.6-.9s2.2.9 3.6.9c1.5 0 2.5-1.3 3.4-2.7 1-1.5 1.4-3 1.5-3.1-.1-.1-3.3-1.3-3.3-4zM14.5 3.8c.8-.9 1.3-2.2 1.1-3.4-1.1 0-2.4.8-3.2 1.7-.7.8-1.3 2.1-1.1 3.3 1.2.1 2.4-.6 3.2-1.6z"/>
+              </svg>
+              {{ page.hero_cta | default: "Download on the App Store" }}
+            </a>
+            <div class="shopod-qr-popover" role="tooltip">
+              <img data-qr-img width="160" height="160" alt="{{ page.qr_alt | default: 'QR code for Shopod on the App Store' }}" loading="lazy" decoding="async">
+              <span class="shopod-qr-popover__caption">{{ page.qr_hint | default: "Scan to download" }}</span>
+            </div>
+          </div>
           <a class="shopod-button shopod-button--secondary" href="#how-it-works">{{ page.hero_secondary_cta | default: "See how it works" }}</a>
         </div>
         <p class="shopod-hero__note">{{ page.hero_note | default: "For grocery runs where the total matters before you reach the register." }}</p>
@@ -142,12 +148,18 @@ layout: default
         <h2 id="download-title">{{ page.cta_title | default: "Make your next shopping list simpler" }}</h2>
         <p>{{ page.cta_subtitle | default: "Plan items, prices, quantities, and totals in one clean place." }}</p>
       </div>
-      <a class="shopod-button shopod-button--primary shopod-store-link" href="{{ app_store_url }}" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M17.2 12.1c0-1.9 1-3.4 2.4-4.3-.9-1.3-2.3-2-4-2.1-1.7-.2-3.3 1-4.1 1-.8 0-2.1-1-3.4-.9-1.8 0-3.5 1.1-4.4 2.7-1.9 3.3-.5 8.1 1.3 10.7.9 1.3 2 2.8 3.4 2.7 1.4-.1 1.9-.9 3.6-.9s2.2.9 3.6.9c1.5 0 2.5-1.3 3.4-2.7 1-1.5 1.4-3 1.5-3.1-.1-.1-3.3-1.3-3.3-4zM14.5 3.8c.8-.9 1.3-2.2 1.1-3.4-1.1 0-2.4.8-3.2 1.7-.7.8-1.3 2.1-1.1 3.3 1.2.1 2.4-.6 3.2-1.6z"/>
-        </svg>
-        {{ page.hero_cta | default: "Download on the App Store" }}
-      </a>
+      <div class="shopod-qr-wrap shopod-qr-wrap--final" data-qr data-qr-url="{{ app_store_url }}">
+        <a class="shopod-button shopod-button--primary shopod-store-link" href="{{ app_store_url }}" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M17.2 12.1c0-1.9 1-3.4 2.4-4.3-.9-1.3-2.3-2-4-2.1-1.7-.2-3.3 1-4.1 1-.8 0-2.1-1-3.4-.9-1.8 0-3.5 1.1-4.4 2.7-1.9 3.3-.5 8.1 1.3 10.7.9 1.3 2 2.8 3.4 2.7 1.4-.1 1.9-.9 3.6-.9s2.2.9 3.6.9c1.5 0 2.5-1.3 3.4-2.7 1-1.5 1.4-3 1.5-3.1-.1-.1-3.3-1.3-3.3-4zM14.5 3.8c.8-.9 1.3-2.2 1.1-3.4-1.1 0-2.4.8-3.2 1.7-.7.8-1.3 2.1-1.1 3.3 1.2.1 2.4-.6 3.2-1.6z"/>
+          </svg>
+          {{ page.hero_cta | default: "Download on the App Store" }}
+        </a>
+        <div class="shopod-qr-popover" role="tooltip">
+          <img data-qr-img width="160" height="160" alt="{{ page.qr_alt | default: 'QR code for Shopod on the App Store' }}" loading="lazy" decoding="async">
+          <span class="shopod-qr-popover__caption">{{ page.qr_hint | default: "Scan to download" }}</span>
+        </div>
+      </div>
     </section>
   </main>
 
@@ -164,6 +176,7 @@ layout: default
 </div>
 
 {% include analytics.html %}
+{% include qr-code.html %}
 {% include one-script.html content="
 (function() {
     const SUPPORTED_LANGUAGES = {

@@ -2,6 +2,7 @@
 layout: app_Typin
 lang: ja
 permalink: /Typin/ja/
+qr_hint: "スキャンしてダウンロード"
 title: "Typin - 集中して書く"
 description: "iPhone のためのミニマル Markdown エディタ。ローカルで書いて、シームレスに同期。"
 

@@ -2,6 +2,7 @@
 layout: app_Typin
 lang: zh-Hans
 permalink: /Typin/zh-Hans/
+qr_hint: "扫码下载"
 title: "Typin - 专注写作"
 description: "iPhone 上的极简 Markdown 编辑器。本地写作，无缝同步。"
 

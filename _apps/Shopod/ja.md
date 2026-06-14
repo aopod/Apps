@@ -5,6 +5,7 @@ lang: ja
 title: Shopod - 買い物リスト計算アプリ
 description: カテゴリ、価格、数量、合計、内蔵計算機を備えた、シンプルな iOS 買い物リストアプリです。
 permalink: /Shopod/ja/
+qr_hint: "スキャンしてダウンロード"
 hero_title: 価格まで扱える、よりシンプルな買い物リスト
 hero_subtitle: カテゴリ、商品価格、数量、合計、内蔵計算機をひとつのすっきりした流れで管理できます。
 hero_cta: App Store でダウンロード

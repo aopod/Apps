@@ -2,6 +2,7 @@
 layout: app_Typin
 lang: ko
 permalink: /Typin/ko/
+qr_hint: "스캔하여 다운로드"
 title: "Typin - 집중해서 쓰기"
 description: "iPhone을 위한 미니멀 Markdown 에디터. 로컬에서 작성하고, 원활하게 동기화."
 

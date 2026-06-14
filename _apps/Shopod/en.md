@@ -5,6 +5,7 @@ lang: en
 title: Shopod - Shopping list calculator
 description: A clean, minimalist iOS shopping list app with categories, item prices, quantities, totals, and a built-in calculator.
 permalink: /Shopod/en/
+qr_hint: "Scan to download"
 gesture_tap: Tap
 gesture_swipe: Swipe
 gesture_long_press: Long press

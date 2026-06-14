@@ -5,6 +5,7 @@ lang: fr
 title: Shopod - Calculateur de liste de courses
 description: Une app iOS claire et minimaliste pour listes de courses, avec catégories, prix, quantités, totaux et calculatrice intégrée.
 permalink: /Shopod/fr/
+qr_hint: "Scanner pour télécharger"
 hero_title: Une liste de courses plus simple, avec les prix
 hero_subtitle: Catégories, prix, quantités, totaux et calculatrice intégrée dans un flux clair.
 hero_cta: Télécharger sur l'App Store
