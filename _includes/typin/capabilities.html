@@ -4,15 +4,19 @@
     <h2 class="section__title">{{ page.capabilities_title | default: "Details That Matter" }}</h2>
     <p class="section__subtitle">{{ page.capabilities_subtitle | default: "Thoughtful features for a better writing experience" }}</p>
   </div>
-  <div class="capabilities-grid">
-    {% assign capabilities = page.capabilities_list | split: "," %}
-    {% for cap in capabilities %}
-    <div class="capability-item">
-      <div class="capability-item__icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-      </div>
-      <span class="capability-item__text">{{ cap | strip }}</span>
-    </div>
+  <div class="capability-groups">
+    {% for group in page.capability_groups %}
+    <article class="capability-group">
+      <h3 class="capability-group__title">{{ group.title | escape }}</h3>
+      <ul class="capability-group__list">
+        {% for item in group.items %}
+        <li class="capability-item">
+          <svg class="capability-item__icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          <span class="capability-item__text">{{ item | escape }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+    </article>
     {% endfor %}
   </div>
 </section>

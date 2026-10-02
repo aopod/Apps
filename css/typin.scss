@@ -617,25 +617,46 @@ html, body {
 // ============================================
 // CAPABILITIES SECTION
 // ============================================
-.capabilities-grid {
+.capability-groups {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: var(--space-3);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-6);
+
+  @media (max-width: 600px) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.capability-group {
+  min-width: 0;
+  padding: var(--space-6);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.capability-group__title {
+  margin: 0 0 var(--space-4);
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.capability-group__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .capability-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: var(--space-3);
-  padding: var(--space-3) var(--space-4);
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  transition: all var(--transition-fast);
+  padding: var(--space-3) 0;
 
-  &:hover {
-    border-color: var(--accent);
-    background: var(--bg-card-hover);
+  & + & {
+    border-top: 1px solid var(--border-subtle);
   }
 }
 
@@ -643,17 +664,14 @@ html, body {
   flex-shrink: 0;
   width: 20px;
   height: 20px;
-
-  svg {
-    width: 20px;
-    height: 20px;
-    fill: var(--text-muted);
-  }
+  margin-top: 2px;
+  fill: var(--accent);
 }
 
 .capability-item__text {
   font-size: 0.9375rem;
   color: var(--text-secondary);
+  overflow-wrap: anywhere;
 }
 
 // ============================================

@@ -3,32 +3,32 @@
   <div class="typinsync-content">
     <div class="typinsync-info">
       <h2 class="section__title">{{ page.typinsync_title | default: "TypinSync" }}</h2>
-      <p class="section__subtitle">{{ page.typinsync_subtitle | default: "Real-time sync. No cloud. Full privacy." }}</p>
+      <p class="section__subtitle">{{ page.typinsync_subtitle | default: "Connect your phone and computer over your local network. No cloud account required." }}</p>
 
       <div class="typinsync-features">
         <div class="typinsync-feature">
           <div class="typinsync-feature__icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
           </div>
-          <span class="typinsync-feature__text">{{ page.typinsync_feature_1 | default: "Start on iPhone, continue on browser" }}</span>
+          <span class="typinsync-feature__text">{{ page.typinsync_feature_1 | default: "Enable TypinSync and open the displayed address in a browser on the same local network" }}</span>
         </div>
         <div class="typinsync-feature">
           <div class="typinsync-feature__icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
           </div>
-          <span class="typinsync-feature__text">{{ page.typinsync_feature_2 | default: "Local network sync via HTTP" }}</span>
+          <span class="typinsync-feature__text">{{ page.typinsync_feature_2 | default: "View the current document and send browser edits back to your iPhone or iPad, without a cloud account" }}</span>
         </div>
         <div class="typinsync-feature">
           <div class="typinsync-feature__icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
           </div>
-          <span class="typinsync-feature__text">{{ page.typinsync_feature_3 | default: "Optional password protection" }}</span>
+          <span class="typinsync-feature__text">{{ page.typinsync_feature_3 | default: "Switch between Markdown source and rendered preview, and copy text from your browser" }}</span>
         </div>
         <div class="typinsync-feature">
           <div class="typinsync-feature__icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
           </div>
-          <span class="typinsync-feature__text">{{ page.typinsync_feature_4 | default: "Data never leaves your network" }}</span>
+          <span class="typinsync-feature__text">{{ page.typinsync_feature_4 | default: "An editing lock pauses phone editing while the browser edits; release it from the browser or revoke it on the phone" }}</span>
         </div>
       </div>
     </div>
@@ -37,7 +37,7 @@
       {% assign sync_image = page.typinsync_image | default: "/assets/typin/images/sync-en.jpg" %}
       {% if sync_image %}
       <img src="{{ sync_image }}"
-           alt="{{ page.typinsync_image_alt | default: 'TypinSync Real-time Sync' }}"
+           alt="{{ page.typinsync_image_alt | default: 'TypinSync local network address and connection status' }}"
            class="typinsync__image"
            width="400"
            height="280"
