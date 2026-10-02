@@ -1,60 +1,81 @@
 ---
-layout: app_Shopod
-appName: Shopod
-lang: fr
-title: Shopod - Calculateur de liste de courses
-description: Une app iOS claire et minimaliste pour listes de courses, avec catégories, prix, quantités, totaux et calculatrice intégrée.
-permalink: /Shopod/fr/
+layout: "app_Shopod"
+appName: "Shopod"
+lang: "fr"
+title: "Shopod - Listes de courses avec prix et réductions"
+description: "Préparez vos courses avec prix, quantités, réductions par catégorie et totaux actualisés. Scannez les textes des produits et personnalisez vos listes sur iOS."
+permalink: "/Shopod/fr/"
+hero_screenshot: "/assets/shopod/images/hero-en.jpg"
+hero_cta: "Télécharger sur l'App Store"
+hero_secondary_cta: "Voir les fonctions"
+mobile_banner_subtitle: "Disponible sur l'App Store"
+mobile_banner_cta: "Ouvrir"
+app_store_aria: "Télécharger Shopod sur l'App Store"
+language_aria: "Choix de la langue"
+preview_aria: "Aperçu de l'interface Shopod"
 qr_hint: "Scanner pour télécharger"
-hero_title: Une liste de courses plus simple, avec les prix
-hero_subtitle: Catégories, prix, quantités, totaux et calculatrice intégrée dans un flux clair.
-hero_cta: Télécharger sur l'App Store
-hero_secondary_cta: Voir les fonctions
-hero_note: "Conçue pour les gestes connus : toucher, saisir, tirer, balayer, appuyer longuement et glisser."
-mobile_banner_subtitle: Disponible sur l'App Store
-mobile_banner_cta: Ouvrir
-app_store_aria: Télécharger Shopod sur l'App Store
-language_aria: Choix de la langue
-preview_aria: Aperçu de l'interface Shopod
-mock_list_title: Courses du samedi
-mock_cat_1: Frais
-mock_cat_2: Épicerie
-mock_item_1: Tomates
-mock_item_2: Épinards
-mock_item_3: Pommes
-mock_item_4: Huile d'olive
-mock_item_5: Pâtes
-mock_total_label: Total de la liste
-positioning_1: Les apps de notes ne calculent pas les totaux.
-positioning_2: Les apps de courses ajoutent souvent plus que nécessaire.
-positioning_3: "Shopod garde un flux simple : liste, catégorie, article, prix, quantité, total."
-features_title: L'essentiel pour planifier les courses du quotidien
-feature_1_title: Organiser
-feature_1_desc: Gérez plusieurs listes, ajoutez des catégories et réorganisez avec glisser, balayer et appui long.
-feature_2_title: Calculer
-feature_2_desc: Ajoutez prix et quantités, voyez les totaux automatiques et utilisez la calculatrice avec historique.
-feature_3_title: Faire les courses
-feature_3_desc: Cochez les articles, passez entre catégories, déplacez des articles et partagez des captures de liste.
-flow_title: Préparez la liste, gardez le total visible
-flow_1_title: Créer une liste
-flow_1_desc: Commencez avec un plan de courses clair.
-flow_2_title: Ajouter des catégories
-flow_2_desc: Regroupez les articles comme vous faites vos courses.
-flow_3_title: Saisir les articles
-flow_3_desc: Ajoutez prix et quantités pendant la préparation.
-flow_4_title: Vérifier le total
-flow_4_desc: Voyez le total se mettre à jour pendant les courses.
-calculator_title: Calculez les prix sans quitter l'app
-calculator_1: Opérations de base, pourcentages, signe, suppression et effacement.
-calculator_2: Réutilisez les résultats lors de la modification des prix.
-calculator_3: Consultez les calculs récents dans l'historique.
-support_title: Utile pour la maison, les voyages et les régions
-support_desc: Shopod prend en charge 8 langues à l'exécution et plusieurs symboles monétaires.
-cta_title: Simplifiez votre prochaine liste de courses
-cta_subtitle: Planifiez articles, prix, quantités et totaux au même endroit.
-gesture_tap: Toucher
-gesture_swipe: Balayer
-gesture_long_press: Appui long
-gesture_drag: Glisser
-gesture_pull: Tirer
+mock_list_title: "Courses du samedi"
+mock_cat_1: "Frais"
+mock_cat_2: "Épicerie"
+mock_item_2: "Épinards"
+mock_item_4: "Huile d'olive"
+flow_2_title: "Ajouter des catégories"
+hero_title: "Connaissez le total avant de passer en caisse"
+hero_subtitle: "Notez le prix et la quantité de chaque article. Ajoutez des réductions par catégorie et suivez le total pendant vos courses."
+hero_note: "Pour les courses de la semaine, les achats du foyer et les voyages."
+proof_title: "Prix, réductions, un seul total"
+proof_desc: "Les réductions par catégorie sont intégrées au total. Les prix unitaires d’origine restent inchangés."
+receipt_eyebrow: "Avant la caisse"
+receipt_title: "Gardez le total après réductions en vue"
+receipt_desc: "Shopod additionne les montants de chaque catégorie après réductions. Dès qu’une remise s’applique, le total d’origine apparaît aussi pour faciliter la comparaison."
+receipt_aria: "Exemple de total avec une réduction par catégorie"
+receipt_original_label: "Avant réductions"
+receipt_discount_label: "Frais · 20% de remise"
+receipt_total_label: "Après réductions"
+receipt_note: "Les prix sont des exemples. Les articles cochés restent inclus dans le total ; la coche indique ce qui a déjà été pris."
+workbench_eyebrow: "Mode d’emploi"
+flow_title: "Trois étapes pour les courses du quotidien"
+workbench_1_title: "Organisez vos listes"
+feature_1_desc: "Créez plusieurs listes et regroupez les articles par catégorie. Faites glisser les listes, catégories et articles pour les réordonner ou déplacez un article vers une autre catégorie."
+workbench_2_title: "Ajoutez prix et quantités"
+feature_2_desc: "Saisissez ou scannez le prix en rayon, puis ajustez la quantité. Les sous-totaux, réductions par catégorie et le total de la liste se mettent à jour ensemble."
+workbench_3_title: "Cochez pendant les courses"
+feature_3_desc: "Cochez les articles pris et accédez directement à une catégorie. Ajustez les quantités dans la liste, puis remettez celles d’une catégorie à zéro pour les prochaines courses."
+discounts_eyebrow: "Réductions par catégorie"
+discounts_title: "Gardez les offres avec les articles concernés"
+discounts_desc: "Ajoutez et réordonnez les règles dans les paramètres de réduction d’une catégorie. Consultez l’économie de chaque règle et le montant restant pour atteindre un seuil d’achat."
+rule_percent_title: "Réduction en pourcentage"
+rule_percent_desc: "Payez une part du montant de la catégorie. Saisir 80 signifie payer 80% du prix, soit une remise de 20%."
+rule_fixed_title: "Réduction d’un montant fixe"
+rule_fixed_desc: "Déduisez un montant directement ou une seule fois lorsqu’un seuil est atteint. Avec « 50 de remise dès 100 », un achat de 250 revient à 200."
+rule_repeating_title: "Réduction à chaque tranche"
+rule_repeating_desc: "Répétez la remise pour chaque tranche complète. Avec « 50 de remise par tranche de 100 », un achat de 250 revient à 150."
+combination_title: "Cumulez les règles ou retenez la meilleure offre"
+combination_desc: "Appliquez les règles dans l’ordre choisi ou seulement la règle admissible offrant la plus grande économie. Les réductions sont calculées séparément pour chaque catégorie."
+import_title: "Réutilisez les règles d’une autre catégorie"
+import_desc: "Importez toutes les règles d’une autre catégorie de la même liste et enregistrez-les avec la vôtre, sans modifier la catégorie source."
+prices_title: "Comparez les sous-totaux avant et après réduction"
+prices_desc: "Affichez les sous-totaux remisés depuis la carte des règles ou basculez leur affichage pour la liste actuelle en mode édition. Les changements de quantité et déplacements redistribuent la remise sans modifier les prix unitaires."
+tools_eyebrow: "Pendant les courses"
+tools_title: "Moins de saisie, plus d’informations utiles"
+scanner_title: "Scannez les noms et les prix"
+scanner_desc: "Reconnaissez le texte des produits avec l’appareil photo. Sélectionnez et combinez des fragments de nom, ou confirmez un prix avant de le reporter dans l’article."
+scanner_note: "Le scan de texte nécessite iOS 16 ou ultérieur, un appareil compatible et l’accès à l’appareil photo."
+calculator_title: "Calculez les prix sans quitter l’app"
+calculator_1: "Utilisez les opérations de base, pourcentages, changement de signe, retour arrière et effacement."
+calculator_2: "Reportez directement le résultat lors de la modification du prix d’un article."
+calculator_3: "Consultez, réutilisez ou supprimez des calculs dans l’historique."
+background_title: "Un fond pour chaque liste"
+background_desc: "Choisissez parmi dix styles photo et couleurs. Définissez un fond global, personnalisez une liste ou faites-la suivre à nouveau le réglage global."
+share_title: "Partagez toute la liste en image"
+share_desc: "Prenez une capture de l’écran des courses pour prévisualiser une image de la liste complète avec le logo Shopod, puis envoyez-la via la feuille de partage iOS."
+support_eyebrow: "Langue et monnaie"
+support_title: "Faites vos courses dans votre langue"
+support_desc: "Passez entre huit langues dans l’app. Pour chaque liste, choisissez parmi douze symboles monétaires ou saisissez le vôtre. Les prix restent dans la monnaie que vous notez."
+support_aria: "Langues de l’app et exemples de symboles monétaires"
+cta_title: "Une liste de courses qui fait les calculs"
+cta_subtitle: "Préparez les articles, notez les prix et gardez réductions et totaux à portée de vue."
+privacy_label: "Politique de confidentialité"
+qr_alt: "Code QR pour télécharger Shopod sur l’App Store"
+hero_screenshot_alt: "Liste de courses Shopod affichée en anglais"
 ---

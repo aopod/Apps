@@ -1,71 +1,81 @@
 ---
-layout: app_Shopod
-appName: Shopod
-lang: zh-Hans
-title: Shopod - 带总价的购物清单
-description: Shopod 是一款 iOS 购物清单应用，可以给商品记录价格和数量，并在购物时查看清单总价。
-permalink: /Shopod/zh-Hans/
+layout: "app_Shopod"
+appName: "Shopod"
+lang: "zh-Hans"
+title: "Shopod - 计算价格与优惠的购物清单"
+description: "用 Shopod 管理购物清单、价格与数量，自动计算分类优惠和总额，还能扫描商品文字、使用计算器、设置清单背景并分享长图。"
+permalink: "/Shopod/zh-Hans/"
+hero_screenshot: "/assets/shopod/images/hero-en.jpg"
+hero_cta: "在 App Store 下载"
+hero_secondary_cta: "看看怎么用"
+mobile_banner_subtitle: "已上架 App Store"
+mobile_banner_cta: "打开"
+app_store_aria: "在 App Store 下载 Shopod"
+language_aria: "语言选择"
+preview_aria: "Shopod 应用界面预览"
 qr_hint: "扫码下载"
-app_icon: ""
-hero_screenshot_alt: Shopod 购物清单界面
-hero_title: 购物前先知道大概要花多少
-hero_subtitle: 把价格和数量记在商品旁边，边逛边勾选，清单总价会跟着变化。
-hero_cta: 在 App Store 下载
-hero_secondary_cta: 看看怎么用
-hero_note: 适合超市采购、家庭补货，也适合旅行时控制预算。
-proof_title: 一个清单，实时总价
-proof_desc: 价格、数量和已购买状态都在同一张清单里，不需要切到计算器。
-mobile_banner_subtitle: 已上架 App Store
-mobile_banner_cta: 打开
-app_store_aria: 在 App Store 下载 Shopod
-language_aria: 语言选择
-preview_aria: Shopod 应用界面预览
-mock_list_title: 周六采购
-mock_cat_1: 生鲜
-mock_cat_2: 食品柜
-mock_item_1: 番茄
-mock_item_2: 菠菜
-mock_item_3: 苹果
-mock_item_4: 橄榄油
-mock_item_5: 意面
-mock_total_label: 清单总计
-positioning_1: 备忘录应用不会计算总价。
-positioning_2: 很多购物应用加入了太多不需要的功能。
-positioning_3: 给商品填上货架价格和数量，Shopod 会把分类小计和清单总价算出来。
-features_title: 结账前心里有数
-receipt_eyebrow: 结账前
-receipt_title: 篮子里的东西大概要多少钱
-receipt_desc: 看到价格就填进去，拿两件就改数量，已经放进购物车的项目可以直接标记完成。
-feature_1_title: 整理
-feature_1_desc: 按超市区域或自己的习惯分分类，常买的东西下次还能接着用。
-feature_2_title: 计算
-feature_2_desc: 商品价格和数量放在同一行，改数量时自动更新小计和总价。
-feature_3_title: 购物
-feature_3_desc: 逛到哪一类就看哪一类，买完就勾掉，清单不会变成一长串备忘录。
-flow_title: 一次普通采购，只需要三步
-flow_1_title: 出门前列清单
-flow_1_desc: 把要买的东西按区域整理好。
-flow_2_title: 添加分类
-flow_2_desc: 生鲜、食品柜、日用品都可以分开看。
-flow_3_title: 看到价格就填上
-flow_3_desc: 货架价、数量和小计留在商品旁边。
-flow_4_title: 购物时勾掉
-flow_4_desc: 清单总价随时更新。
-workbench_1_title: 出门前列好清单
-workbench_2_title: 看到价格就填在商品旁边
-workbench_3_title: 购物时一项项勾掉
-calculator_title: 不离开应用就能计算价格
-calculator_1: 支持基础运算、百分比、正负切换、删除和清除。
-calculator_2: 编辑商品价格时可直接使用计算结果。
-calculator_3: 从历史记录回看最近计算。
-support_eyebrow: 本地化
-support_title: 用你习惯的语言和货币记账
-support_desc: Shopod 支持多种界面语言和常见货币符号，家庭采购、出门旅行都能按当地价格记录。
-cta_title: 下次采购前，先列一张带总价的清单
-cta_subtitle: 记录商品、价格和数量，购物时直接勾选。
-gesture_tap: 点击
-gesture_swipe: 滑动
-gesture_long_press: 长按
-gesture_drag: 拖动
-gesture_pull: 下拉
+mock_list_title: "周六采购"
+mock_cat_1: "生鲜"
+mock_cat_2: "食品柜"
+mock_item_2: "菠菜"
+mock_item_4: "橄榄油"
+flow_2_title: "添加分类"
+hero_title: "结账前，看清这次购物要花多少"
+hero_subtitle: "把价格和数量记在商品旁边，按分类设置优惠，购物时随时查看更新后的总额。"
+hero_note: "适合每周采购、家庭补货，也适合旅行时记录购物开销。"
+proof_title: "价格、优惠、总额都在清单里"
+proof_desc: "分类优惠自动计入清单总额，商品原始单价保持不变。"
+receipt_eyebrow: "结账前"
+receipt_title: "把优惠算进购物总额"
+receipt_desc: "Shopod 汇总各分类的优惠后金额。有实际减免时，同时展示原价总额，方便对照优惠前后要花多少钱。"
+receipt_aria: "包含分类优惠的购物总额示例"
+receipt_original_label: "优惠前总额"
+receipt_discount_label: "生鲜 · 八折"
+receipt_total_label: "优惠后总额"
+receipt_note: "价格仅为示例。已勾选商品仍计入总额，勾选用于记录已经拿到的商品。"
+workbench_eyebrow: "使用流程"
+flow_title: "一次日常采购，只需要三步"
+workbench_1_title: "按习惯整理清单"
+feature_1_desc: "建立多张清单，按分类整理商品，拖动调整清单、分类和商品顺序，也能把商品移到其他分类。"
+workbench_2_title: "填上价格和数量"
+feature_2_desc: "输入或扫描货架价格，再调整数量。商品小计、分类优惠和清单总额一起更新。"
+workbench_3_title: "边逛边勾选"
+feature_3_desc: "拿到商品就勾选，快速跳转到需要的分类，直接调整数量。下次采购时，可将分类内商品数量归零后重新使用。"
+discounts_eyebrow: "分类优惠"
+discounts_title: "让超市优惠跟着对应的商品走"
+discounts_desc: "在分类的优惠设置中添加规则、调整顺序，查看每条规则实际减免多少，以及距离金额门槛还差多少。"
+rule_percent_title: "比例折扣"
+rule_percent_desc: "按分类金额的一定比例付款，例如输入 8 表示八折，实付原价的 80%。"
+rule_fixed_title: "直减与满减"
+rule_fixed_desc: "直接减去指定金额，或达到门槛后减一次。例如满 100 减 50，消费 250 实付 200。"
+rule_repeating_title: "每满循环减"
+rule_repeating_desc: "每达到一次门槛就再减一次。例如每满 100 减 50，消费 250 实付 150。"
+combination_title: "按顺序叠加，或选择最优惠的一条"
+combination_desc: "按你排列的顺序应用规则，也可以只选满足条件且减免最多的一条。每个分类独立计算优惠。"
+import_title: "复用其他分类的优惠规则"
+import_desc: "从同一清单的其他分类导入整组规则，随当前分类一起保存，不会改动来源分类。"
+prices_title: "对照商品原价与优惠后小计"
+prices_desc: "从分类规则卡片显示商品优惠价，也能在编辑模式中统一切换当前清单。改数量或移动商品时重新分摊优惠，原始单价不变。"
+tools_eyebrow: "购物中的小帮手"
+tools_title: "少输一点，多看清一点"
+scanner_title: "扫描商品名称与价格"
+scanner_desc: "用相机识别商品文字，选取并组合名称片段，或确认识别到的价格后回填到商品。"
+scanner_note: "文字扫描需要 iOS 16 或更高版本、受支持的设备及相机访问权限。"
+calculator_title: "不离开应用就能计算价格"
+calculator_1: "支持基础运算、百分比、正负切换、退格和清除。"
+calculator_2: "编辑商品价格时，可以直接使用计算结果。"
+calculator_3: "在历史记录中回看、复用或删除计算。"
+background_title: "给每张清单设置自己的背景"
+background_desc: "提供十种照片与配色背景。可以统一设置全局背景，也能为某张清单单独选择，或恢复为跟随全局。"
+share_title: "把完整清单分享成图片"
+share_desc: "在购物页面截屏后，预览带 Shopod 标识的完整清单长图，再通过 iOS 分享面板发送。"
+support_eyebrow: "语言与货币"
+support_title: "用你习惯的语言购物"
+support_desc: "支持八种应用语言。每张清单可从十二种常用货币符号中选择，也能自行输入；价格按你记录的货币显示。"
+support_aria: "支持的应用语言与货币符号示例"
+cta_title: "下次采购，带上一张会算账的清单"
+cta_subtitle: "列好商品、记下价格，分类优惠和购物总额随时可见。"
+privacy_label: "隐私政策"
+qr_alt: "在 App Store 下载 Shopod 的二维码"
+hero_screenshot_alt: "Shopod 英文购物清单界面"
 ---

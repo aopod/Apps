@@ -1,60 +1,81 @@
 ---
-layout: app_Shopod
-appName: Shopod
-lang: de
-title: Shopod - Einkaufslisten-Rechner
-description: Eine klare, minimalistische iOS-Einkaufslisten-App mit Kategorien, Preisen, Mengen, Summen und integriertem Rechner.
-permalink: /Shopod/de/
+layout: "app_Shopod"
+appName: "Shopod"
+lang: "de"
+title: "Shopod - Einkaufslisten mit Preisen und Rabatten"
+description: "Plane Einkaufslisten mit Preisen, Mengen, Kategorierabatten und aktuellen Summen. Scanne Produkttexte, berechne Preise und gestalte jede Liste auf iOS."
+permalink: "/Shopod/de/"
+hero_screenshot: "/assets/shopod/images/hero-en.jpg"
+hero_cta: "Im App Store laden"
+hero_secondary_cta: "Funktionen ansehen"
+mobile_banner_subtitle: "Im App Store verfügbar"
+mobile_banner_cta: "Öffnen"
+app_store_aria: "Shopod im App Store laden"
+language_aria: "Sprachauswahl"
+preview_aria: "Vorschau der Shopod App-Oberfläche"
 qr_hint: "Scannen zum Laden"
-hero_title: Eine einfachere Einkaufsliste mit Preisen
-hero_subtitle: Kategorien, Artikelpreise, Mengen, Summen und ein integrierter Rechner in einem klaren Planungsfluss.
-hero_cta: Im App Store laden
-hero_secondary_cta: Funktionen ansehen
-hero_note: "Gebaut für vertraute Gesten: tippen, eingeben, ziehen, wischen, lang drücken und verschieben."
-mobile_banner_subtitle: Im App Store verfügbar
-mobile_banner_cta: Öffnen
-app_store_aria: Shopod im App Store laden
-language_aria: Sprachauswahl
-preview_aria: Vorschau der Shopod App-Oberfläche
-mock_list_title: Samstagseinkauf
-mock_cat_1: Obst und Gemüse
-mock_cat_2: Vorrat
-mock_item_1: Tomaten
-mock_item_2: Spinat
-mock_item_3: Äpfel
-mock_item_4: Olivenöl
-mock_item_5: Pasta
-mock_total_label: Listensumme
-positioning_1: Notizen-Apps berechnen keine Summen.
-positioning_2: Einkaufs-Apps bringen oft mehr Funktionen mit als nötig.
-positioning_3: "Shopod hält den Ablauf einfach: Liste, Kategorie, Artikel, Preis, Menge, Summe."
-features_title: Alles Wichtige für die tägliche Einkaufsplanung
-feature_1_title: Organisieren
-feature_1_desc: Verwalte mehrere Listen, füge Kategorien hinzu und sortiere per Ziehen, Wischen und langem Drücken.
-feature_2_title: Berechnen
-feature_2_desc: Ergänze Preis und Menge pro Artikel, sieh automatische Summen und nutze den Rechner mit Verlauf.
-feature_3_title: Einkaufen
-feature_3_desc: Markiere Artikel als erledigt, springe zwischen Kategorien, verschiebe Artikel und teile Listen-Screenshots.
-flow_title: Plane die Liste und behalte die Summe im Blick
-flow_1_title: Liste erstellen
-flow_1_desc: Beginne mit einem klaren Einkaufsplan.
-flow_2_title: Kategorien hinzufügen
-flow_2_desc: Ordne Lebensmittel nach deiner Einkaufsweise.
-flow_3_title: Artikel eingeben
-flow_3_desc: Füge Preise und Mengen beim Planen hinzu.
-flow_4_title: Summe prüfen
-flow_4_desc: Sieh die aktualisierte Listensumme beim Einkaufen.
-calculator_title: Preise berechnen, ohne die App zu verlassen
-calculator_1: Grundrechenarten, Prozent, Vorzeichenwechsel, Löschen und Zurücksetzen.
-calculator_2: Nutze Ergebnisse direkt beim Bearbeiten von Artikelpreisen.
-calculator_3: Prüfe letzte Berechnungen im Verlauf.
-support_title: Nützlich für Haushalte, Reisen und Regionen
-support_desc: Shopod unterstützt 8 Laufzeitsprachen und mehrere Währungssymbole.
-cta_title: Mach deine nächste Einkaufsliste einfacher
-cta_subtitle: Plane Artikel, Preise, Mengen und Summen an einem klaren Ort.
-gesture_tap: Tippen
-gesture_swipe: Wischen
-gesture_long_press: Lang drücken
-gesture_drag: Ziehen
-gesture_pull: Herunterziehen
+mock_list_title: "Samstagseinkauf"
+mock_cat_1: "Obst und Gemüse"
+mock_cat_2: "Vorrat"
+mock_item_2: "Spinat"
+mock_item_4: "Olivenöl"
+flow_2_title: "Kategorien hinzufügen"
+hero_title: "Die Einkaufssumme schon vor der Kasse kennen"
+hero_subtitle: "Halte Preis und Menge bei jedem Artikel fest. Ergänze Rabatte je Kategorie und sieh die aktualisierte Summe beim Einkaufen."
+hero_note: "Für den Wocheneinkauf, Haushaltsbedarf und Einkäufe auf Reisen."
+proof_title: "Preise, Rabatte, eine Summe"
+proof_desc: "Kategorierabatte fließen in die Listensumme ein. Die ursprünglichen Stückpreise bleiben erhalten."
+receipt_eyebrow: "Vor dem Bezahlen"
+receipt_title: "Die Summe nach Rabatten im Blick"
+receipt_desc: "Shopod addiert die rabattierten Beträge aller Kategorien. Sobald ein Rabatt greift, erscheint auch die ursprüngliche Summe zum Vergleich."
+receipt_aria: "Beispiel einer Einkaufssumme mit Kategorierabatt"
+receipt_original_label: "Vor Rabatten"
+receipt_discount_label: "Obst und Gemüse · 20% Rabatt"
+receipt_total_label: "Nach Rabatten"
+receipt_note: "Die Preise dienen als Beispiel. Abgehakte Artikel zählen weiter zur Summe; das Häkchen zeigt, was bereits im Wagen liegt."
+workbench_eyebrow: "So geht’s"
+flow_title: "Drei Schritte für den täglichen Einkauf"
+workbench_1_title: "Listen vorbereiten"
+feature_1_desc: "Erstelle mehrere Listen und ordne Artikel nach Kategorien. Sortiere Listen, Kategorien und Artikel per Ziehen oder verschiebe Artikel in eine andere Kategorie."
+workbench_2_title: "Preise und Mengen ergänzen"
+feature_2_desc: "Gib den Regalpreis ein oder scanne ihn und passe die Menge an. Artikelsummen, Kategorierabatte und Listensumme werden gemeinsam aktualisiert."
+workbench_3_title: "Beim Einkaufen abhaken"
+feature_3_desc: "Hake eingepackte Artikel ab und springe direkt zur gewünschten Kategorie. Ändere Mengen in der Liste oder setze die Mengen einer Kategorie für den nächsten Einkauf auf null."
+discounts_eyebrow: "Rabatte je Kategorie"
+discounts_title: "Die Angebote bei den passenden Artikeln behalten"
+discounts_desc: "Füge in den Rabatteinstellungen einer Kategorie Regeln hinzu und ordne sie neu. Sieh die Ersparnis jeder Regel und den fehlenden Betrag bis zur Umsatzschwelle."
+rule_percent_title: "Prozentuale Rabatte"
+rule_percent_desc: "Zahle einen Anteil des Kategoriebetrags. Die Eingabe 80 bedeutet beispielsweise 80% des Preises, also 20% Rabatt."
+rule_fixed_title: "Feste Abzüge"
+rule_fixed_desc: "Ziehe einen Betrag direkt ab oder einmal beim Erreichen einer Schwelle. Bei „50 weniger ab 100“ zahlst du für einen Einkauf von 250 noch 200."
+rule_repeating_title: "Abzug bei jeder vollen Schwelle"
+rule_repeating_desc: "Wiederhole den Abzug je voller Schwelle. Bei „50 weniger je 100“ zahlst du für einen Einkauf von 250 noch 150."
+combination_title: "Regeln kombinieren oder das beste Angebot wählen"
+combination_desc: "Wende Regeln in deiner Reihenfolge an oder nutze nur die erfüllte Regel mit der größten Ersparnis. Jede Kategorie berechnet ihre Rabatte separat."
+import_title: "Regeln einer anderen Kategorie übernehmen"
+import_desc: "Importiere alle Regeln einer anderen Kategorie derselben Liste und speichere sie mit deiner Kategorie. Die ursprüngliche Kategorie bleibt erhalten."
+prices_title: "Ursprüngliche und rabattierte Artikelsummen vergleichen"
+prices_desc: "Zeige rabattierte Artikelsummen über die Regelkarte der Kategorie oder schalte sie im Bearbeitungsmodus für die aktuelle Liste um. Mengenänderungen und Verschiebungen verteilen den Rabatt neu, ohne Stückpreise zu ändern."
+tools_eyebrow: "Beim Einkaufen"
+tools_title: "Weniger tippen, mehr Überblick"
+scanner_title: "Namen und Preise scannen"
+scanner_desc: "Erkenne Produkttexte mit der Kamera. Wähle und kombiniere Namensfragmente oder bestätige einen Preis, bevor er beim Artikel eingetragen wird."
+scanner_note: "Textscans erfordern iOS 16 oder neuer, ein unterstütztes Gerät und Zugriff auf die Kamera."
+calculator_title: "Preise direkt in der App berechnen"
+calculator_1: "Nutze Grundrechenarten, Prozent, Vorzeichenwechsel, Rücktaste und Zurücksetzen."
+calculator_2: "Übernimm das Ergebnis direkt beim Bearbeiten eines Artikelpreises."
+calculator_3: "Sieh Berechnungen im Verlauf an, verwende sie erneut oder lösche sie."
+background_title: "Für jede Liste einen eigenen Hintergrund"
+background_desc: "Wähle aus zehn Foto- und Farbstilen. Lege einen globalen Hintergrund fest, gestalte eine einzelne Liste oder stelle sie wieder auf den globalen Hintergrund um."
+share_title: "Die ganze Liste als Bild teilen"
+share_desc: "Erstelle auf der Einkaufsseite einen Screenshot, um ein Bild der vollständigen Liste mit Shopod-Logo anzusehen und über das iOS-Teilen-Menü zu versenden."
+support_eyebrow: "Sprache und Währung"
+support_title: "In deiner Sprache einkaufen"
+support_desc: "Wechsle zwischen acht App-Sprachen. Wähle für jede Liste aus zwölf gängigen Währungssymbolen oder gib ein eigenes ein. Preise erscheinen in der eingetragenen Währung."
+support_aria: "Unterstützte App-Sprachen und Beispiele für Währungssymbole"
+cta_title: "Eine Einkaufsliste, die mitrechnet"
+cta_subtitle: "Plane Artikel, notiere Preise und behalte Kategorierabatte und Summen im Blick."
+privacy_label: "Datenschutzerklärung"
+qr_alt: "QR-Code zum Laden von Shopod im App Store"
+hero_screenshot_alt: "Shopod-Einkaufsliste auf Englisch"
 ---

@@ -1,60 +1,81 @@
 ---
-layout: app_Shopod
-appName: Shopod
-lang: zh-Hant
-title: Shopod - 購物清單計算器
-description: 一款清爽極簡的 iOS 購物清單 App，支援分類、商品價格、數量、總計和內建計算器。
-permalink: /Shopod/zh-Hant/
+layout: "app_Shopod"
+appName: "Shopod"
+lang: "zh-Hant"
+title: "Shopod - 計算價格與優惠的購物清單"
+description: "用 Shopod 管理購物清單、價格與數量，自動計算分類優惠和總額，還能掃描商品文字、使用計算機、設定清單背景並分享長圖。"
+permalink: "/Shopod/zh-Hant/"
+hero_screenshot: "/assets/shopod/images/hero-en.jpg"
+hero_cta: "在 App Store 下載"
+hero_secondary_cta: "查看功能"
+mobile_banner_subtitle: "已上架 App Store"
+mobile_banner_cta: "開啟"
+app_store_aria: "在 App Store 下載 Shopod"
+language_aria: "語言選擇"
+preview_aria: "Shopod App 介面預覽"
 qr_hint: "掃碼下載"
-hero_title: 用更清爽的方式規劃購物清單
-hero_subtitle: 分類、商品價格、數量、總計和內建計算器，都在一個簡潔流程裡。
-hero_cta: 在 App Store 下載
-hero_secondary_cta: 查看功能
-hero_note: 點擊、輸入、下拉、滑動、長按、拖動，都是熟悉的操作。
-mobile_banner_subtitle: 已上架 App Store
-mobile_banner_cta: 開啟
-app_store_aria: 在 App Store 下載 Shopod
-language_aria: 語言選擇
-preview_aria: Shopod App 介面預覽
-mock_list_title: 週六採買
-mock_cat_1: 生鮮
-mock_cat_2: 食品櫃
-mock_item_1: 番茄
-mock_item_2: 菠菜
-mock_item_3: 蘋果
-mock_item_4: 橄欖油
-mock_item_5: 義大利麵
-mock_total_label: 清單總計
-positioning_1: 備忘錄 App 不會計算總價。
-positioning_2: 許多購物 App 加入了太多不需要的功能。
-positioning_3: Shopod 保持簡單流程：清單、分類、商品、價格、數量、總計。
-features_title: 日常購物規劃需要的功能
-feature_1_title: 整理
-feature_1_desc: 管理多個清單，在清單中加入分類，並用拖動、滑動和長按調整順序。
-feature_2_title: 計算
-feature_2_desc: 為商品加入價格和數量，自動查看總計，並使用帶歷史記錄的內建計算器。
-feature_3_title: 購物
-feature_3_desc: 標記已完成商品，快速跳轉分類，跨分類移動商品，並分享帶浮水印的清單截圖。
-flow_title: 先規劃清單，再隨時查看總計
-flow_1_title: 建立清單
-flow_1_desc: 從一份清爽的購物計劃開始。
-flow_2_title: 加入分類
-flow_2_desc: 按你的購物方式組織商品。
-flow_3_title: 輸入商品
-flow_3_desc: 規劃時加入價格和數量。
-flow_4_title: 查看總計
-flow_4_desc: 購物時保持清單總計更新。
-calculator_title: 不離開 App 就能計算價格
-calculator_1: 支援基礎運算、百分比、正負切換、刪除和清除。
-calculator_2: 編輯商品價格時可直接使用計算結果。
-calculator_3: 從歷史記錄回看最近計算。
-support_title: 適合家庭、旅行和不同地區使用
-support_desc: Shopod 支援 8 種執行時語言和多種貨幣符號，讓清單貼合你的購物方式。
-cta_title: 讓下一次購物清單更簡單
-cta_subtitle: 在一個清爽的地方規劃商品、價格、數量和總計。
-gesture_tap: 點擊
-gesture_swipe: 滑動
-gesture_long_press: 長按
-gesture_drag: 拖動
-gesture_pull: 下拉
+mock_list_title: "週六採買"
+mock_cat_1: "生鮮"
+mock_cat_2: "食品櫃"
+mock_item_2: "菠菜"
+mock_item_4: "橄欖油"
+flow_2_title: "加入分類"
+hero_title: "結帳前，看清這次購物要花多少"
+hero_subtitle: "把價格和數量記在商品旁邊，按分類設定優惠，購物時隨時查看更新後的總額。"
+hero_note: "適合每週採買、家庭補貨，也適合旅行時記錄購物開銷。"
+proof_title: "價格、優惠、總額都在清單裡"
+proof_desc: "分類優惠自動計入清單總額，商品原始單價保持不變。"
+receipt_eyebrow: "結帳前"
+receipt_title: "把優惠算進購物總額"
+receipt_desc: "Shopod 加總各分類的優惠後金額。有實際折抵時，同時顯示原價總額，方便比較優惠前後要花多少錢。"
+receipt_aria: "包含分類優惠的購物總額範例"
+receipt_original_label: "優惠前總額"
+receipt_discount_label: "生鮮 · 八折"
+receipt_total_label: "優惠後總額"
+receipt_note: "價格僅為範例。已勾選商品仍計入總額，勾選用於記錄已經拿到的商品。"
+workbench_eyebrow: "使用流程"
+flow_title: "一次日常採買，只需要三步"
+workbench_1_title: "按習慣整理清單"
+feature_1_desc: "建立多張清單，按分類整理商品，拖曳調整清單、分類和商品順序，也能把商品移到其他分類。"
+workbench_2_title: "填上價格和數量"
+feature_2_desc: "輸入或掃描貨架價格，再調整數量。商品小計、分類優惠和清單總額一起更新。"
+workbench_3_title: "邊逛邊勾選"
+feature_3_desc: "拿到商品就勾選，快速跳到需要的分類，直接調整數量。下次採買時，可將分類內商品數量歸零後重新使用。"
+discounts_eyebrow: "分類優惠"
+discounts_title: "讓賣場優惠跟著對應的商品走"
+discounts_desc: "在分類的優惠設定中新增規則、調整順序，查看每條規則實際折抵多少，以及距離金額門檻還差多少。"
+rule_percent_title: "比例折扣"
+rule_percent_desc: "按分類金額的一定比例付款，例如輸入 8 表示八折，實付原價的 80%。"
+rule_fixed_title: "直接折抵與滿額折抵"
+rule_fixed_desc: "直接扣除指定金額，或達到門檻後折抵一次。例如滿 100 折 50，消費 250 實付 200。"
+rule_repeating_title: "每滿額累計折抵"
+rule_repeating_desc: "每達到一次門檻就再折抵一次。例如每滿 100 折 50，消費 250 實付 150。"
+combination_title: "按順序疊加，或選擇最優惠的一條"
+combination_desc: "按你排列的順序套用規則，也可以只選符合條件且折抵最多的一條。每個分類獨立計算優惠。"
+import_title: "沿用其他分類的優惠規則"
+import_desc: "從同一清單的其他分類匯入整組規則，隨目前分類一起儲存，不會更動來源分類。"
+prices_title: "比較商品原價與優惠後小計"
+prices_desc: "從分類規則卡片顯示商品優惠價，也能在編輯模式中統一切換目前清單。改數量或移動商品時重新分攤優惠，原始單價不變。"
+tools_eyebrow: "購物中的小幫手"
+tools_title: "少輸入一點，多看清一點"
+scanner_title: "掃描商品名稱與價格"
+scanner_desc: "用相機辨識商品文字，選取並組合名稱片段，或確認辨識到的價格後填入商品。"
+scanner_note: "文字掃描需要 iOS 16 或更新版本、支援的裝置及相機存取權限。"
+calculator_title: "不離開 App 就能計算價格"
+calculator_1: "支援基本運算、百分比、正負切換、退格和清除。"
+calculator_2: "編輯商品價格時，可以直接使用計算結果。"
+calculator_3: "在歷史紀錄中回看、沿用或刪除計算。"
+background_title: "給每張清單設定自己的背景"
+background_desc: "提供十種照片與配色背景。可以統一設定全域背景，也能為某張清單單獨選擇，或恢復為跟隨全域。"
+share_title: "把完整清單分享成圖片"
+share_desc: "在購物頁面截圖後，預覽帶 Shopod 標誌的完整清單長圖，再透過 iOS 分享面板傳送。"
+support_eyebrow: "語言與貨幣"
+support_title: "用你習慣的語言購物"
+support_desc: "支援八種 App 語言。每張清單可從十二種常用貨幣符號中選擇，也能自行輸入；價格按你記錄的貨幣顯示。"
+support_aria: "支援的 App 語言與貨幣符號範例"
+cta_title: "下次採買，帶上一張會算帳的清單"
+cta_subtitle: "列好商品、記下價格，分類優惠和購物總額隨時可見。"
+privacy_label: "隱私權政策"
+qr_alt: "在 App Store 下載 Shopod 的 QR 碼"
+hero_screenshot_alt: "Shopod 英文購物清單介面"
 ---

@@ -1,60 +1,81 @@
 ---
-layout: app_Shopod
-appName: Shopod
-lang: es
-title: Shopod - Calculadora de lista de compras
-description: Una app iOS limpia y minimalista para listas de compras, con categorías, precios, cantidades, totales y calculadora integrada.
-permalink: /Shopod/es/
+layout: "app_Shopod"
+appName: "Shopod"
+lang: "es"
+title: "Shopod - Listas de compras con precios y descuentos"
+description: "Organiza listas con precios, cantidades, descuentos por categoría y totales actualizados. Escanea textos, calcula precios y personaliza cada lista en iOS."
+permalink: "/Shopod/es/"
+hero_screenshot: "/assets/shopod/images/hero-en.jpg"
+hero_cta: "Descargar en App Store"
+hero_secondary_cta: "Ver funciones"
+mobile_banner_subtitle: "Disponible en App Store"
+mobile_banner_cta: "Abrir"
+app_store_aria: "Descargar Shopod en App Store"
+language_aria: "Selección de idioma"
+preview_aria: "Vista previa de la interfaz de Shopod"
 qr_hint: "Escanear para descargar"
-hero_title: Una lista de compras más simple, con precios incluidos
-hero_subtitle: Categorías, precios, cantidades, totales y una calculadora integrada en un flujo claro.
-hero_cta: Descargar en App Store
-hero_secondary_cta: Ver funciones
-hero_note: "Diseñada para gestos familiares: tocar, escribir, tirar, deslizar, mantener pulsado y arrastrar."
-mobile_banner_subtitle: Disponible en App Store
-mobile_banner_cta: Abrir
-app_store_aria: Descargar Shopod en App Store
-language_aria: Selección de idioma
-preview_aria: Vista previa de la interfaz de Shopod
-mock_list_title: Compra del sábado
-mock_cat_1: Frescos
-mock_cat_2: Despensa
-mock_item_1: Tomates
-mock_item_2: Espinaca
-mock_item_3: Manzanas
-mock_item_4: Aceite de oliva
-mock_item_5: Pasta
-mock_total_label: Total de la lista
-positioning_1: Las apps de notas no calculan totales.
-positioning_2: Las apps de compras suelen añadir más funciones de las necesarias.
-positioning_3: "Shopod mantiene el flujo simple: lista, categoría, artículo, precio, cantidad, total."
-features_title: Lo necesario para planificar compras diarias
-feature_1_title: Organizar
-feature_1_desc: Gestiona varias listas, añade categorías y reordena con arrastrar, deslizar y mantener pulsado.
-feature_2_title: Calcular
-feature_2_desc: Añade precio y cantidad por artículo, ve totales automáticos y usa la calculadora con historial.
-feature_3_title: Comprar
-feature_3_desc: Marca artículos como hechos, salta entre categorías, mueve artículos y comparte capturas de la lista.
-flow_title: Planifica la lista y mantén el total a la vista
-flow_1_title: Crear una lista
-flow_1_desc: Empieza con un plan de compra limpio.
-flow_2_title: Añadir categorías
-flow_2_desc: Agrupa productos según tu forma de comprar.
-flow_3_title: Introducir artículos
-flow_3_desc: Añade precios y cantidades mientras planificas.
-flow_4_title: Revisar el total
-flow_4_desc: Mira cómo se actualiza el total mientras compras.
-calculator_title: Calcula precios sin salir de la app
-calculator_1: Operaciones básicas, porcentajes, cambio de signo, borrar y limpiar.
-calculator_2: Reutiliza resultados al editar precios de artículos.
-calculator_3: Revisa cálculos recientes desde el historial.
-support_title: Útil para hogares, viajes y regiones
-support_desc: Shopod admite 8 idiomas en tiempo de ejecución y varios símbolos de moneda.
-cta_title: Haz más simple tu próxima lista de compras
-cta_subtitle: Planifica artículos, precios, cantidades y totales en un lugar limpio.
-gesture_tap: Tocar
-gesture_swipe: Deslizar
-gesture_long_press: Mantener pulsado
-gesture_drag: Arrastrar
-gesture_pull: Tirar
+mock_list_title: "Compra del sábado"
+mock_cat_1: "Frescos"
+mock_cat_2: "Despensa"
+mock_item_2: "Espinaca"
+mock_item_4: "Aceite de oliva"
+flow_2_title: "Añadir categorías"
+hero_title: "Conoce el total antes de llegar a la caja"
+hero_subtitle: "Anota el precio y la cantidad junto a cada producto. Añade descuentos por categoría y sigue el total mientras compras."
+hero_note: "Para la compra semanal, los productos del hogar y las compras durante viajes."
+proof_title: "Precios, descuentos, un solo total"
+proof_desc: "Los descuentos por categoría se reflejan en el total. Los precios unitarios originales se conservan."
+receipt_eyebrow: "Antes de pagar"
+receipt_title: "Ten a la vista el total con descuentos"
+receipt_desc: "Shopod suma los importes de cada categoría después de aplicar los descuentos. Cuando hay un ahorro, también muestra el total original para compararlos."
+receipt_aria: "Ejemplo de total con un descuento por categoría"
+receipt_original_label: "Antes de descuentos"
+receipt_discount_label: "Frescos · 20% de descuento"
+receipt_total_label: "Después de descuentos"
+receipt_note: "Los precios son ejemplos. Los productos marcados siguen contando en el total; la marca indica lo que ya has tomado."
+workbench_eyebrow: "Cómo funciona"
+flow_title: "Tres pasos para las compras de cada día"
+workbench_1_title: "Organiza tus listas"
+feature_1_desc: "Crea varias listas y agrupa los productos por categoría. Arrastra listas, categorías y productos para ordenarlos, o mueve productos a otra categoría."
+workbench_2_title: "Añade precios y cantidades"
+feature_2_desc: "Introduce o escanea el precio del estante y ajusta la cantidad. Los subtotales, descuentos por categoría y el total de la lista se actualizan juntos."
+workbench_3_title: "Marca mientras compras"
+feature_3_desc: "Marca los productos que ya has tomado y salta directamente a una categoría. Ajusta cantidades en la lista y pon a cero las de una categoría para reutilizarla la próxima vez."
+discounts_eyebrow: "Descuentos por categoría"
+discounts_title: "Guarda las ofertas junto a los productos adecuados"
+discounts_desc: "Añade y ordena reglas en los ajustes de descuentos de una categoría. Consulta cuánto ahorra cada regla y cuánto falta para alcanzar un importe mínimo."
+rule_percent_title: "Descuentos porcentuales"
+rule_percent_desc: "Paga un porcentaje del importe de la categoría. Por ejemplo, introducir 80 significa pagar el 80% del precio, con un 20% de descuento."
+rule_fixed_title: "Descuentos de importe fijo"
+rule_fixed_desc: "Resta un importe directamente o una sola vez al alcanzar un mínimo. Con «50 de descuento a partir de 100», una compra de 250 queda en 200."
+rule_repeating_title: "Descuento por cada tramo"
+rule_repeating_desc: "Repite el descuento por cada tramo completo. Con «50 de descuento por cada 100», una compra de 250 queda en 150."
+combination_title: "Combina reglas o elige la mejor oferta"
+combination_desc: "Aplica las reglas en el orden elegido o usa solo la regla válida que ofrece el mayor ahorro. Los descuentos se calculan por separado en cada categoría."
+import_title: "Reutiliza reglas de otra categoría"
+import_desc: "Importa todas las reglas de otra categoría de la misma lista y guárdalas con la actual, sin modificar la categoría de origen."
+prices_title: "Compara subtotales originales y con descuento"
+prices_desc: "Muestra los subtotales con descuento desde la tarjeta de reglas o cambia su visualización en toda la lista actual en modo de edición. Al cambiar cantidades o mover productos se reparte de nuevo el descuento, sin alterar los precios unitarios."
+tools_eyebrow: "Mientras compras"
+tools_title: "Menos escritura, más información útil"
+scanner_title: "Escanea nombres y precios"
+scanner_desc: "Reconoce textos de productos con la cámara. Selecciona y combina fragmentos del nombre o confirma un precio antes de introducirlo en el producto."
+scanner_note: "El escaneo de texto requiere iOS 16 o posterior, un dispositivo compatible y acceso a la cámara."
+calculator_title: "Calcula precios sin salir de la app"
+calculator_1: "Usa operaciones básicas, porcentajes, cambio de signo, retroceso y borrado."
+calculator_2: "Aplica el resultado directamente al editar el precio de un producto."
+calculator_3: "Consulta, reutiliza o elimina cálculos del historial."
+background_title: "Un fondo propio para cada lista"
+background_desc: "Elige entre diez estilos de fotos y colores. Configura un fondo global, personaliza una lista o vuelve a hacer que siga el ajuste global."
+share_title: "Comparte la lista completa como imagen"
+share_desc: "Haz una captura en la pantalla de compras para ver una imagen de toda la lista con el logo de Shopod y enviarla mediante la hoja de compartir de iOS."
+support_eyebrow: "Idioma y moneda"
+support_title: "Compra en tu idioma"
+support_desc: "Cambia entre ocho idiomas en la app. Elige entre doce símbolos de moneda o introduce uno propio para cada lista. Los precios se muestran en la moneda que registres."
+support_aria: "Idiomas de la app y ejemplos de símbolos de moneda"
+cta_title: "Una lista de compras que hace las cuentas"
+cta_subtitle: "Organiza productos, anota precios y mantén los descuentos y totales a la vista."
+privacy_label: "Política de privacidad"
+qr_alt: "Código QR para descargar Shopod en App Store"
+hero_screenshot_alt: "Lista de compras de Shopod en inglés"
 ---

@@ -1,60 +1,81 @@
 ---
-layout: app_Shopod
-appName: Shopod
-lang: ja
-title: Shopod - 買い物リスト計算アプリ
-description: カテゴリ、価格、数量、合計、内蔵計算機を備えた、シンプルな iOS 買い物リストアプリです。
-permalink: /Shopod/ja/
+layout: "app_Shopod"
+appName: "Shopod"
+lang: "ja"
+title: "Shopod - 価格と割引を計算する買い物リスト"
+description: "価格、数量、カテゴリごとの割引と合計を管理する iOS 買い物リスト。商品テキストのスキャン、計算機、リスト別の背景、画像共有に対応。"
+permalink: "/Shopod/ja/"
+hero_screenshot: "/assets/shopod/images/hero-en.jpg"
+hero_cta: "App Store でダウンロード"
+hero_secondary_cta: "機能を見る"
+mobile_banner_subtitle: "App Store で入手できます"
+mobile_banner_cta: "開く"
+app_store_aria: "App Store で Shopod をダウンロード"
+language_aria: "言語選択"
+preview_aria: "Shopod アプリ画面のプレビュー"
 qr_hint: "スキャンしてダウンロード"
-hero_title: 価格まで扱える、よりシンプルな買い物リスト
-hero_subtitle: カテゴリ、商品価格、数量、合計、内蔵計算機をひとつのすっきりした流れで管理できます。
-hero_cta: App Store でダウンロード
-hero_secondary_cta: 機能を見る
-hero_note: タップ、入力、プルダウン、スワイプ、長押し、ドラッグに合わせて設計されています。
-mobile_banner_subtitle: App Store で入手できます
-mobile_banner_cta: 開く
-app_store_aria: App Store で Shopod をダウンロード
-language_aria: 言語選択
-preview_aria: Shopod アプリ画面のプレビュー
-mock_list_title: 土曜の買い物
-mock_cat_1: 生鮮
-mock_cat_2: 食料品
-mock_item_1: トマト
-mock_item_2: ほうれん草
-mock_item_3: りんご
-mock_item_4: オリーブオイル
-mock_item_5: パスタ
-mock_total_label: リスト合計
-positioning_1: メモアプリでは合計を計算できません。
-positioning_2: 多くの買い物アプリは必要以上の機能を詰め込みがちです。
-positioning_3: Shopod は、リスト、カテゴリ、商品、価格、数量、合計という流れをシンプルに保ちます。
-features_title: 毎日の買い物計画に必要な機能
-feature_1_title: 整理
-feature_1_desc: 複数のリストを管理し、カテゴリを追加し、ドラッグ、スワイプ、長押しで並べ替えできます。
-feature_2_title: 計算
-feature_2_desc: 商品ごとに価格と数量を入れると自動で合計を表示し、履歴付き計算機も使えます。
-feature_3_title: 買い物
-feature_3_desc: 商品を完了済みにし、カテゴリ間を移動し、商品を別カテゴリへ移し、リスト画像を共有できます。
-flow_title: リストを作り、合計を見ながら買い物
-flow_1_title: リストを作成
-flow_1_desc: すっきりした買い物計画から始めます。
-flow_2_title: カテゴリを追加
-flow_2_desc: 買い物の流れに合わせて商品をまとめます。
-flow_3_title: 商品を入力
-flow_3_desc: 価格と数量を計画中に追加します。
-flow_4_title: 合計を確認
-flow_4_desc: 買い物中もリスト合計が更新されます。
-calculator_title: アプリを離れずに価格を計算
-calculator_1: 基本演算、パーセント、符号切替、削除、クリアに対応。
-calculator_2: 商品価格の編集時に計算結果をそのまま使えます。
-calculator_3: 履歴から最近の計算を確認できます。
-support_title: 家庭、旅行、地域をまたぐ買い物に便利
-support_desc: Shopod は 8 つの実行時言語と複数の通貨記号に対応しています。
-cta_title: 次の買い物リストをもっとシンプルに
-cta_subtitle: 商品、価格、数量、合計をひとつのきれいな場所で計画できます。
-gesture_tap: タップ
-gesture_swipe: スワイプ
-gesture_long_press: 長押し
-gesture_drag: ドラッグ
-gesture_pull: プルダウン
+mock_list_title: "土曜の買い物"
+mock_cat_1: "生鮮"
+mock_cat_2: "食料品"
+mock_item_2: "ほうれん草"
+mock_item_4: "オリーブオイル"
+flow_2_title: "カテゴリを追加"
+hero_title: "レジに並ぶ前に、買い物の合計を確認"
+hero_subtitle: "商品ごとに価格と数量を記録。カテゴリに割引を設定すると、買い物中も合計が更新されます。"
+hero_note: "毎週の買い出し、日用品の補充、旅行先での買い物に。"
+proof_title: "価格も割引も、ひとつの合計に"
+proof_desc: "カテゴリの割引をリスト合計に反映。商品の元の単価は変わりません。"
+receipt_eyebrow: "お会計の前に"
+receipt_title: "割引後の買い物合計を確認"
+receipt_desc: "各カテゴリの割引後の金額を合計します。値引きがある場合は元の合計も表示され、割引前後を比較できます。"
+receipt_aria: "カテゴリ割引を含む買い物合計の例"
+receipt_original_label: "割引前の合計"
+receipt_discount_label: "生鮮 · 20%引き"
+receipt_total_label: "割引後の合計"
+receipt_note: "価格は表示例です。チェック済みの商品も合計に含まれます。チェックは商品を手に取った記録です。"
+workbench_eyebrow: "使い方"
+flow_title: "いつもの買い物を、3つのステップで"
+workbench_1_title: "リストを整理する"
+feature_1_desc: "複数のリストを作り、商品をカテゴリに分けます。リスト、カテゴリ、商品をドラッグで並べ替え、商品を別カテゴリへ移動できます。"
+workbench_2_title: "価格と数量を入れる"
+feature_2_desc: "棚の価格を入力またはスキャンして数量を調整。商品小計、カテゴリの割引、リスト合計が一緒に更新されます。"
+workbench_3_title: "買い物しながらチェック"
+feature_3_desc: "手に取った商品にチェックを付け、必要なカテゴリへすぐ移動。リスト内で数量を調整し、次回はカテゴリの数量をゼロに戻して再利用できます。"
+discounts_eyebrow: "カテゴリごとの割引"
+discounts_title: "お店の特典を、対象の商品と一緒に管理"
+discounts_desc: "カテゴリの割引設定でルールを追加し、順序を変更。各ルールの値引き額と、金額条件まであといくら必要かを確認できます。"
+rule_percent_title: "割合で割引"
+rule_percent_desc: "カテゴリ金額の指定割合を支払います。たとえば 80 を入力すると、元の価格の 80%を支払う20%引きになります。"
+rule_fixed_title: "定額の値引き"
+rule_fixed_desc: "指定額を直接引くか、購入金額の条件を満たしたら一度だけ値引き。「100以上で50引き」なら、250の買い物で支払いは200です。"
+rule_repeating_title: "一定額ごとに値引き"
+rule_repeating_desc: "条件額に達するたびに値引き。「100ごとに50引き」なら、250の買い物で支払いは150です。"
+combination_title: "順番に適用するか、最もお得なルールを選ぶ"
+combination_desc: "設定した順番で割引を重ねるか、条件を満たす中で値引き額が最大のルールだけを適用。割引はカテゴリごとに計算します。"
+import_title: "別カテゴリのルールを再利用"
+import_desc: "同じリスト内の別カテゴリからルール一式を取り込み、現在のカテゴリと一緒に保存。元のカテゴリは変更されません。"
+prices_title: "元の小計と割引後の小計を比較"
+prices_desc: "カテゴリのルールカードから商品別の割引後小計を表示。編集モードでは現在のリスト全体で切り替えられます。数量変更や移動で割引を再配分し、単価は維持します。"
+tools_eyebrow: "買い物中の便利な機能"
+tools_title: "入力を減らして、必要な情報を確認"
+scanner_title: "商品名と価格をスキャン"
+scanner_desc: "カメラで商品テキストを読み取り、名前の断片を選んで組み合わせるか、価格を確認して商品欄に入力できます。"
+scanner_note: "テキストのスキャンには iOS 16以降、対応デバイス、カメラへのアクセスが必要です。"
+calculator_title: "アプリを離れずに価格を計算"
+calculator_1: "基本演算、パーセント、符号切替、バックスペース、クリアに対応。"
+calculator_2: "商品価格の編集時に計算結果をそのまま使えます。"
+calculator_3: "履歴から計算を確認、再利用、削除できます。"
+background_title: "リストごとに背景を選ぶ"
+background_desc: "写真とカラーの10種類から選択。すべてのリストに共通の背景を設定し、個別のリストだけ変更したり、共通設定に戻したりできます。"
+share_title: "リスト全体を画像で共有"
+share_desc: "買い物画面でスクリーンショットを撮ると、Shopodのロゴ入りのリスト全体の画像をプレビューし、iOSの共有シートから送れます。"
+support_eyebrow: "言語と通貨"
+support_title: "いつもの言語で買い物を"
+support_desc: "8つのアプリ言語を切り替えられます。各リストの通貨記号は12種類から選ぶか、自分で入力。価格は記録した通貨で表示されます。"
+support_aria: "対応するアプリ言語と通貨記号の例"
+cta_title: "次の買い物は、計算できるリストで"
+cta_subtitle: "商品と価格を記録して、カテゴリの割引と合計をいつでも確認。"
+privacy_label: "プライバシーポリシー"
+qr_alt: "App StoreでShopodをダウンロードするQRコード"
+hero_screenshot_alt: "英語表示のShopod買い物リスト画面"
 ---

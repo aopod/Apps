@@ -4,7 +4,6 @@ layout: default
 {% include one-css.html named="shopod" %}
 {% assign app_store_url = "https://apps.apple.com/us/app/shopod-a-shopping-list/id1271213321" %}
 {% assign lang = page.lang | default: "en" %}
-{% assign languages_count = page.languages_count | default: "8" %}
 {% assign app_icon = page.app_icon | default: "" %}
 {% assign hero_screenshot = page.hero_screenshot | default: "/assets/shopod/images/hero-en.jpg" %}
 
@@ -88,7 +87,10 @@ layout: default
       <div class="shopod-receipt-card" aria-label="{{ page.receipt_aria | default: 'Shopping total example' }}">
         <div><span>{{ page.mock_cat_1 | default: "Produce" }}</span><strong>$16.20</strong></div>
         <div><span>{{ page.mock_cat_2 | default: "Pantry" }}</span><strong>$21.45</strong></div>
-        <div class="shopod-receipt-card__total"><span>{{ page.mock_total_label | default: "List total" }}</span><strong>$48.65</strong></div>
+        <div><span>{{ page.receipt_original_label }}</span><s>$37.65</s></div>
+        <div class="shopod-receipt-card__saving"><span>{{ page.receipt_discount_label }}</span><strong>−$3.24</strong></div>
+        <div class="shopod-receipt-card__total"><span>{{ page.receipt_total_label }}</span><strong>$34.41</strong></div>
+        <p class="shopod-detail-note">{{ page.receipt_note }}</p>
       </div>
     </section>
 
@@ -103,7 +105,7 @@ layout: default
           <h3>{{ page.workbench_1_title | default: page.flow_1_title | default: "Make the list at home" }}</h3>
           <p>{{ page.feature_1_desc | default: "Group items by aisle or store section, then reuse the same structure next time." }}</p>
           <div class="shopod-list-stack" aria-hidden="true">
-            <span>{{ page.mock_list_title | default: "Saturday groceries" }}</span><span>{{ page.flow_2_title | default: "Add categories" }}</span><span>{{ page.support_title | default: "Languages and currency" }}</span>
+            <span>{{ page.mock_list_title | default: "Saturday groceries" }}</span><span>{{ page.flow_2_title | default: "Add categories" }}</span><span>{{ page.support_eyebrow }}</span>
           </div>
         </article>
         <article>
@@ -129,13 +131,68 @@ layout: default
       </div>
     </section>
 
+    <section id="discounts" class="shopod-section shopod-discounts" aria-labelledby="discounts-title">
+      <div class="shopod-section__header">
+        <p class="shopod-eyebrow">{{ page.discounts_eyebrow }}</p>
+        <h2 id="discounts-title">{{ page.discounts_title }}</h2>
+        <p class="shopod-section__lead">{{ page.discounts_desc }}</p>
+      </div>
+      <div class="shopod-rule-grid">
+        {% assign rule_types = "percent,fixed,repeating" | split: "," %}
+        {% for rule_type in rule_types %}
+          {% assign title_key = "rule_" | append: rule_type | append: "_title" %}
+          {% assign desc_key = "rule_" | append: rule_type | append: "_desc" %}
+          <article class="shopod-rule-card">
+            <span class="shopod-mini-label" aria-hidden="true">0{{ forloop.index }}</span>
+            <h3>{{ page[title_key] }}</h3>
+            <p>{{ page[desc_key] }}</p>
+          </article>
+        {% endfor %}
+      </div>
+      <dl class="shopod-discount-details">
+        <div><dt>{{ page.combination_title }}</dt><dd>{{ page.combination_desc }}</dd></div>
+        <div><dt>{{ page.import_title }}</dt><dd>{{ page.import_desc }}</dd></div>
+        <div><dt>{{ page.prices_title }}</dt><dd>{{ page.prices_desc }}</dd></div>
+      </dl>
+    </section>
+
+    <section id="shopping-tools" class="shopod-section shopod-tools" aria-labelledby="tools-title">
+      <div class="shopod-section__header">
+        <p class="shopod-eyebrow">{{ page.tools_eyebrow }}</p>
+        <h2 id="tools-title">{{ page.tools_title }}</h2>
+      </div>
+      <div class="shopod-tools-grid">
+        <article>
+          <h3>{{ page.scanner_title }}</h3>
+          <p>{{ page.scanner_desc }}</p>
+          <p class="shopod-detail-note">{{ page.scanner_note }}</p>
+        </article>
+        <article>
+          <h3>{{ page.calculator_title }}</h3>
+          <ul>
+            <li>{{ page.calculator_1 }}</li>
+            <li>{{ page.calculator_2 }}</li>
+            <li>{{ page.calculator_3 }}</li>
+          </ul>
+        </article>
+        <article>
+          <h3>{{ page.background_title }}</h3>
+          <p>{{ page.background_desc }}</p>
+        </article>
+        <article>
+          <h3>{{ page.share_title }}</h3>
+          <p>{{ page.share_desc }}</p>
+        </article>
+      </div>
+    </section>
+
     <section class="shopod-section shopod-support" aria-labelledby="support-title">
       <div>
         <p class="shopod-eyebrow">{{ page.support_eyebrow | default: "Local details" }}</p>
         <h2 id="support-title">{{ page.support_title | default: "Use the language and currency you shop with" }}</h2>
         <p>{{ page.support_desc | default: "Shopod supports multiple app languages and common currency symbols for everyday lists, travel, and shared household planning." }}</p>
       </div>
-      <div class="shopod-chips" aria-label="Supported languages and currencies">
+      <div class="shopod-chips" aria-label="{{ page.support_aria }}">
         <span>English</span><span>简体中文</span><span>繁體中文</span><span>Deutsch</span>
         <span>Français</span><span>日本語</span><span>한국어</span><span>Español</span>
         <span>$</span><span>€</span><span>¥</span><span>£</span>
@@ -165,7 +222,7 @@ layout: default
 
   <footer class="shopod-footer">
     <span>© {{ site.time | date: "%Y" }} aopod</span>
-    <a href="/Shopod/privacy/{{ lang }}/">Privacy Policy</a>
+    <a href="/Shopod/privacy/{{ lang }}/">{{ page.privacy_label }}</a>
   </footer>
 
   <a class="shopod-floating-store shopod-store-link" href="{{ app_store_url }}" target="_blank" rel="noopener" aria-label="{{ page.app_store_aria | default: 'Download Shopod on the App Store' }}">

@@ -1,60 +1,81 @@
 ---
-layout: app_Shopod
-appName: Shopod
-lang: ko
-title: Shopod - 쇼핑 목록 계산기
-description: 카테고리, 상품 가격, 수량, 합계, 내장 계산기를 갖춘 깔끔한 iOS 쇼핑 목록 앱입니다.
-permalink: /Shopod/ko/
+layout: "app_Shopod"
+appName: "Shopod"
+lang: "ko"
+title: "Shopod - 가격과 할인을 계산하는 쇼핑 목록"
+description: "가격, 수량, 카테고리 할인과 합계를 관리하는 iOS 쇼핑 목록 앱. 상품 문자 스캔, 계산기, 목록별 배경과 이미지 공유를 지원합니다."
+permalink: "/Shopod/ko/"
+hero_screenshot: "/assets/shopod/images/hero-en.jpg"
+hero_cta: "App Store에서 다운로드"
+hero_secondary_cta: "기능 보기"
+mobile_banner_subtitle: "App Store에서 이용 가능"
+mobile_banner_cta: "열기"
+app_store_aria: "App Store에서 Shopod 다운로드"
+language_aria: "언어 선택"
+preview_aria: "Shopod 앱 화면 미리보기"
 qr_hint: "스캔하여 다운로드"
-hero_title: 가격까지 함께 관리하는 더 단순한 쇼핑 목록
-hero_subtitle: 카테고리, 상품 가격, 수량, 합계, 내장 계산기를 하나의 깔끔한 흐름에서 관리합니다.
-hero_cta: App Store에서 다운로드
-hero_secondary_cta: 기능 보기
-hero_note: 탭, 입력, 아래로 당기기, 스와이프, 길게 누르기, 드래그에 맞춰 설계했습니다.
-mobile_banner_subtitle: App Store에서 이용 가능
-mobile_banner_cta: 열기
-app_store_aria: App Store에서 Shopod 다운로드
-language_aria: 언어 선택
-preview_aria: Shopod 앱 화면 미리보기
-mock_list_title: 토요일 장보기
-mock_cat_1: 신선식품
-mock_cat_2: 식료품
-mock_item_1: 토마토
-mock_item_2: 시금치
-mock_item_3: 사과
-mock_item_4: 올리브 오일
-mock_item_5: 파스타
-mock_total_label: 목록 합계
-positioning_1: 메모 앱은 합계를 계산하지 않습니다.
-positioning_2: 장보기 앱은 종종 필요한 것보다 많은 기능을 넣습니다.
-positioning_3: Shopod는 목록, 카테고리, 상품, 가격, 수량, 합계의 흐름을 단순하게 유지합니다.
-features_title: 일상적인 장보기 계획에 필요한 기능
-feature_1_title: 정리
-feature_1_desc: 여러 목록을 관리하고, 목록 안에 카테고리를 추가하며, 드래그, 스와이프, 길게 누르기로 순서를 바꿉니다.
-feature_2_title: 계산
-feature_2_desc: 상품별 가격과 수량을 넣으면 합계가 자동 계산되고, 기록이 있는 내장 계산기를 사용할 수 있습니다.
-feature_3_title: 쇼핑
-feature_3_desc: 상품을 완료 표시하고, 카테고리 사이를 이동하며, 상품을 옮기고 목록 스크린샷을 공유합니다.
-flow_title: 목록을 계획하고 합계를 계속 확인하세요
-flow_1_title: 목록 만들기
-flow_1_desc: 깔끔한 쇼핑 계획으로 시작합니다.
-flow_2_title: 카테고리 추가
-flow_2_desc: 쇼핑 방식에 맞게 상품을 묶습니다.
-flow_3_title: 상품 입력
-flow_3_desc: 계획하면서 가격과 수량을 추가합니다.
-flow_4_title: 합계 확인
-flow_4_desc: 쇼핑하는 동안 목록 합계가 업데이트됩니다.
-calculator_title: 앱을 떠나지 않고 가격 계산
-calculator_1: 기본 연산, 퍼센트, 부호 전환, 삭제, 지우기를 지원합니다.
-calculator_2: 상품 가격을 편집할 때 계산 결과를 바로 사용할 수 있습니다.
-calculator_3: 기록에서 최근 계산을 확인할 수 있습니다.
-support_title: 가정, 여행, 여러 지역에서 유용합니다
-support_desc: Shopod는 8개 실행 언어와 여러 통화 기호를 지원합니다.
-cta_title: 다음 쇼핑 목록을 더 단순하게
-cta_subtitle: 상품, 가격, 수량, 합계를 하나의 깔끔한 곳에서 계획하세요.
-gesture_tap: 탭
-gesture_swipe: 스와이프
-gesture_long_press: 길게 누르기
-gesture_drag: 드래그
-gesture_pull: 아래로 당기기
+mock_list_title: "토요일 장보기"
+mock_cat_1: "신선식품"
+mock_cat_2: "식료품"
+mock_item_2: "시금치"
+mock_item_4: "올리브 오일"
+flow_2_title: "카테고리 추가"
+hero_title: "계산대에 가기 전에 쇼핑 합계를 확인하세요"
+hero_subtitle: "상품 옆에 가격과 수량을 기록하세요. 카테고리별 할인을 설정하면 쇼핑 중에도 합계가 업데이트됩니다."
+hero_note: "매주 장보기, 생활용품 구매, 여행 중 쇼핑에 활용하세요."
+proof_title: "가격과 할인, 하나의 합계"
+proof_desc: "카테고리 할인을 목록 합계에 반영하며 상품의 원래 단가는 유지합니다."
+receipt_eyebrow: "결제 전에"
+receipt_title: "할인 후 쇼핑 합계를 확인하세요"
+receipt_desc: "각 카테고리의 할인 후 금액을 합산합니다. 실제 할인이 있으면 할인 전 합계도 함께 표시해 비교할 수 있습니다."
+receipt_aria: "카테고리 할인이 적용된 쇼핑 합계 예시"
+receipt_original_label: "할인 전 합계"
+receipt_discount_label: "신선식품 · 20% 할인"
+receipt_total_label: "할인 후 합계"
+receipt_note: "가격은 예시입니다. 체크한 상품도 합계에 포함됩니다. 체크는 이미 담은 상품을 기록하는 기능입니다."
+workbench_eyebrow: "사용 방법"
+flow_title: "평소 장보기를 세 단계로"
+workbench_1_title: "목록 정리하기"
+feature_1_desc: "여러 목록을 만들고 상품을 카테고리별로 정리하세요. 목록, 카테고리, 상품을 드래그해 순서를 바꾸거나 상품을 다른 카테고리로 옮길 수 있습니다."
+workbench_2_title: "가격과 수량 넣기"
+feature_2_desc: "진열대 가격을 입력하거나 스캔한 뒤 수량을 조절하세요. 상품 소계, 카테고리 할인과 목록 합계가 함께 업데이트됩니다."
+workbench_3_title: "쇼핑하며 체크하기"
+feature_3_desc: "담은 상품을 체크하고 필요한 카테고리로 바로 이동하세요. 목록에서 수량을 조절하고, 다음 장보기에는 카테고리의 수량을 0으로 초기화해 다시 사용할 수 있습니다."
+discounts_eyebrow: "카테고리 할인"
+discounts_title: "매장 할인 정보를 해당 상품과 함께 관리하세요"
+discounts_desc: "카테고리 할인 설정에서 규칙을 추가하고 순서를 바꾸세요. 규칙별 할인 금액과 최소 구매 금액까지 얼마나 남았는지 확인할 수 있습니다."
+rule_percent_title: "비율 할인"
+rule_percent_desc: "카테고리 금액의 지정 비율을 지불합니다. 예를 들어 80을 입력하면 원래 가격의 80%를 지불하는 20% 할인이 됩니다."
+rule_fixed_title: "정액 할인"
+rule_fixed_desc: "지정 금액을 바로 할인하거나 최소 구매 금액에 도달하면 한 번 할인합니다. 100 이상 구매 시 50 할인이라면 250 구매 시 200을 지불합니다."
+rule_repeating_title: "구매 금액마다 반복 할인"
+rule_repeating_desc: "기준 금액에 도달할 때마다 할인합니다. 100마다 50 할인이라면 250 구매 시 150을 지불합니다."
+combination_title: "순서대로 적용하거나 가장 큰 할인 선택"
+combination_desc: "설정한 순서대로 할인을 적용하거나 조건을 충족하는 규칙 중 할인액이 가장 큰 하나만 적용하세요. 할인은 카테고리별로 계산됩니다."
+import_title: "다른 카테고리의 할인 규칙 재사용"
+import_desc: "같은 목록의 다른 카테고리에서 규칙 전체를 가져와 현재 카테고리와 함께 저장하세요. 원본 카테고리는 변경되지 않습니다."
+prices_title: "상품의 원래 소계와 할인 후 소계 비교"
+prices_desc: "카테고리 규칙 카드에서 상품별 할인 금액을 표시하고, 편집 모드에서 현재 목록 전체의 표시를 바꿀 수 있습니다. 수량 변경이나 이동 시 할인을 다시 배분하며 단가는 유지합니다."
+tools_eyebrow: "쇼핑 중 유용한 기능"
+tools_title: "입력은 줄이고 필요한 정보는 확인하세요"
+scanner_title: "상품명과 가격 스캔"
+scanner_desc: "카메라로 상품 문자를 인식하세요. 이름 조각을 선택해 조합하거나 인식된 가격을 확인한 뒤 상품에 입력할 수 있습니다."
+scanner_note: "문자 스캔에는 iOS 16 이상, 지원 기기와 카메라 접근 권한이 필요합니다."
+calculator_title: "앱을 떠나지 않고 가격 계산"
+calculator_1: "기본 연산, 퍼센트, 부호 전환, 한 글자 삭제와 전체 지우기를 지원합니다."
+calculator_2: "상품 가격을 편집할 때 계산 결과를 바로 사용할 수 있습니다."
+calculator_3: "기록에서 계산을 확인하고 재사용하거나 삭제하세요."
+background_title: "목록마다 배경 설정"
+background_desc: "사진과 색상으로 구성된 열 가지 배경 중 선택하세요. 전체 목록의 기본 배경을 설정하고 목록별로 바꾸거나 전체 설정을 따르도록 되돌릴 수 있습니다."
+share_title: "전체 목록을 이미지로 공유"
+share_desc: "쇼핑 화면에서 스크린샷을 찍으면 Shopod 표시가 포함된 전체 목록 이미지를 미리 보고 iOS 공유 시트로 보낼 수 있습니다."
+support_eyebrow: "언어와 통화"
+support_title: "익숙한 언어로 쇼핑하세요"
+support_desc: "앱에서 여덟 가지 언어를 전환할 수 있습니다. 목록마다 열두 가지 통화 기호 중 선택하거나 직접 입력하세요. 가격은 기록한 통화로 표시됩니다."
+support_aria: "지원 앱 언어와 통화 기호 예시"
+cta_title: "다음 장보기에는 계산하는 목록을 준비하세요"
+cta_subtitle: "상품과 가격을 기록하고 카테고리 할인과 합계를 언제든 확인하세요."
+privacy_label: "개인정보 처리방침"
+qr_alt: "App Store에서 Shopod를 다운로드하는 QR 코드"
+hero_screenshot_alt: "영어로 표시된 Shopod 쇼핑 목록 화면"
 ---
