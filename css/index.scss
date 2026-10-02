@@ -42,6 +42,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.portal-body {
+  margin: 0;
+}
+
 .portal-page {
   min-height: 100vh;
   background: var(--portal-bg);
@@ -59,6 +63,11 @@ html {
   color: inherit;
 }
 
+.portal-page a:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 5px;
+}
+
 .portal-page img {
   display: block;
   max-width: 100%;
@@ -68,7 +77,9 @@ html {
 // MASTHEAD
 // ============================================
 .portal-masthead {
-  padding: clamp(96px, 16vh, 168px) 0 clamp(72px, 12vh, 120px);
+  position: relative;
+  z-index: 1;
+  padding: clamp(56px, 9vh, 96px) 0 clamp(40px, 6vh, 64px);
   text-align: center;
   border-bottom: 1px solid var(--portal-line);
 }
@@ -104,12 +115,95 @@ html {
   font-size: clamp(1rem, 1.6vw, 1.15rem);
 }
 
+.portal-app-nav {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.portal-app-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  min-height: 44px;
+  padding: 10px 18px;
+  border: 1px solid var(--portal-line);
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.portal-app-nav a:hover {
+  border-color: var(--portal-text);
+}
+
+.portal-app-nav__item {
+  position: relative;
+}
+
+.portal-app-tooltip {
+  position: absolute;
+  z-index: 2;
+  top: calc(100% + 12px);
+  left: 50%;
+  width: min(340px, calc(100vw - 32px));
+  padding: 18px 20px;
+  border: 1px solid var(--portal-line);
+  border-radius: 12px;
+  background: var(--portal-bg);
+  color: var(--portal-text);
+  box-shadow: 0 12px 32px rgba(31, 37, 32, 0.14);
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: left;
+  transform: translateX(-50%);
+  visibility: hidden;
+  pointer-events: none;
+}
+
+// Keep the tooltip open while crossing the gap or reading its content.
+.portal-app-tooltip::before {
+  position: absolute;
+  top: -13px;
+  left: 0;
+  width: 100%;
+  height: 13px;
+  content: "";
+}
+
+.portal-app-tooltip strong,
+.portal-app-tooltip > span {
+  display: block;
+}
+
+.portal-app-tooltip strong {
+  margin-bottom: 6px;
+  font-size: 1rem;
+}
+
+.portal-app-nav__item:not(.is-tooltip-dismissed) a:focus-visible + .portal-app-tooltip {
+  visibility: visible;
+  pointer-events: auto;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .portal-app-nav__item:hover:not(.is-tooltip-dismissed) .portal-app-tooltip {
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+
 // ============================================
 // APP SHOWCASE ROWS — shared
 // ============================================
 .portal-row {
   position: relative;
-  padding: clamp(80px, 12vh, 140px) 0;
+  padding: clamp(56px, 8vh, 96px) 0;
+  scroll-margin-top: 24px;
 }
 
 .portal-row__inner {
@@ -124,6 +218,10 @@ html {
 // Shopod row mirrors Typin so the two phones face each other
 .portal-row--shopod .portal-row__inner {
   grid-template-columns: 0.96fr 1.04fr;
+}
+
+.portal-row--shopod .portal-row__visual {
+  order: -1;
 }
 
 .portal-row__copy {
@@ -159,6 +257,33 @@ html {
   margin: 22px 0 0;
   font-size: clamp(1.05rem, 1.6vw, 1.22rem);
   line-height: 1.6;
+}
+
+.portal-row__features {
+  display: grid;
+  gap: 12px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.portal-row__features li {
+  position: relative;
+  padding-left: 20px;
+}
+
+.portal-row__features li::before {
+  position: absolute;
+  top: 0.6em;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--portal-typin-accent);
+  content: "";
 }
 
 .portal-row__cta {
@@ -215,6 +340,10 @@ html {
   transform: translateY(-2px);
 }
 
+.portal-row--typin .portal-row__cta:focus-visible {
+  outline-color: var(--portal-typin-accent);
+}
+
 // Typin presents its hero as a clean rounded screenshot (no bezel),
 // the same way its own landing page does.
 .portal-phone--typin {
@@ -238,6 +367,10 @@ html {
 
 .portal-row--shopod .portal-row__eyebrow {
   color: var(--portal-shopod-accent-dark);
+}
+
+.portal-row--shopod .portal-row__features li::before {
+  background: var(--portal-shopod-accent);
 }
 
 .portal-row--shopod .portal-row__cta {
@@ -302,7 +435,7 @@ html {
 // ============================================
 .portal-lang-switcher {
   width: 100%;
-  margin-top: clamp(44px, 6vh, 64px);
+  margin-top: 28px;
 }
 
 .portal-lang-switcher ul {
@@ -317,7 +450,7 @@ html {
 
 .portal-lang-switcher a {
   display: inline-flex;
-  min-height: 34px;
+  min-height: 44px;
   align-items: center;
   padding: 6px 12px;
   border: 1px solid var(--portal-line);
@@ -376,6 +509,11 @@ html {
   .portal-row {
     animation: none;
   }
+
+  .portal-page a,
+  .portal-row__arrow {
+    transition: none;
+  }
 }
 
 // ============================================
@@ -390,8 +528,8 @@ html {
     text-align: center;
   }
 
-  .portal-row__visual {
-    order: -1;
+  .portal-row--shopod .portal-row__visual {
+    order: 0;
   }
 
   .portal-row__eyebrow {
@@ -403,6 +541,13 @@ html {
     margin-right: auto;
   }
 
+  .portal-row__features {
+    width: fit-content;
+    max-width: 460px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .portal-row__cta {
     margin-left: auto;
     margin-right: auto;
@@ -410,6 +555,14 @@ html {
 }
 
 @media (max-width: 600px) {
+  :root {
+    --portal-maxw: calc(100% - 32px);
+  }
+
+  .portal-app-nav__item {
+    position: static;
+  }
+
   .portal-row__cta {
     width: 100%;
     justify-content: center;
@@ -417,7 +570,7 @@ html {
 
   .portal-phone--typin,
   .portal-phone-bezel {
-    width: min(260px, 80vw);
+    width: min(224px, 72vw);
   }
 
   .portal-phone-bezel {

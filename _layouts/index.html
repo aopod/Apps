@@ -1,15 +1,35 @@
 ---
 layout: default
+title: "aopod — Typin & Shopod"
 ---
 {% include one-css.html named="index" %}
 {% assign lang = page.lang | default: "en" %}
+{% assign portal_defaults = site.data.portal %}
+{% assign typin_lang = lang %}
+{% if lang == "es" %}{% assign typin_lang = "en" %}{% endif %}
 
 <div class="portal-page" data-lang="{{ lang }}">
   <header class="portal-masthead">
     <div class="portal-masthead__inner">
       <p class="portal-wordmark">aopod</p>
-      <h1 class="portal-tagline">{{ page.tagline | default: "iPhone software, made in small numbers." }}</h1>
-      <p class="portal-sub">{{ page.sub | default: "Two apps, each its own thing." }}</p>
+      <h1 class="portal-tagline">{{ page.tagline | default: portal_defaults.tagline }}</h1>
+      <p class="portal-sub">{{ page.sub | default: portal_defaults.sub }}</p>
+      <nav class="portal-app-nav" aria-label="{{ page.apps_aria | default: portal_defaults.apps_aria }}">
+        <span class="portal-app-nav__item">
+          <a href="#portal-typin" aria-describedby="portal-typin-tooltip">Typin <span aria-hidden="true">↓</span></a>
+          <span id="portal-typin-tooltip" class="portal-app-tooltip" role="tooltip">
+            <strong>Typin</strong>
+            <span>{{ page.typin_lead | default: portal_defaults.typin_lead | escape }}</span>
+          </span>
+        </span>
+        <span class="portal-app-nav__item">
+          <a href="#portal-shopod" aria-describedby="portal-shopod-tooltip">Shopod <span aria-hidden="true">↓</span></a>
+          <span id="portal-shopod-tooltip" class="portal-app-tooltip" role="tooltip">
+            <strong>Shopod</strong>
+            <span>{{ page.shopod_lead | default: portal_defaults.shopod_lead | escape }}</span>
+          </span>
+        </span>
+      </nav>
       {% include portal/lang-switcher.html %}
     </div>
   </header>
@@ -21,9 +41,9 @@ layout: default
 
   <footer class="portal-footer">
     <span class="portal-footer__copy">© {{ site.time | date: "%Y" }} aopod</span>
-    <nav class="portal-footer__links">
-      <a href="/Typin/privacy/">Typin {{ page.privacy_label | default: "Privacy" }}</a>
-      <a href="/Shopod/privacy/">Shopod {{ page.privacy_label | default: "Privacy" }}</a>
+    <nav class="portal-footer__links" aria-label="{{ page.footer_aria | default: portal_defaults.footer_aria }}">
+      <a href="/Typin/privacy/{{ typin_lang }}/"{% if lang != typin_lang %} lang="en" hreflang="en"{% endif %}>Typin {% if lang != typin_lang %}{{ portal_defaults.privacy_label }} (English){% else %}{{ page.privacy_label | default: portal_defaults.privacy_label }}{% endif %}</a>
+      <a href="/Shopod/privacy/{{ lang }}/">Shopod {{ page.privacy_label | default: portal_defaults.privacy_label }}</a>
     </nav>
   </footer>
 </div>
@@ -41,6 +61,8 @@ layout: default
         'zh-hk': 'zh-Hant',
         'zh-mo': 'zh-Hant',
         'zh': 'zh-Hans',
+        'zh-hans': 'zh-Hans',
+        'zh-hant': 'zh-Hant',
         'de': 'de',
         'fr': 'fr',
         'ja': 'ja',
@@ -60,6 +82,10 @@ layout: default
         var normalized = (browserLang || 'en').toLowerCase().trim();
         if (SUPPORTED_LANGUAGES[normalized]) {
             return SUPPORTED_LANGUAGES[normalized];
+        }
+        var languageAndScript = normalized.split('-').slice(0, 2).join('-');
+        if (SUPPORTED_LANGUAGES[languageAndScript]) {
+            return SUPPORTED_LANGUAGES[languageAndScript];
         }
         var langFamily = normalized.split('-')[0];
         if (SUPPORTED_LANGUAGES[langFamily]) {
@@ -115,7 +141,7 @@ layout: default
             try {
                 sessionStorage.setItem('portal_lang_redirect', String(Date.now()));
             } catch (e) {}
-            window.location.href = target;
+            window.location.replace(target + window.location.search + window.location.hash);
         }
     }
 
@@ -134,14 +160,38 @@ layout: default
         });
     }
 
+    function setupAppTooltips() {
+        var items = document.querySelectorAll('.portal-app-nav__item');
+        Array.prototype.forEach.call(items, function(item) {
+            var link = item.querySelector('a');
+            function resetTooltip() {
+                item.classList.remove('is-tooltip-dismissed');
+            }
+            item.addEventListener('mouseenter', resetTooltip);
+            link.addEventListener('focus', resetTooltip);
+            link.addEventListener('click', function() {
+                item.classList.add('is-tooltip-dismissed');
+            });
+        });
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                Array.prototype.forEach.call(items, function(item) {
+                    item.classList.add('is-tooltip-dismissed');
+                });
+            }
+        });
+    }
+
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', function() {
             detectAndRedirect();
             setupLanguageSwitcher();
+            setupAppTooltips();
         });
     } else {
         detectAndRedirect();
         setupLanguageSwitcher();
+        setupAppTooltips();
     }
 })();
 " %}

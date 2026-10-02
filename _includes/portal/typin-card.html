@@ -1,21 +1,25 @@
-<section class="portal-row portal-row--typin" aria-labelledby="portal-typin-title">
+<section id="portal-typin" class="portal-row portal-row--typin" aria-labelledby="portal-typin-title">
   <div class="portal-row__inner">
     <div class="portal-row__copy">
       <p class="portal-row__eyebrow">
         <span class="portal-row__index">01</span>
         <span>Typin</span>
       </p>
-      <h2 id="portal-typin-title" class="portal-row__title">{{ page.typin_title | default: "Write with Focus." }}</h2>
-      <p class="portal-row__lead">{{ page.typin_lead | default: "A minimalist Markdown editor for iPhone. Write locally, sync seamlessly." }}</p>
-      <a class="portal-row__cta" href="/Typin/">
-        {{ page.typin_cta | default: "Open Typin" }}
+      <h2 id="portal-typin-title" class="portal-row__title">{{ page.typin_title | default: portal_defaults.typin_title }}</h2>
+      <p class="portal-row__lead">{{ page.typin_lead | default: portal_defaults.typin_lead }}</p>
+      {% assign typin_features = page.typin_features | default: portal_defaults.typin_features %}
+      <ul class="portal-row__features" role="list">
+        {% for feature in typin_features %}<li>{{ feature }}</li>{% endfor %}
+      </ul>
+      <a class="portal-row__cta" href="/Typin/{{ typin_lang }}/"{% if lang != typin_lang %} hreflang="en"{% endif %}>
+        {{ page.typin_cta | default: portal_defaults.typin_cta }}
         <span class="portal-row__arrow" aria-hidden="true">→</span>
       </a>
     </div>
     <div class="portal-row__visual">
       <img class="portal-phone--typin"
            src="/assets/typin/images/hero-en.jpg"
-           alt="{{ page.typin_title | default: 'Typin' }}"
+           alt="{{ page.typin_image_alt | default: portal_defaults.typin_image_alt }}"
            width="488" height="1008"
            loading="eager" decoding="async">
     </div>
